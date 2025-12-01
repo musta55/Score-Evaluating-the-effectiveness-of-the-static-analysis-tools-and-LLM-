@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_42.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:14:06",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "address payable addr_unchk40;\n   if (! addr_unchk40.send (2 ether))\n      {// comment1;\n      }\n  else\n    {//comment2;\n    }\n",
+      "confidence": "medium",
+      "reasoning": "The UncheckedExternalCall_unchk40 function directly calls addr.send(2 ether) without any try-catch block or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "address payable addr_unchk40;\n   if (! addr_unchk40.send (2 ether))\n      {// comment1;\n      }\n  else\n    {//comment2;\n    }\n",
+      "confidence": "medium",
+      "reasoning": "The UncheckedExternalCall_unchk40 function directly calls addr.send(2 ether) without any try-catch block or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 18,
+      "code_snippet": "function bug_unchk39(address payable addr) public\n      {addr.send (4 ether);}",
+      "confidence": "medium",
+      "reasoning": "The bug_unchk39 function directly calls addr.send(4 ether) without any try-catch block or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 21,
+      "code_snippet": "function bug_unchk27(address payable addr) public\n      {addr.send (42 ether);}",
+      "confidence": "medium",
+      "reasoning": "The bug_unchk27 function directly calls addr.send(42 ether) without any try-catch block or return value check, making it vulnerable to unhandled exceptions."
+    }
+  ]
+}

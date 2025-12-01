@@ -1,0 +1,38 @@
+{
+  "contract": "buggy_36.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:26:25",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 43,
+      "code snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 44,
+      "code snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 45,
+      "code snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 46,
+      "code snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high"
+    }
+  ]
+}

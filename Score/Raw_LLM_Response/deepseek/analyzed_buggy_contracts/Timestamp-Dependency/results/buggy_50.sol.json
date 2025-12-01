@@ -1,0 +1,155 @@
+{
+  "contract": "buggy_50.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:22:44",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 25,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Using block.timestamp without considering the same second issue."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 28,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Using block.timestamp without considering the same second issue."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Using block.timestamp without considering the same second issue."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 36,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 40,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 43,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 47,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 52,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Using block.timestamp without considering the same second issue."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 60,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Using block.timestamp without considering the same second issue."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 64,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 72,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 76,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 80,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 84,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 92,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 96,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 100,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 104,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 108,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high",
+      "reasoning": "Directly using block.timestamp without a nonce or unique value source."
+    }
+  ]
+}

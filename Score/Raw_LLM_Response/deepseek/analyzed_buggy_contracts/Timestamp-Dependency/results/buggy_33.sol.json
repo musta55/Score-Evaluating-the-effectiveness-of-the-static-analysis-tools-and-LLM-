@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_33.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:16:07",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "bug_tmstmp8 () public payable {\n        require(msg.value == 10 ether);\n        require(now != pastBlockTime_tmstmp8);\n        pastBlockTime_tmstmp8 = now;\n        if(now % 15 == 0) {\n            msg.sender.transfer(address(this).balance);\n        }\n    }",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp8 uses 'now' without validation, allowing attackers to exploit by predicting the timestamp."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 1546300800,
+      "code_snippet": "bug_tmstmp9() return block.timestamp >= 1546300800;",
+      "confidence": "low",
+      "reasoning": "No validation is done before using the timestamp, increasing predictability."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "medium",
+      "reasoning": "No validation ensures only one transaction per block, potentially allowing attackers to exploit."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_38.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "dst.call.value(msg.value)(\"\")",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "interface IERC20 {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "callee.send(5 ether)",
+      "confidence": "high",
+      "context_before": [
+        "  function transfer(address to, uint256 value) external returns (bool);",
+        "  function approve(address spender, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "",
+        "  event Transfer(address indexed from, address indexed to, uint256 value);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "addr_unchk4.send (42 ether) || if (! addr_unchk4.send (42 ether))",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a / b;",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "addr_unchk40.send (2 ether) || if (! addr_unchk40.send (2 ether))",
+      "confidence": "high",
+      "context_before": [
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a + b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44);",
+      "confidence": "high",
+      "context_before": [
+        "    return mul(div(d,m),m);",
+        "  }"
+      ],
+      "context_after": [
+        "",
+        "contract ERC20Detailed is IERC20 {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

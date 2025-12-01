@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_38.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  function approve(address spender, uint256 value) external returns (bool);",
+        "  function transferFrom(address from, address to, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "balances_intou2[msg.sender] -= _value;",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "transferValue_intou37 = 10;",
+      "confidence": "high",
+      "context_before": [
+        "    assert(c >= a);",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  function ceil(uint256 a, uint256 m) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "contract ERC20Detailed is IERC20 {",
+        ""
+      ],
+      "context_after": [
+        "",
+        "function transfer_intou22(address _to, uint _value) public returns (bool) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "transferValue_intou25 = 10;",
+      "confidence": "high",
+      "context_before": [
+        "function bug_intou12(uint8 p_intou12) public{",
+        "    uint8 vundflw1=0;"
+      ],
+      "context_after": [
+        "}",
+        "  string private _symbol;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 76,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  constructor(string memory name, string memory symbol, uint8 decimals) public {",
+        "    _name = name;"
+      ],
+      "context_after": [
+        "    _decimals = decimals;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 87,
+      "code_snippet": "transferValue_intou14 = 10;",
+      "confidence": "high",
+      "context_before": [
+        "    return _name;",
+        "  }"
+      ],
+      "context_after": [
+        "",
+        "function transfer_intou26(address _to, uint _value) public returns (bool) {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

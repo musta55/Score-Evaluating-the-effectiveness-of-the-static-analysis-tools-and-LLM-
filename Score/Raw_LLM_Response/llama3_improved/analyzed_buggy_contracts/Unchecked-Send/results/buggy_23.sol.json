@@ -1,0 +1,74 @@
+{
+  "contract": "buggy_23.sol",
+  "contract_name": "ERC20",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 15,
+      "code_snippet": "function bug_unchk_send15() payable public{\r\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "interface IERC20 {",
+        "    function transfer(address to, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "    function approve(address spender, uint256 value) external returns (bool);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 28,
+      "code_snippet": "function withdraw() public {\r\n      uint amount = balances[msg.sender];\r\n      (bool success, ) = msg.sender.call.value(amount)('');\r\n      require(success);\r\n      balances[msg.sender] = 0;\r\n}",
+      "confidence": "high",
+      "context_before": [
+        "    event Transfer(address indexed from, address indexed to, uint256 value);",
+        ""
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "function withdraw() public {\r\n      uint amount = balances[msg.sender];\r\n      (bool success, ) = msg.sender.call.value(amount)('');\r\n      require(success);\r\n      balances[msg.sender] = 0;\r\n}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function totalSupply() external view returns (uint256);"
+      ],
+      "context_after": [
+        "    function balanceOf(address who) external view returns (uint256);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 11,
+      "code_snippet": "constructor() ERC20Detailed('Aggregion Token', 'AGR', 4) public {\r\n      super._mint(msg.sender, 30000000000000);\r\n}",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " * @title ERC20 interface"
+      ],
+      "context_after": [
+        " */",
+        "interface IERC20 {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

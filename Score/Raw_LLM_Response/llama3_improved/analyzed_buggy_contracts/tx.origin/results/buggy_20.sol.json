@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_20.sol",
+  "contract_name": "ownership",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "require (tx.origin == owner_txorigin1);",
+      "confidence": "high",
+      "context_before": [
+        " * and associated documentation files (the \"Software\"), to deal in the Software without restriction,",
+        " * including without limitation the rights to use, copy, modify, merge, publish, distribute,"
+      ],
+      "context_after": [
+        " * is furnished to do so, subject to the following conditions:",
+        " *"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "require (tx.origin == owner_txorigin2);",
+      "confidence": "high",
+      "context_before": [
+        " * is furnished to do so, subject to the following conditions:",
+        " *"
+      ],
+      "context_after": [
+        " * or substantial portions of the Software.",
+        " *"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "require (tx.origin == owner_txorigin3);",
+      "confidence": "high",
+      "context_before": [
+        " * or substantial portions of the Software.",
+        " *"
+      ],
+      "context_after": [
+        " * BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE",
+        " * AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "require (tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        " * BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE",
+        " * AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,"
+      ],
+      "context_after": [
+        " * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        " */"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require (tx.origin == owner_txorigin5);",
+      "confidence": "high",
+      "context_before": [
+        " * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        " */"
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "require (tx.origin == owner_txorigin6);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " */",
+        "contract Ownable {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "require (tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        "contract Ownable {"
+      ],
+      "context_after": [
+        "  function sendto_txorigin21(address payable receiver, uint amount,address owner_txorigin21) public {",
+        "\trequire (tx.origin == owner_txorigin21);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require (tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "  function sendto_txorigin21(address payable receiver, uint amount,address owner_txorigin21) public {",
+        "\trequire (tx.origin == owner_txorigin21);"
+      ],
+      "context_after": [
+        "}",
+        "  address public owner;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "require (tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "  function bug_txorigin40(address owner_txorigin40) public{",
+        "        require(tx.origin == owner_txorigin40);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "require (tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_txorigin40(address owner_txorigin40) public{",
+        "        require(tx.origin == owner_txorigin40);"
+      ],
+      "context_after": [
+        "  event OwnerChanged(address oldOwner, address newOwner);",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

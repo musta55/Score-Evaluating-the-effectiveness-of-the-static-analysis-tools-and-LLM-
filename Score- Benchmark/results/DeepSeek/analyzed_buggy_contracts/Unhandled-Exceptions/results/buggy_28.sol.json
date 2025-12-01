@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_28.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:33:09",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "if (!addr_unchk43.send (10 ether) || 1==1)\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk43` attempts to send 10 ether but does not check if the send was successful before proceeding. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code_snippet": "if (!addr_unchk3.send (42 ether))\n        {receivers_unchk30 +=1;}\n        else\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk30` sends 42 ether without checking if the send was successful. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 158,
+      "code_snippet": "if (!addr_unchk7.send (10 ether) || 1==1)\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk7` attempts to send 10 ether but does not check if the send was successful before proceeding. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 235,
+      "code_snippet": "if (!addr_unchk19.send (10 ether) || 1==1)\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk19` attempts to send 10 ether without checking if the send was successful. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 273,
+      "code_snippet": "if (!addr_unchk31.send (10 ether) || 1==1)\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk31` attempts to send 10 ether without checking if the send was successful. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 342,
+      "code_snippet": "if (!addr_unchk45.send (10 ether) || 1==1)\n        {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk45` attempts to send 10 ether without checking if the send was successful. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 297,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))\n        { // comment1;}\n        else\n        { //comment2;}\n",
+      "confidence": "medium",
+      "reasoning": "The function `UncheckedExternalCall_unchk4` allows external code to call without proper validation. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 317,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))\n        { // comment1;}\n        else\n        { //comment2;}\n",
+      "confidence": "medium",
+      "reasoning": "The function `UncheckedExternalCall_unchk4` allows external code to call without proper validation. This could lead to unintended execution flow and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 327,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))\n        { // comment1;}\n        else\n        { //comment2;}\n",
+      "confidence": "medium",
+      "reasoning": "The function `UncheckedExternalCall_unchk4` allows external code to call without proper validation. This could lead to unintended execution flow and potential vulnerabilities."
+    }
+  ]
+}

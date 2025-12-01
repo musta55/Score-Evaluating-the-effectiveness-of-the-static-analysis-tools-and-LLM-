@@ -1,0 +1,99 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:21:11",
+  "findings": [
+    {
+      "bug_type": "Overflow",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "reasoning": "Adding two uint8 values can overflow the maximum value of 255."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "reasoning": "Same as above, adding two uint8 values can overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 58,
+      "code_snippet": "balances_intou14[msg.sender] - _value >= 0;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a uint can result in underflow if the value is too large."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 59,
+      "code_snippet": "_to += _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, adding to a uint can cause underflow if it exceeds the maximum value."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 70,
+      "code_snippet": "balanceOf[_to] + _value >= balanceOf[_to];",
+      "confidence": "high",
+      "reasoning": "Adding to a uint can cause overflow if it exceeds the maximum value."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 84,
+      "code_snippet": "_transfer(msg.sender, _to, _value);",
+      "confidence": "high",
+      "reasoning": "Same as above, adding to a uint can cause underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 96,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "reasoning": "Adding two uint8 values can overflow the maximum value of 255."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 104,
+      "code_snippet": "balanceOf[_to] + _value >= balanceOf[_to];",
+      "confidence": "high",
+      "reasoning": "Same as above, adding to a uint can cause underflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 108,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a uint can result in underflow if the value is too large."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 120,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "reasoning": "Adding two uint8 values can overflow the maximum value of 255."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 127,
+      "code_snippet": "balanceOf[_from] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a uint can result in underflow if the value is too large."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 140,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "reasoning": "Adding to a uint can cause overflow if it exceeds the maximum value."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 152,
+      "code_snippet": "msg.sender.transfer(transferValue_intou33);",
+      "confidence": "high",
+      "reasoning": "Same as above, adding to a uint can cause underflow."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_50.sol",
+  "contract_name": "digitalNotary",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 143,
+      "code_snippet": "HashRegistration memory thisregistration;",
+      "confidence": "medium",
+      "context_before": [
+        "    constructor() public",
+        "    {"
+      ],
+      "context_after": [
+        "        manager = msg.sender;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 203,
+      "code_snippet": "require(msg.value == changehashownerfee);",
+      "confidence": "medium",
+      "context_before": [
+        "        require(newfee >= 0);",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        "bool claimed_TOD20 = false;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,298 @@
+{
+  "contract": "buggy_28.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "require(tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    uint256 c = a / b;",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner_txorigin12);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    assert(b <= a);",
+        "    return a - b;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require(tx.origin == owner_txorigin11);",
+      "confidence": "high",
+      "context_before": [
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a + b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function ceil(uint256 a, uint256 m) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    uint256 d = sub(c,1);",
+        "    return mul(div(d,m),m);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 51,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "}"
+      ],
+      "context_after": [
+        "contract ERC20Detailed is IERC20 {",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 56,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        "function withdrawAll_txorigin22(address payable _recipient,address owner_txorigin22) public {",
+        "        require(tx.origin == owner_txorigin22);"
+      ],
+      "context_after": [
+        "    }",
+        "  string private _name;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 61,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "context_before": [
+        "function bug_txorigin12(address owner_txorigin12) public{",
+        "        require(tx.origin == owner_txorigin12);"
+      ],
+      "context_after": [
+        "  string private _symbol;",
+        "function transferTo_txorigin11(address to, uint amount,address owner_txorigin11) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 66,
+      "code_snippet": "require(tx.origin == owner_txorigin1);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin11);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  uint8 private _decimals;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "require(tx.origin == owner_txorigin17);",
+      "confidence": "high",
+      "context_before": [
+        "  constructor(string memory name, string memory symbol, uint8 decimals) public {",
+        "    _name = name;"
+      ],
+      "context_after": [
+        "    _decimals = decimals;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 76,
+      "code_snippet": "require(tx.origin == owner_txorigin37);",
+      "confidence": "high",
+      "context_before": [
+        "function transferTo_txorigin19(address to, uint amount,address owner_txorigin19) public {",
+        "  require(tx.origin == owner_txorigin19);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 81,
+      "code_snippet": "require(tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "  function name() public view returns(string memory) {",
+        "    return _name;"
+      ],
+      "context_after": [
+        "function withdrawAll_txorigin26(address payable _recipient,address owner_txorigin26) public {",
+        "        require(tx.origin == owner_txorigin26);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 86,
+      "code_snippet": "require(tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ],
+      "context_after": [
+        "  function symbol() public view returns(string memory) {",
+        "    return _symbol;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 91,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "function bug_txorigin20(address owner_txorigin20) public{"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 96,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "  function decimals() public view returns(uint8) {",
+        "    return _decimals;"
+      ],
+      "context_after": [
+        "function bug_txorigin32(  address owner_txorigin32) public{",
+        "        require(tx.origin == owner_txorigin32);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 101,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "}"
+      ],
+      "context_after": [
+        "contract HYDROGEN is ERC20Detailed {",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 106,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "  using SafeMath for uint256;",
+        "function sendto_txorigin1(address payable receiver, uint amount,address owner_txorigin1) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 111,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => uint256) private _balances;",
+        "function withdrawAll_txorigin2(address payable _recipient,address owner_txorigin2) public {"
+      ],
+      "context_after": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 116,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => mapping (address => uint256)) private _allowed;",
+        ""
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin17);",
+        "\treceiver.transfer(amount);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

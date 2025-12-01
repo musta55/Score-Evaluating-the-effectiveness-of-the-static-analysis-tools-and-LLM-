@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:19:43",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code_snippet": "transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {\n        require(_value <= allowance[_from][msg.sender]);     // Check allowance\n        allowance[_from][msg.sender] -= _value;\n        _transfer(_from, _to, _value);\n        return true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The transferFrom function checks the allowance but does not handle cases where multiple transfers could lead to unintended behavior. The allowance is decremented by _value, which might cause issues if multiple calls are made without proper handling."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 13,
+      "code_snippet": "balanceOf[_from] >= _value",
+      "confidence": "medium",
+      "reasoning": "The burn function does not validate if the user actually owns the tokens being burned, potentially allowing unauthorized token distribution."
+    }
+  ]
+}

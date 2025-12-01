@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_20.sol",
+  "contract_name": "ownership",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))  { // comment1; } else { //comment2; }",
+      "confidence": "high",
+      "context_before": [
+        "uint receivers_unchk42;",
+        "address payable addr_unchk42;"
+      ],
+      "context_after": [
+        "\t{receivers_unchk42 +=1;}",
+        "else"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "if (! addr_unchk31.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "if (!addr_unchk42.send(42 ether))",
+        "\t{receivers_unchk42 +=1;}"
+      ],
+      "context_after": [
+        "\t{revert();}",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "if (!addr_unchk19.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "  address public owner;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "function withdrawLeftOver_unchk33() public {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "if (! addr_unchk43.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "function withdrawLeftOver_unchk33() public {",
+        "        require(payedOut_unchk33);"
+      ],
+      "context_after": [
+        "    }",
+        "  event OwnerChanged(address oldOwner, address newOwner);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "if (!addr_unchk4.send (42 ether))  { // comment1; } else { //comment2; }",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnerChanged(address oldOwner, address newOwner);",
+        ""
+      ],
+      "context_after": [
+        "        owner = msg.sender;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "if (!addr_unchk30.send(42 ether)) {receivers_unchk30 +=1;} else {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "bool public payedOut_unchk9 = false;"
+      ],
+      "context_after": [
+        "function withdrawLeftOver_unchk9() public {",
+        "        require(payedOut_unchk9);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_35.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:12:00",
+  "findings": [
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "uint8 vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This function attempts to subtract 10 from a uint8 variable. If the value is too low, it will underflow and become a large positive number when treated as unsigned, leading to incorrect calculations in subsequent operations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 5,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high|medium",
+      "reasoning": "This function adds 10 to a uint8 variable. If the value is already at its maximum (255), adding 10 will cause an overflow into negative numbers when treated as signed, leading to incorrect calculations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 6,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This function subtracts 10 from a uint8 variable. If the value is too low, it will underflow and become a large positive number when treated as unsigned, leading to incorrect calculations in subsequent operations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 7,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou28;",
+      "confidence": "high|medium",
+      "reasoning": "This function adds a value to a uint8 variable. If the sum exceeds the maximum value for a uint8, it will overflow into negative numbers when treated as signed, leading to incorrect calculations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This function subtracts 10 from a uint8 variable. If the value is too low, it will underflow and become a large positive number when treated as unsigned, leading to incorrect calculations in subsequent operations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 2,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high|medium",
+      "reasoning": "This function adds a value to a uint8 variable. If the sum exceeds the maximum value for a uint8, it will overflow into negative numbers when treated as signed, leading to incorrect calculations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 3,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This function subtracts 10 from a uint8 variable. If the value is too low, it will underflow and become a large positive number when treated as unsigned, leading to incorrect calculations in subsequent operations."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 4,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou28;",
+      "confidence": "high|medium",
+      "reasoning": "This function adds a value to a uint8 variable. If the sum exceeds the maximum value for a uint8, it will overflow into negative numbers when treated as signed, leading to incorrect calculations."
+    }
+  ]
+}

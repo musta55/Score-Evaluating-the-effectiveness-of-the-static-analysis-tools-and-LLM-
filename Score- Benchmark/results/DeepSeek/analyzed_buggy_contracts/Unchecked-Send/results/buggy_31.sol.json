@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_31.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:29:14",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 15,
+      "code_snippet": "marmo.signer()",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 20,
+      "code_snippet": "token.transferFrom(msg.sender, _to, _value)",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 25,
+      "code_snippet": "token.transferFrom(msg.sender, relayer, _fee)",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    }
+  ]
+}

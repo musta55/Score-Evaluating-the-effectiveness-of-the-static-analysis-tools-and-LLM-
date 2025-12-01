@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_1.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 14:33:55",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 25,
+      "code_snippet": "withdrawFunds_re_ent31 (uint256 _weiToWithdraw) public {\n        require(balances_re_ent31[msg.sender] >= _weiToWithdraw);\n        // limit the withdrawal\n        require(msg.sender.send(_weiToWithdraw));  //bug\n        balances_re_ent31[msg.sender] -= _weiToWithdraw;\n      }",
+      "confidence": "high",
+      "reasoning": "The external call `msg.sender.send(_weiToWithdraw)` is made before updating the state variable `balances_re_ent31[msg.sender]`. This allows an attacker to exploit re-entrancy by calling the function multiple times without proper state updates."
+    }
+  ]
+}

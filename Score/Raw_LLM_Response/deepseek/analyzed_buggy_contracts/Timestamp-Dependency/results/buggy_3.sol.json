@@ -1,0 +1,32 @@
+{
+  "contract": "buggy_3.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:02:12",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 15,
+      "code_snippet": "uint pastBlockTime_tmstmp32 = block.timestamp;\n\nrequire(now != pastBlockTime_tmstmp32); // only 1 transaction per block   //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 16,
+      "code_snippet": "pastBlockTime_tmstmp32 = now;       //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 47,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 50,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;       //bug",
+      "confidence": "high"
+    }
+  ]
+}

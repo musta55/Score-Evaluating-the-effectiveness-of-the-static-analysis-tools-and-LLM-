@@ -1,0 +1,9 @@
+{
+  "contract": "buggy_34.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Re-entrancy",
+  "findings": [],
+  "success": false,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

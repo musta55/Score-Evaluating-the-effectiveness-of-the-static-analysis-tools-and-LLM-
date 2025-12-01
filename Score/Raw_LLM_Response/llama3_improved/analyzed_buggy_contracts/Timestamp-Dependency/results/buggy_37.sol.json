@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_37.sol",
+  "contract_name": "SafeMath",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "(bool success, ) = msg.sender.call.value(amount)('');",
+      "confidence": "high",
+      "context_before": [
+        "// ----------------------------------------------------------------------------",
+        "// Safe maths"
+      ],
+      "context_after": [
+        "contract SafeMath {",
+        "    function safeAdd(uint a, uint b) public pure returns (uint c) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "function play_tmstmp3(uint startTime) public { uint _vtime = block.timestamp; ... }",
+      "confidence": "low",
+      "context_before": [
+        "  }",
+        "    function safeSub(uint a, uint b) public pure returns (uint c) {"
+      ],
+      "context_after": [
+        "        c = a - b;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "function play_tmstmp9() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "low",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "    function safeMul(uint a, uint b) public pure returns (uint c) {",
+        "        c = a * b;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "function bug_tmstmp20 () public payable { require(msg.value == 10 ether); ... require(now != pastBlockTime_tmstmp20); ... }",
+      "confidence": "low",
+      "context_before": [
+        "        require(b > 0);",
+        "        c = a / b;"
+      ],
+      "context_after": [
+        "function bug_tmstmp25() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "return startTime + (5 * 1 days) == _vtime;",
+      "confidence": "high",
+      "context_before": [
+        "// Name        : AugustCoin",
+        "// Total supply: 100000000"
+      ],
+      "context_after": [
+        "//",
+        "// Enjoy."
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "// Decimals    : 18",
+        "//"
+      ],
+      "context_after": [
+        "//",
+        "// (c) by Ahiwe Onyebuchi Valentine."
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "require(now != pastBlockTime_tmstmp12);",
+      "confidence": "high",
+      "context_before": [
+        "// (c) by Ahiwe Onyebuchi Valentine.",
+        "// ----------------------------------------------------------------------------"
+      ],
+      "context_after": [
+        "",
+        "// ----------------------------------------------------------------------------"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "    function safeAdd(uint a, uint b) public pure returns (uint c) {",
+        "        c = a + b;"
+      ],
+      "context_after": [
+        "    }",
+        "function bug_tmstmp37() view public returns (bool) {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_12.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:43:20",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 56,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 70,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 84,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 98,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 112,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 126,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 140,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 154,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 168,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends 1 ether without any validation."
+    }
+  ]
+}

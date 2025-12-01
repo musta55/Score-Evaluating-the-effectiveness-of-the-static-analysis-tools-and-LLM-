@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_4.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:07:51",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": ".callnotchecked_unchk13(address callee)\n        public\n",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": ".bug_unchk7() public\n        addr.send(10 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 34,
+      "code_snippet": ".bug_unchk14() public\n        callee.send(5 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": ".bug_unchk30() public\n        addr.send(42 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 51,
+      "code_snippet": ".bug_unchk38() public\n        callee.send(5 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 52,
+      "code_snippet": ".bug_unchk39() public\n        addr.send(4 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 60,
+      "code_snippet": "UncheckedExternalCall_unchk4() public\n        addr.send(42 ether);\n    ",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 78,
+      "code_snippet": "UncheckedExternalCall_unchk40() public\n        addr.send(2 ether);\n    ",
+      "confidence": "medium"
+    }
+  ]
+}

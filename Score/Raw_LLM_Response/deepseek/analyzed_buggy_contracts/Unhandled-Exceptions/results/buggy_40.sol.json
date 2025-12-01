@@ -1,0 +1,28 @@
+{
+  "contract": "buggy_40.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:11:18",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code snippet": "UncheckedExternalCall_unchk40 () public\n{  address payable addr_unchk40;\n   if (! addr_unchk40.send (2 ether))\n      {// comment1;\n      }\n    else\n      {//comment2;\n      }\n}"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 5,
+      "code snippet": "bug_unchk27(address payable addr) public\n{addr.send (42 ether);}"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code snippet": "UncheckedExternalCall_unchk4 () public\n{  address payable addr_unchk4;\n   if (! addr_unchk4.send (4 ether))\n      {// comment1;\n      }\n    else\n      {//comment2;\n      }\n}"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 5,
+      "code snippet": "bug_unchk31() public{\naddress payable addr_unchk31;\nif (!addr_unchk31.send (10 ether) || 1==1)\n{revert();}\n}"
+    }
+  ]
+}

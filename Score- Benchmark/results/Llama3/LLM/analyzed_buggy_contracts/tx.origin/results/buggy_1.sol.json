@@ -1,0 +1,250 @@
+{
+  "contract": "buggy_1.sol",
+  "contract_name": "EIP20Interface",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "require(tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "context_before": [
+        "    function by the compiler.",
+        "    */"
+      ],
+      "context_after": [
+        "    uint256 public totalSupply;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "require(tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /// @param _owner The address from which the balance will be retrieved"
+      ],
+      "context_after": [
+        "    function balanceOf(address _owner) public view returns (uint256 balance);",
+        "function transferTo_txorigin7(address to, uint amount,address owner_txorigin7) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "context_before": [
+        "  to.call.value(amount);",
+        "}"
+      ],
+      "context_after": [
+        "    /// @notice send `_value` token to `_to` from `msg.sender`",
+        "    /// @param _to The address of the recipient"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "    /// @param _to The address of the recipient",
+        "    /// @param _value The amount of token to be transferred"
+      ],
+      "context_after": [
+        "    function transfer(address _to, uint256 _value) public returns (bool success);",
+        "function transferTo_txorigin23(address to, uint amount,address owner_txorigin23) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "function transferTo_txorigin23(address to, uint amount,address owner_txorigin23) public {",
+        "  require(tx.origin == owner_txorigin23);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /// @notice send `_value` token to `_to` from `_from` on the condition it is approved by `_from`"
+      ],
+      "context_after": [
+        "    /// @param _to The address of the recipient",
+        "    /// @param _value The amount of token to be transferred"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        "    /// @param _value The amount of token to be transferred",
+        "    /// @return Whether the transfer was successful or not"
+      ],
+      "context_after": [
+        "function withdrawAll_txorigin14(address payable _recipient,address owner_txorigin14) public {",
+        "        require(tx.origin == owner_txorigin14);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "context_before": [
+        "        require(tx.origin == owner_txorigin14);",
+        "        _recipient.transfer(address(this).balance);"
+      ],
+      "context_after": [
+        "",
+        "    /// @notice `msg.sender` approves `_spender` to spend `_value` tokens"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "context_before": [
+        "    /// @notice `msg.sender` approves `_spender` to spend `_value` tokens",
+        "    /// @param _spender The address of the account able to transfer the tokens"
+      ],
+      "context_after": [
+        "    /// @return Whether the approval was successful or not",
+        "    function approve(address _spender, uint256 _value) public returns (bool success);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "    function approve(address _spender, uint256 _value) public returns (bool success);",
+        "function withdrawAll_txorigin30(address payable _recipient,address owner_txorigin30) public {"
+      ],
+      "context_after": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 58,
+      "code_snippet": "require(tx.origin == owner_txorigin39);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "    /// @param _spender The address of the account able to transfer the tokens",
+        "    /// @return Amount of remaining tokens allowed to spent"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 62,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "    /// @return Amount of remaining tokens allowed to spent",
+        "    function allowance(address _owner, address _spender) public view returns (uint256 remaining);"
+      ],
+      "context_after": [
+        "        require(tx.origin == owner_txorigin8);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 66,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "  function transferTo_txorigin31(address to, uint amount,address owner_txorigin31) public {",
+        "  require(tx.origin == owner_txorigin31);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 70,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin31);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  event Transfer(address indexed _from, address indexed _to, uint256 _value);",
+        "  function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 74,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "  function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {",
+        "\trequire (tx.origin == owner_txorigin13);"
+      ],
+      "context_after": [
+        "}",
+        "  event Approval(address indexed _owner, address indexed _spender, uint256 _value);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

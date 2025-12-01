@@ -1,0 +1,154 @@
+{
+  "contract": "buggy_28.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  event Transfer(address indexed from, address indexed to, uint256 value);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);",
+        "}"
+      ],
+      "context_after": [
+        "library SafeMath {",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "library SafeMath {"
+      ],
+      "context_after": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    if (a == 0) {"
+      ],
+      "context_after": [
+        "    }",
+        "    uint256 c = a * b;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "      return 0;",
+        "    }"
+      ],
+      "context_after": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "require(now != pastBlockTime_tmstmp20); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a / b;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a / b;",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

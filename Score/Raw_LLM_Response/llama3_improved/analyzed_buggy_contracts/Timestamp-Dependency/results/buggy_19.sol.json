@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_19.sol",
+  "contract_name": "has",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  /**",
+        "  * @dev Multiplies two numbers, throws on overflow."
+      ],
+      "context_after": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    if (a == 0) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "      return 0;",
+        "    }"
+      ],
+      "context_after": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  * @dev Integer division of two numbers, truncating the quotient.",
+        "  */"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a / b;"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  /**",
+        "  * @dev Substracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend)."
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "    return a - b;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "  * @dev Adds two numbers, throws on overflow."
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

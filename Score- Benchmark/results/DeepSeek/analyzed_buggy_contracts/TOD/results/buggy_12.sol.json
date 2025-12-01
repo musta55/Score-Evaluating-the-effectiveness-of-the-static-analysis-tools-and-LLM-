@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_12.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:16:09",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 25,
+      "code snippet": "function getReward_TOD5() payable public{\n     winner_TOD5.transfer(msg.value);\n}",
+      "confidence": "medium",
+      "reasoning": "The reward transfer occurs without verifying the game outcome, allowing front-running."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 26,
+      "code snippet": "function getReward_TOD15() payable public{\n     winner_TOD15.transfer(msg.value);\n}",
+      "confidence": "medium",
+      "reasoning": "Same as above, reward transfer without game verification."
+    }
+  ]
+}

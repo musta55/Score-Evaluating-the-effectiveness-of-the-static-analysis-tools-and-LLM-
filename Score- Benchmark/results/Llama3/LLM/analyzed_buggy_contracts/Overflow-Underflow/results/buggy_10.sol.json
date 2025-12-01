@@ -1,0 +1,202 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 4,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Friday, April 26, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity >=0.4.21 < 0.6.0;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 6,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "pragma solidity >=0.4.21 < 0.6.0;"
+      ],
+      "context_after": [
+        "contract DocumentSigner {",
+        "  function bug_intou39() public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou36(uint8 p_intou36) public{",
+        "    uint8 vundflw1=0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "  mapping(bytes32=>string) public docs;",
+        "  function bug_intou36(uint8 p_intou36) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou36;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    modifier validDoc(bytes32 _docHash) {"
+      ],
+      "context_after": [
+        "        _;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract DocumentSigner {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "medium",
+      "context_before": [
+        "}",
+        "  mapping(bytes32=>string) public docs;"
+      ],
+      "context_after": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou36;   // overflow bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "        _;",
+        "    }"
+      ],
+      "context_after": [
+        "  function bug_intou31() public{",
+        "    uint8 vundflw =0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "medium",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  mapping(address => uint) public lockTime_intou13;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        "    }",
+        "function withdraw_intou13() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou13 = 10;",
+        "        msg.sender.transfer(transferValue_intou13);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "  event NewDocument(bytes32 _docHash);",
+        ""
+      ],
+      "context_after": [
+        "        bytes32 _docHash = getHash(_doc);",
+        "        if(bytes(docs[_docHash]).length == 0) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        "            docs[_docHash] = _doc;",
+        "            emit NewDocument(_docHash);"
+      ],
+      "context_after": [
+        "    }",
+        "function bug_intou35() public{"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

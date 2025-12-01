@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_44.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:18:22",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code snippet": "msg.sender.call.value(1 ether))",
+      "confidence": "high",
+      "reasoning": "The function `bug_re_ent13` calls `msg.sender.call.value(1 ether)`, which sends 1 ether to the sender. However, there is no subsequent state update after this call that could be influenced by an attacker calling it multiple times from different locations."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 2,
+      "code snippet": "ProofHashes._splitMultiHash(multihashObj.hash)",
+      "confidence": "high",
+      "reasoning": "The function `_submitHash` in `Template` calls `ProofHashes._splitMultiHash`, which splits a multi-hash into individual parts. However, there is no subsequent state update after this call that could be influenced by an attacker."
+    }
+  ]
+}

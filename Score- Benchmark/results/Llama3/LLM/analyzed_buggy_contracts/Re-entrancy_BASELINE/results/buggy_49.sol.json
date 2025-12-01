@@ -1,0 +1,40 @@
+{
+  "contract": "buggy_49.sol",
+  "contract_name": "TAMC",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 34,
+      "code_snippet": "if (!(msg.sender.call.value(1 ether)('')))",
+      "confidence": "high",
+      "context_before": [
+        "      }",
+        "  string public symbol = \"TAMC\";"
+      ],
+      "context_after": [
+        "function claimReward_re_ent39() public {",
+        "        // ensure there is a reward to give"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 41,
+      "code_snippet": "(bool success,) = msg.sender.call.value(_weiToWithdraw)('');",
+      "confidence": "high",
+      "context_before": [
+        "        msg.sender.transfer(transferValue_re_ent39);   //bug",
+        "        redeemableEther_re_ent39[msg.sender] = 0;"
+      ],
+      "context_after": [
+        "  uint8 public decimals = 18;",
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);"
+      ]
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,20 @@
+{
+  "contract": "buggy_40.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:09:34",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 12,
+      "code snippet": "require(balances_re_ent17[msg.sender] >= _weiToWithdraw);",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 13,
+      "code snippet": "bool success,= msg.sender.call.value(_weiToWithdraw);",
+      "confidence": "medium"
+    }
+  ]
+}

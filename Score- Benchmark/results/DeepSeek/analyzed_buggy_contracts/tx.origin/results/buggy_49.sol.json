@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:08:40",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 1,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 2,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 3,
+      "code_snippet": "bug_txorigin8",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 4,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 5,
+      "code_snippet": "transferTo_txorigin39",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 6,
+      "code_snippet": "transferTo_txorigin31",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 7,
+      "code_snippet": "transferTo_txorigin35",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 8,
+      "code_snippet": "bug_txorigin40",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 9,
+      "code_snippet": "sendto_txorigin13",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 10,
+      "code_snippet": "transferFrom",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    }
+  ]
+}

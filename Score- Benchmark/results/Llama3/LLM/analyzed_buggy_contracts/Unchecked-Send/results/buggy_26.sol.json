@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_26.sol",
+  "contract_name": "UBBCToken",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 16,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "low",
+      "context_before": [
+        "",
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        uint256 c = a - b;",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "low",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the",
+        "        // benefit is lost if 'b' is also tested."
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 22,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "low",
+      "context_before": [
+        "",
+        "    function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        // benefit is lost if 'b' is also tested.",
+        "        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

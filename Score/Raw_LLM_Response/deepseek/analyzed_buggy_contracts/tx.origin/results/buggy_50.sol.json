@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_50.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:10:00",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 2,
+      "code_snippet": "require(tx.origin == owner_txorigin2);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple contexts, making it a vulnerability."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 10,
+      "code_snippet": "require (tx.origin == owner_txorigin17);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple contexts, making it a vulnerability."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 38,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple contexts, making it a vulnerability."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_29.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:42:02",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function transferTo_txorigin7(address to, uint amount,address owner_txorigin7) public {\n  require(tx.origin == owner_txorigin7);\n  to.call.value(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx.origin but does not check if the caller is the owner of tx_origin7 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 43,
+      "code_snippet": "function bug_txorigin20(address owner_txorigin20) public {\n  require(tx.origin == owner_txorigin20);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not verify if the caller is the owner of tx_origin20 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended behavior."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 44,
+      "code_snippet": "function bug_txorigin32(  address owner_txorigin32) public {\n  require(tx.origin == owner_txorigin32);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not check if the caller is the owner of tx_origin32 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended behavior."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code_snippet": "function bug_txorigin4(address owner_txorigin4) public {\n  require(tx.origin == owner_txorigin4);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not verify if the caller is the owner of tx_origin4 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended behavior."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 46,
+      "code_snippet": "function bug_txorigin36(  address owner_txorigin36) public {\n  require(tx.origin == owner_txorigin36);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not check if the caller is the owner of tx_origin36 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended behavior."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 47,
+      "code_snippet": "function transferTo_txorigin19(address to, uint amount,address owner_txorigin19) public {\n  require(tx.origin == owner_txorigin19);\n  to.call.value(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not check if the caller is the owner of tx_origin19 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 48,
+      "code_snippet": "function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {\n  require(tx.origin == owner_txorigin13);\n  receiver.transfer(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not verify if the caller is the owner of tx_origin13 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 49,
+      "code_snippet": "function transferTo_txorigin27(address to, uint amount,address owner_txorigin27) public {\n  require(tx.origin == owner_txorigin27);\n  to.call.value(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not check if the caller is the owner of tx_origin27 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 50,
+      "code_snippet": "function transferTo_txorigin31(address to, uint amount,address owner_txorigin31) public {\n  require(tx.origin == owner_txorigin31);\n  to.call.value(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not verify if the caller is the owner of tx_origin31 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 51,
+      "code_snippet": "function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public {\n  require(tx.origin == owner_txorigin33);\n  receiver.transfer(amount);\n}",
+      "confidence": "high",
+      "reasoning": "This function requires tx_origin but does not check if the caller is the owner of tx_origin33 beyond that. This could allow external parties with matching tx_origin to execute this function, leading to unintended token transfers."
+    }
+  ]
+}

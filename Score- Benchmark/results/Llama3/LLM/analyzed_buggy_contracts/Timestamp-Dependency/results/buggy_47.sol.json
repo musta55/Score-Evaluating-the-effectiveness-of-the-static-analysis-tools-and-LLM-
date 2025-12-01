@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_47.sol",
+  "contract_name": "has",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract ERC20Interface {"
+      ],
+      "context_after": [
+        "function bug_tmstmp25() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "if (now % 15 == 0) { // winner //bug",
+      "confidence": "high",
+      "context_before": [
+        "function bug_tmstmp25() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ],
+      "context_after": [
+        "    function balanceOf(address tokenOwner) public view returns (uint balance);",
+        "address winner_tmstmp19;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "if(now % 15 == 0) { // winner //bug",
+      "confidence": "high",
+      "context_before": [
+        "address winner_tmstmp19;",
+        "function play_tmstmp19(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp19 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp19 = msg.sender;}}"
+      ],
+      "context_after": [
+        "address winner_tmstmp26;",
+        "function play_tmstmp26(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "if (now % 15 == 0) { // winner //bug",
+      "confidence": "high",
+      "context_before": [
+        "address winner_tmstmp26;",
+        "function play_tmstmp26(uint startTime) public {"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp26 = msg.sender;}}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        ""
+      ],
+      "context_after": [
+        "function bug_tmstmp20 () public payable {",
+        "\tuint pastBlockTime_tmstmp20; // Forces one bet per block"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "if (now % 15 == 0) { // winner //bug",
+      "confidence": "high",
+      "context_before": [
+        "function bug_tmstmp20 () public payable {",
+        "\tuint pastBlockTime_tmstmp20; // Forces one bet per block"
+      ],
+      "context_after": [
+        "        require(now != pastBlockTime_tmstmp20); // only 1 transaction per block   //bug",
+        "        pastBlockTime_tmstmp20 = now;       //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require(block.timestamp >= 1546300800);",
+      "confidence": "high",
+      "context_before": [
+        "        require(now != pastBlockTime_tmstmp20); // only 1 transaction per block   //bug",
+        "        pastBlockTime_tmstmp20 = now;       //bug"
+      ],
+      "context_after": [
+        "            msg.sender.transfer(address(this).balance);",
+        "        }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "if (block.timestamp > saleEnd) {",
+      "confidence": "high",
+      "context_before": [
+        "            msg.sender.transfer(address(this).balance);",
+        "        }"
+      ],
+      "context_after": [
+        "    function approve(address spender, uint tokens) public returns (bool success);",
+        "function bug_tmstmp32 () public payable {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require(block.timestamp >= 1546300800);",
+      "confidence": "high",
+      "context_before": [
+        "    function approve(address spender, uint tokens) public returns (bool success);",
+        "function bug_tmstmp32 () public payable {"
+      ],
+      "context_after": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp32); // only 1 transaction per block   //bug"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

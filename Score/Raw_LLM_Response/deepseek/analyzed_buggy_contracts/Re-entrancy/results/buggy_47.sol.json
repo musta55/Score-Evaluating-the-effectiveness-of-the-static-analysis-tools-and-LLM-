@@ -1,0 +1,20 @@
+{
+  "contract": "buggy_47.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:30:47",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 42,
+      "code snippet": "function withdrawFunds_re_ent24 (uint256 _weiToWithdraw) public {\n        require(balances_re_ent24[msg.sender] >= _weiToWithdraw);\n        // limit the withdrawal\n        require(msg.sender.send(_weiToWithdraw));  //bug\n        balances_re_ent24[msg.sender] -= _weiToWithdraw;\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 38,
+      "code snippet": "function withdrawFunds_re_ent31 (uint256 _weiToWithdraw) public {\n        require(balances_re_ent31[msg.sender] >= _weiToWithdraw);\n        // limit the withdrawal\n        require(msg.sender.send(_weiToWithdraw));  //bug\n        balances_re_ent31[msg.sender] -= _weiToWithdraw;\n    }\n",
+      "confidence": "high"
+    }
+  ]
+}

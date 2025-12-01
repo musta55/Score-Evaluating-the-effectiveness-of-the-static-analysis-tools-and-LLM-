@@ -1,0 +1,346 @@
+{
+  "contract": "buggy_38.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);"
+      ],
+      "context_after": [
+        "",
+        "library SafeMath {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    uint256 c = a / b;",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require(now != pastBlockTime_tmstmp36); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return a - b;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require(now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a + b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  function ceil(uint256 a, uint256 m) internal pure returns (uint256) {",
+        "    uint256 c = add(a,m);"
+      ],
+      "context_after": [
+        "    return mul(div(d,m),m);",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "uint256 bugv_tmstmp1 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract ERC20Detailed is IERC20 {"
+      ],
+      "context_after": [
+        "function bug_tmstmp17() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 59,
+      "code_snippet": "uint256 bugv_tmstmp2 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  string private _name;",
+        "function bug_tmstmp37() view public returns (bool) {"
+      ],
+      "context_after": [
+        "  }",
+        "  string private _symbol;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "uint256 bugv_tmstmp3 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "function play_tmstmp3(uint startTime) public {",
+        "\tuint _vtime = block.timestamp;"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp3 = msg.sender;}}",
+        "  uint8 private _decimals;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "uint256 bugv_tmstmp4 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  constructor(string memory name, string memory symbol, uint8 decimals) public {",
+        "    _name = name;"
+      ],
+      "context_after": [
+        "    _decimals = decimals;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  function approve(address spender, uint256 value) external returns (bool);",
+        "  function transferFrom(address from, address to, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "medium",
+      "context_before": [
+        "library SafeMath {",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "      return 0;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "medium",
+      "context_before": [
+        "      return 0;",
+        "    }"
+      ],
+      "context_after": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "medium",
+      "context_before": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "if(now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "require(now != pastBlockTime_tmstmp20); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "if(now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    uint256 c = a + b;",
+        "    assert(c >= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "require(now != pastBlockTime_tmstmp32); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a + b;",
+        "    assert(c >= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "if(now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    uint256 c = add(a,m);",
+        "    uint256 d = sub(c,1);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "require(now != pastBlockTime_tmstmp40); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = add(a,m);",
+        "    uint256 d = sub(c,1);"
+      ],
+      "context_after": [
+        "  }",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

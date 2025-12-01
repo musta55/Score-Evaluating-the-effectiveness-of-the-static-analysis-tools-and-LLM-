@@ -1,0 +1,85 @@
+{
+  "contract": "buggy_22.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:13:14",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "uint64 subpot_unchk22 = 3 ether;",
+      "confidence": "high",
+      "reasoning": "Missing null check before sending ether to `subpot_unchk22` address."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "if (!addr_unchk19.send (10 ether) || 1==1)",
+      "confidence": "high",
+      "reasoning": "Missing null check before sending ether to `addr_unchk19` address."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 52,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "uint64 Balances_unchk17 = 0;",
+      "confidence": "medium",
+      "reasoning": "Missing check for `msg.sender` validity before sending ether."
+    }
+  ]
+}

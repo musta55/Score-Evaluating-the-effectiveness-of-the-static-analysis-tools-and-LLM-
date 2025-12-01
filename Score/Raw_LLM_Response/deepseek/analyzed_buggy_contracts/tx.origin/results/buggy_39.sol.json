@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_39.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:57:03",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 15,
+      "code_snippet": "function bug_txorigin8(address owner_txorigin8) public{\n        require(tx.origin == owner_txorigin8);\n    }",
+      "confidence": "high",
+      "reasoning": "Only checks tx.origin without additional validation."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 39,
+      "code_snippet": "function bug_txorigin40(address owner_txorigin40) public{\n        require(tx.origin == owner_txorigin40);\n    }",
+      "confidence": "high",
+      "reasoning": "Only checks tx.origin without additional validation."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 36,
+      "code_snippet": "function bug_txorigin36(  address owner_txorigin36) public{\n        require(tx.origin == owner_txorigin36);\n    }",
+      "confidence": "high",
+      "reasoning": "Only checks tx.origin without additional validation."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function bug_txorigin8(address owner_txorigin8) public{\n        require(tx.origin == owner_txorigin8);\n    }",
+      "confidence": "high",
+      "reasoning": "Only checks tx.origin without additional validation."
+    }
+  ]
+}

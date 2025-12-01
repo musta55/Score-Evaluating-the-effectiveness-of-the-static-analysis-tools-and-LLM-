@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_15.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:17:06",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 34,
+      "code_snippet": "function _transfer(address _from, address _to, uint _value) internal {\n        // Prevent transfer to 0x0 address. Use burn() instead\n        require(_to != address(0x0));\n        // Check if the sender has enough\n        require(balanceOf[_from] >= _value);\n        // Check for overflows\n        require(balanceOf[_to] + _value >= balanceOf[_to]);\n        // Save this for an assertion in the future\n        uint previousBalances = balanceOf[_from] + balanceOf[_to];\n        // Subtract from the sender\n        balanceOf[_from] -= _value;\n        // Add the same to the recipient\n        balanceOf[_to] += _value;\n        emit Transfer(_from, _to, _value);\n        // Asserts are used to use static analysis to find bugs in your code. They should never fail\n        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);\n    }",
+      "confidence": "medium",
+      "reasoning": "The internal transfer function lacks a tx.origin check, allowing any address to send transactions."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 58,
+      "code_snippet": "function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {\n        require(_value <= allowance[_from][msg.sender]);     // Check allowance\n        allowance[_from][msg.sender] -= _value;\n        _transfer(_from, _to, _value);\n        return true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The transferFrom function does not check tx.origin on the caller."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 75,
+      "code_snippet": "function approve(address _spender, uint256 _value) public\n        returns (bool success) {\n        allowance[msg.sender][_spender] = _value;\n        emit Approval(msg.sender, _spender, _value);\n        return true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The approve function does not require tx.origin on the caller."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 82,
+      "code_snippet": "function approveAndCall(address _spender, uint256 _value, bytes memory _extraData)\n        public\n        returns (bool success) {\n        tokenRecipient spender = tokenRecipient(_spender);\n        if (approve(_spender, _value)) {\n            spender.receiveApproval(msg.sender, _value, address(this), _extraData);\n            return true;\n        }\n    }",
+      "confidence": "medium",
+      "reasoning": "The approveAndCall function does not check tx.origin on the caller."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 102,
+      "code_snippet": "function burn(uint256 _value) public returns (bool success) {\n        require(balanceOf[msg.sender] >= _value);   // Check if the sender has enough\n        balanceOf[msg.sender] -= _value;            // Subtract from the sender\n        totalSupply -= _value;                      // Updates totalSupply\n        emit Burn(msg.sender, _value);\n        return true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The burn function lacks a tx.origin check."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 120,
+      "code_snippet": "function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public {\n        require (tx.origin == owner_txorigin33);\n        receiver.transfer(amount);\n    }",
+      "confidence": "high",
+      "reasoning": "The sendto_txorigin33 function checks tx.origin correctly."
+    }
+  ]
+}

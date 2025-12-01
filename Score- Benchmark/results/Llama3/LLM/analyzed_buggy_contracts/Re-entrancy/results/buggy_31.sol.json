@@ -1,0 +1,74 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 6,
+      "code_snippet": "require(msg.sender.send(_weiToWithdraw));  //bug}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        ""
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 12,
+      "code_snippet": "if (msg.sender.send(balances_re_ent36[msg.sender ]))",
+      "confidence": "high",
+      "context_before": [
+        "    function transferFrom(address from, address to, uint256 value) external returns (bool);",
+        "}"
+      ],
+      "context_after": [
+        "interface Marmo {",
+        "    function signer() external view returns (address _signer);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 16,
+      "code_snippet": "if (!(lastPlayer_re_ent30.send(jackpot_re_ent30)))",
+      "confidence": "high",
+      "context_before": [
+        "    function signer() external view returns (address _signer);",
+        "}"
+      ],
+      "context_after": [
+        "/**",
+        " * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations."
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(transferValue_re_ent4);   //bug}",
+      "confidence": "high",
+      "context_before": [
+        " * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations.",
+        " *"
+      ],
+      "context_after": [
+        " * of the private keys of a given address.",
+        " */"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

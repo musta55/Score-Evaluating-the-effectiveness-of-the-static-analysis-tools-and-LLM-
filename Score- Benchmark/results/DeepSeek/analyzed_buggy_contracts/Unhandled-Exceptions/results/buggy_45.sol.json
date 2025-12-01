@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_45.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:25:15",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44);",
+      "confidence": "high",
+      "reasoning": "The send function may fail if insufficient ether is sent, leading to an unhandled exception."
+    },
+    {
+      "bug_type": 15,
+      "line_number": 28,
+      "code_snippet": "UncheckedExternalCall_unchk4() { address payable addr_unchk4; if (!addr_unchk4.send (42 ether))  // comment1; else  //comment2; }",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where addr_unchk4.send(42 ether) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 37,
+      "line_number": 65,
+      "code_snippet": "addr.send (10 ether);",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where addr.send(10 ether) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 83,
+      "line_number": 97,
+      "code_snippet": "sendToWinner_unchk4() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where winner_unchk4.send(winAmount_unchk4) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 107,
+      "line_number": 123,
+      "code_snippet": "sendToWinner_unchk8() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where winner_unchk8.send(winAmount_unchk8) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 137,
+      "line_number": 145,
+      "code_snippet": "sendToWinner_unchk32() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where winner_unchk32.send(winAmount_unchk32) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 157,
+      "line_number": 169,
+      "code_snippet": "my_func_uncheck48(address payable dst) public payable",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where dst.call.value(msg.value) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 179,
+      "line_number": 203,
+      "code_snippet": "bug_unchk4() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where addr.send(42 ether) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 193,
+      "line_number": 208,
+      "code_snippet": "bug_unchk7() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where addr_unchk7.send(10 ether) fails, potentially leading to an unhandled exception."
+    },
+    {
+      "bug_type": 205,
+      "line_number": 213,
+      "code_snippet": "bug_unchk19() public",
+      "confidence": "high",
+      "reasoning": "The function does not handle the case where addr_unchk19.send(10 ether) fails, potentially leading to an unhandled exception."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_42.sol",
+  "contract_name": "Owned",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "",
+        "function increaseLockTime_intou17(uint _secondsToIncrease) public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    constructor() public {",
+        "        owner = msg.sender;"
+      ],
+      "context_after": [
+        "function bug_intou32(uint8 p_intou32) public{",
+        "    uint8 vundflw1=0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 9,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "contract Owned {",
+        "  mapping(address => uint) balances_intou2;"
+      ],
+      "context_after": [
+        "function transfer_undrflow2(address _to, uint _value) public returns (bool) {",
+        "    require(balances_intou2[msg.sender] - _value >= 0);  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "        require(now > lockTime_intou17[msg.sender]);",
+        "        uint transferValue_intou17 = 10;"
+      ],
+      "context_after": [
+        "    }",
+        "  address public newOwner;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "staker[msg.sender].time = now;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "    modifier onlyOwner {"
+      ],
+      "context_after": [
+        "        _;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "staker[msg.sender].tokens =  staker[msg.sender].tokens + stakeTokens;",
+      "confidence": "medium",
+      "context_before": [
+        "        require(msg.sender == owner || msg.sender == address(this));",
+        "        _;"
+      ],
+      "context_after": [
+        "",
+        "    function transferOwnership(address _newOwner) public onlyOwner {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

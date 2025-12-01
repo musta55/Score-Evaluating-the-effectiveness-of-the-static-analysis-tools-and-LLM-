@@ -1,0 +1,26 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 4,
+      "code_snippet": "winner_TOD39 = msg.sender;",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Friday, April 26, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity >=0.4.21 < 0.6.0;",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

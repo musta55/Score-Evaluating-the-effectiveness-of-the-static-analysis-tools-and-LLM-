@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_47.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:34:24",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "require(payedOut_unchk9);",
+      "confidence": "high",
+      "reasoning": "The withdrawLeftOver function does not handle the possibility of an error occurring during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "winner_unchk10.send(subpot_unchk10);",
+      "confidence": "high",
+      "reasoning": "The cash function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 22,
+      "code_snippet": "winner_unchk22.send(subpot_unchk22);",
+      "confidence": "high",
+      "reasoning": "The cash function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 46,
+      "code_snippet": "winner_unchk46.send(subpot_unchk46);",
+      "confidence": "high",
+      "reasoning": "The cash function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "addr_unchk7.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The bug function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 34,
+      "code_snippet": "winner_unchk34.send(subpot_unchk34)",
+      "confidence": "high",
+      "reasoning": "The cash function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "addr_unchk42.send(42 ether)",
+      "confidence": "high",
+      "reasoning": "The bug function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "addr_unchk43.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The bug function does not handle the possibility of an error during the send operation."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 2,
+      "code_snippet": "transferFrom",
+      "confidence": "high",
+      "reasoning": "The transferFrom function calls a super function without proper error handling."
+    }
+  ]
+}

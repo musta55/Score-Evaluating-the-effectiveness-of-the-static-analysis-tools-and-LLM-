@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_29.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 10:55:26",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code_snippet": "function play_TOD8(bytes32 guess) public {\n        if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD8 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD8 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 32,
+      "code_snippet": "function play_TOD13(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD13 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD13 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 40,
+      "code_snippet": "function play_TOD39(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD39 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD39 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 40,
+      "code_snippet": "function play_TOD40(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD40 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD40 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 32,
+      "code_snippet": "function play_TOD19(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD19 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD19 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 32,
+      "code_snippet": "function play_TOD26(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD26 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD26 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 32,
+      "code_snippet": "function play_TOD32(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD32 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD32 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 40,
+      "code_snippet": "function play_TOD8(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD8 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD8 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 40,
+      "code_snippet": "function play_TOD13(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD13 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD13 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 40,
+      "code_snippet": "function play_TOD39(bytes32 guess) public {\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD39 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium",
+      "reasoning": "The play_TOD39 function lacks parameter validation beyond checking the guess is 'hello'. This allows arbitrary inputs to bypass validation, leading to potential injection attacks."
+    }
+  ]
+}

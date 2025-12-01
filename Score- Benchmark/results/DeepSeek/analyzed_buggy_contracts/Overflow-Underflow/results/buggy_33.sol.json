@@ -1,0 +1,99 @@
+{
+  "contract": "buggy_33.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:07:00",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "balances_intou2[msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtracting a value from an unsigned integer without checking if it exceeds the maximum value, leading to underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "balances_intou2[_to] += _value;",
+      "confidence": "medium",
+      "reasoning": "Adding a value without checking if it exceeds the maximum, but less likely to cause overflow than subtraction."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from an uint8 variable without bounds checking, leading to immediate underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 24,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "reasoning": "Adding to an unsigned integer without overflow checks, potentially causing incorrect timing."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 54,
+      "code_snippet": "staker[msg.sender].time = now;",
+      "confidence": "medium",
+      "reasoning": "Incrementing time without overflow checks, but less likely to cause issues than other operations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "staker[msg.sender].redeem = true;",
+      "confidence": "low",
+      "reasoning": "Assigning a boolean without overflow, unlikely to cause issues."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 74,
+      "code_snippet": "staker[msg.sender].time + stakeTime <= now;",
+      "confidence": "medium",
+      "reasoning": "Adding two unsigned integers without overflow checks, but less likely to cause issues than other operations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 84,
+      "code_snippet": "token.transfer(msg.sender,staker[msg.sender].tokens);",
+      "confidence": "low",
+      "reasoning": "Token transfer without overflow, unlikely to cause issues."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 94,
+      "code_snippet": "staker[msg.sender].redeem = true;",
+      "confidence": "low",
+      "reasoning": "Assigning a boolean without overflow, unlikely to cause issues."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 104,
+      "code_snippet": "changeStakingTokens(uint256 _NewTokensThreshold) public onlyOwner{ minstakeTokens = _NewTokensThreshold * 10 ** uint(10);}",
+      "confidence": "high",
+      "reasoning": "Multiplying a uint256 by an exponent without overflow checks, potentially causing incorrect token thresholds."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 114,
+      "code_snippet": "changeStakeTime(uint256 _newStakeTime) public onlyOwner{ stakeTime = _newStakeTime;}",
+      "confidence": "high",
+      "reasoning": "Assigning a new value to `stakeTime` without overflow checks, but less likely than other operations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 124,
+      "code_snippet": "changeStakingPercentage(uint _newStakePercentage) public onlyOwner{ stakePercentage = _newStakePercentage;}",
+      "confidence": "high",
+      "reasoning": "Assigning a new value to `stakePercentage` without overflow checks, but less likely than other operations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 134,
+      "code_snippet": "lock = true;",
+      "confidence": "low",
+      "reasoning": "Assigning a boolean without overflow, unlikely to cause issues."
+    }
+  ]
+}

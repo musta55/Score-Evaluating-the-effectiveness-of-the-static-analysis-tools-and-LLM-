@@ -1,0 +1,26 @@
+{
+  "contract": "buggy_45.sol",
+  "contract_name": "StockBet",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 143,
+      "code_snippet": "state = State.PLAYERS_WIN;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        mapping (address => PaidStatus) players;",
+        "        uint guesses_number;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

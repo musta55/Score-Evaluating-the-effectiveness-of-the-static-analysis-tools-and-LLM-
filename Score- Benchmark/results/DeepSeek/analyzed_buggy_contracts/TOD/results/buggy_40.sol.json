@@ -1,0 +1,14 @@
+{
+  "contract": "buggy_40.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:37:06",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 14,
+      "code snippet": "function requireNo(uint256 a, uint256 b) internal public returns (uint256) {\n        require(carry(a, b) == carry(a, a));\n        // No overflow\n        return c;\n    }",
+      "confidence": "high|medium"
+    }
+  ]
+}

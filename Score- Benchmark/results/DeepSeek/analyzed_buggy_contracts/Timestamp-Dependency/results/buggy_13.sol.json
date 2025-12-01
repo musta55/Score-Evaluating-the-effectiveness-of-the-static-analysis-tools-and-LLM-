@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:33:07",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "This line checks if the block time matches a certain timestamp but doesn't wait for confirmation before updating pastBlockTime, allowing multiple transactions within 15 seconds."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "reasoning": "This line updates pastBlockTime immediately after the check, creating a race condition that allows multiple transactions in less than 15 seconds."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "reasoning": "Same as above, allowing multiple transactions within a short timeframe."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp36 = now;",
+      "confidence": "high",
+      "reasoning": "This line updates pastBlockTime immediately after the check, creating a race condition that allows multiple transactions in less than 15 seconds."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp40 = now;",
+      "confidence": "high",
+      "reasoning": "Same as above, allowing multiple transactions within a short timeframe."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "reasoning": "Same as above, allowing multiple transactions within a short timeframe."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "reasoning": "Same as above, allowing multiple transactions within a short timeframe."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "reasoning": "Same as above, allowing multiple transactions within a short timeframe."
+    }
+  ]
+}

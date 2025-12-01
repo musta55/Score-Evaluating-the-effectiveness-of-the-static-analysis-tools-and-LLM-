@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_14.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:48:30",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "_transfer(msg.sender, to, value)",
+      "confidence": "high",
+      "reasoning": "No sender address validation in _transfer() method."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 58,
+      "code_snippet": "_approve(from, msg.sender, _allowed[from][msg.sender].sub(value))",
+      "confidence": "high",
+      "reasoning": "No sender balance check before transfer."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 74,
+      "code_snippet": "_approve(msg.sender, spender, value)",
+      "confidence": "high",
+      "reasoning": "No sender address validation in _approve()."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 86,
+      "code_snippet": "_burn(msg.sender, value)",
+      "confidence": "high",
+      "reasoning": "No caller address validation when burning tokens."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 102,
+      "code_snippet": "_mint(address(0), add(value))",
+      "confidence": "high",
+      "reasoning": "No minter address validation in mint()."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 47,
+      "code_snippet": "_approve(msg.sender, spender, value)",
+      "confidence": "high",
+      "reasoning": "No sender balance check before approval."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 109,
+      "code_snippet": "_burn(address(0), value)",
+      "confidence": "high",
+      "reasoning": "No caller address validation in burn()."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 24,
+      "code_snippet": "_approve(msg.sender, spender, value)",
+      "confidence": "high",
+      "reasoning": "No sender balance check before approval."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 2,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "/**"
+      ],
+      "context_after": [
+        " (UTC) */",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 5,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract DocumentSigner {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 8,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract DocumentSigner {"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping(bytes32=>string) public docs;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 11,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping(bytes32=>string) public docs;"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping(bytes32=>address[]) public signers;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping(bytes32=>address[]) public signers;"
+      ],
+      "context_after": [
+        "    modifier validDoc(bytes32 _docHash) {",
+        "        require(bytes(docs[_docHash]).length != 0, \"Document is not submitted\");"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 17,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    modifier validDoc(bytes32 _docHash) {",
+        "        require(bytes(docs[_docHash]).length != 0, \"Document is not submitted\");"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

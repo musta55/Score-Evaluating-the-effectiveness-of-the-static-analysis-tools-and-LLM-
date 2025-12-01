@@ -1,0 +1,266 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "     * if the signer is otherwise unable to be retrieved. In those scenarios,",
+        "     * the zero address is returned."
+      ],
+      "context_after": [
+        "     * IMPORTANT: `hash` _must_ be the result of a hash operation for the",
+        "     * verification to be secure: it is possible to craft signatures that"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "bugv_tmstmp3 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "        // Check the signature length",
+        "        if (signature.length != 65) {"
+      ],
+      "context_after": [
+        "        }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 61,
+      "code_snippet": "require(block.timestamp >= 1546300800); //bug",
+      "confidence": "high",
+      "context_before": [
+        "            v := byte(0, mload(add(signature, 0x60)))",
+        "        }"
+      ],
+      "context_after": [
+        "        // EIP-2 still allows signature malleability for ecrecover(). Remove this possibility and make the signature",
+        "        // unique. Appendix F in the Ethereum Yellow paper (https://ethereum.github.io/yellowpaper/paper.pdf), defines"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 76,
+      "code_snippet": "function bug_tmstmp33() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        if (v != 27 && v != 28) {"
+      ],
+      "context_after": [
+        "        }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 101,
+      "code_snippet": "uint256 bugv_tmstmp2 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\t\twinner_tmstmp23 = msg.sender;}}",
+        "  address private _owner;"
+      ],
+      "context_after": [
+        "  uint256 bugv_tmstmp3 = block.timestamp;",
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 144,
+      "code_snippet": "require(block.timestamp >= 1546300800); //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function isOwner() public view returns (bool) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 158,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "     * @dev Transfers ownership of the contract to a new account (`newOwner`).",
+        "     * Can only be called by the current owner."
+      ],
+      "context_after": [
+        "    function transferOwnership(address newOwner) public onlyOwner {",
+        "        _transferOwnership(newOwner);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 165,
+      "code_snippet": "require(block.timestamp >= 1546300800); //bug",
+      "confidence": "high",
+      "context_before": [
+        "\tuint pastBlockTime_tmstmp40; // Forces one bet per block",
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play"
+      ],
+      "context_after": [
+        "        pastBlockTime_tmstmp40 = now;       //bug",
+        "        if(now % 15 == 0) { // winner    //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 174,
+      "code_snippet": "function bug_tmstmp13() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "high",
+      "context_before": [
+        "    /**",
+        "     * @dev Transfers ownership of the contract to a new account (`newOwner`)."
+      ],
+      "context_after": [
+        "    function _transferOwnership(address newOwner) internal {",
+        "        require(newOwner != address(0), \"Ownable: new owner is the zero address\");"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 183,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "    return block.timestamp >= 1546300800;",
+        "  }"
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "interface Marmo {"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "    function signer() external view returns (address _signer);",
+        "}"
+      ],
+      "context_after": [
+        "/**",
+        " * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations."
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        " * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations.",
+        " *"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " *",
+        " * These functions can be used to verify that a message was signed by the holder"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "require(tx.origin == relayer, \"Invalid transaction origin\")",
+      "confidence": "high",
+      "context_before": [
+        " * of the private keys of a given address.",
+        " */"
+      ],
+      "context_after": [
+        "    /**",
+        "     * @dev Returns the address that signed a hashed message (`hash`) with"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "require(block.timestamp >= 1546300800); //bug_tmstmp33() view public returns (bool) {",
+      "confidence": "high",
+      "context_before": [
+        "     *",
+        "     * The `ecrecover` EVM opcode allows for malleable (non-unique) signatures:"
+      ],
+      "context_after": [
+        "     * half order, and the `v` value to be either 27 or 28.",
+        "     *"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

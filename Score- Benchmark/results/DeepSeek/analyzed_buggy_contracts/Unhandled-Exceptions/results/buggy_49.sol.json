@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:47:50",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "addr.send (4 ether);",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk39 uses addr.send without any try-catch or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 28,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk27 uses addr.send without any try-catch or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "addr.send (10 ether)",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk31 uses addr.send without any try-catch or return value check, making it vulnerable to unhandled exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr.send (2 ether)",
+      "confidence": "medium",
+      "reasoning": "The function UncheckedExternalCall_unchk40 uses addr.send without any try-catch or return value check, making it vulnerable to unhandled exceptions."
+    }
+  ]
+}

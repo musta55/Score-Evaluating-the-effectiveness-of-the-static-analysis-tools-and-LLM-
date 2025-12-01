@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "uint256 date;",
+        "address filesender;"
+      ],
+      "context_after": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "BlockchainIdentification identifier;",
+        "}function bug_unchk_send23() payable public{"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 34,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 _date = now;",
+        "        bytes32 QRCodeHash = generateQRCodeForFile(dappBoxOrigin,_fileHash,_filePathHash,_contractAddress ,_identifier);"
+      ],
+      "context_after": [
+        "        newInfo.filesender = dappBoxOrigin;",
+        "        newInfo.fileHash = _fileHash;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 42,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        newInfo.QRCodeHash = QRCodeHash;",
+        ""
+      ],
+      "context_after": [
+        "        return QRCodeHash;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 54,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    function GetFileExistenceProof(address dappBoxOrigin,string memory fileHash, string memory filePathHash) public view returns(uint256,address,address,BlockchainIdentification,bytes32) {",
+        ""
+      ],
+      "context_after": [
+        "        {",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 62,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "            {",
+        "                return( fileExistenceProofs[dappBoxOrigin][i].date,"
+      ],
+      "context_after": [
+        "                fileExistenceProofs[dappBoxOrigin][i].contractAddress,",
+        "                fileExistenceProofs[dappBoxOrigin][i].identifier,"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 70,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function bug_unchk_send30() payable public{"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_3.sol",
+  "contract_name": "CareerOnToken",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        "    }"
+      ],
+      "context_after": [
+        "  address winner_tmstmp38;",
+        "function play_tmstmp38(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "  string public name;                   //\u540d\u79f0\uff0c\u4f8b\u5982\"My test token\"",
+        "  function bug_tmstmp4 () public payable {"
+      ],
+      "context_after": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp4); // only 1 transaction per block   //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "            msg.sender.transfer(address(this).balance);",
+        "        }"
+      ],
+      "context_after": [
+        "  uint8 public decimals;               //\u8fd4\u56detoken\u4f7f\u7528\u7684\u5c0f\u6570\u70b9\u540e\u51e0\u4f4d\u3002\u6bd4\u5982\u5982\u679c\u8bbe\u7f6e\u4e3a3\uff0c\u5c31\u662f\u652f\u63010.001\u8868\u793a.",
+        "  address winner_tmstmp7;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp7 = msg.sender;}}"
+      ],
+      "context_after": [
+        "  address winner_tmstmp23;",
+        "function play_tmstmp23(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "\t\twinner_tmstmp23 = msg.sender;}}",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "  address winner_tmstmp14;",
+        "function play_tmstmp14(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 59,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => uint256) internal balances;",
+        "  address winner_tmstmp30;"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == block.timestamp){",
+        "\t\twinner_tmstmp30 = msg.sender;}}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

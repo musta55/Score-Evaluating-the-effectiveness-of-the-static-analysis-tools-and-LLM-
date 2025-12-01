@@ -1,0 +1,57 @@
+{
+  "contract": "buggy_37.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:30:26",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp37() checks if the current timestamp is greater than or equal to a fixed value without any delay, allowing multiple calls within the same block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 9,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp9() checks the same timestamp condition without any safeguards against multiple calls."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 25,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp25() also checks the timestamp without any mechanism to prevent multiple triggers."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 29,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp29() checks the timestamp without any delay, allowing potential replay attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 8,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp8() lacks any delay mechanism, making it vulnerable to replay attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 36,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp36() also doesn't have any safeguards against multiple calls."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 32,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "The function bug_tmstmp32() lacks any delay, increasing the risk of replay attacks."
+    }
+  ]
+}

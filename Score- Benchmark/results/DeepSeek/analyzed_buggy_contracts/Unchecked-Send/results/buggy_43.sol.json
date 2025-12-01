@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_43.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:58:29",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 16,
+      "code_snippet": "address private _operator; function bug_unchk_send27() payable public{\n      msg.sender.transfer(1 ether);\n}",
+      "confidence": "high",
+      "reasoning": "send operation without return value"
+    },
+    {
+      "bug_type": "Unchecked-Call",
+      "line_number": 31,
+      "code_snippet": "function bug_unchk_send31() payable public{\n      msg.sender.transfer(1 ether);\n}",
+      "confidence": "high",
+      "reasoning": "low-level call with value:... parameter"
+    },
+    {
+      "bug_type": "Unchecked-Call",
+      "line_number": 27,
+      "code_snippet": "function bug_unchk_send27() payable public{\n      msg.sender.transfer(1 ether);\n}",
+      "confidence": "high",
+      "reasoning": "low-level call with value:... parameter"
+    },
+    {
+      "bug_type": "Unchecked-Call",
+      "line_number": 30,
+      "code_snippet": "function bug_unchk_send30() payable public{\n      msg.sender.transfer(1 ether);\n}",
+      "confidence": "high",
+      "reasoning": "low-level call with value:... parameter"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_7.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 05:38:51",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk27 calls addr.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 19,
+      "code_snippet": "addr.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk19 calls addr.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 3,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk7 calls addr.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 19,
+      "code_snippet": "call.value(1 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls callee.call.value without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 27,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls addr.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 19,
+      "code_snippet": "call.value(5 ether)",
+      "confidence": "high",
+      "reasoning": "The function unhandledsend_unchk26 calls callee.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 38,
+      "code_snippet": "call.value(1 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk30 calls addr.send without exception handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "sendToWinner_unchk8",
+      "confidence": "high",
+      "reasoning": "The function sendToWinner_unchk8 does not handle potential exceptions from the external call."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "send(2 ether)",
+      "confidence": "high",
+      "reasoning": "The function UncheckedExternalCall_unchk4 does not handle exceptions from the external call."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 39,
+      "code_snippet": "send(4 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk39 calls addr.send without exception handling."
+    }
+  ]
+}

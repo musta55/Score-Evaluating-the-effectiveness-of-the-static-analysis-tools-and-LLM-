@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_37.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:02:21",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": ".call() addresses external calls without try-catch or return value checks.",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "address.call(value(1 ether)) in callnotchecked_unchk37()",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr.send(2 ether) in UncheckedExternalCall_unchk40()",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": ".call() addresses external calls without try-catch or return value checks.",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 20,
+      "code_snippet": "address.call() in withdrawBal_unchk17() and balanceOf()",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "call.value(1 ether) in callnotchecked_unchk25()",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 46,
+      "code_snippet": "send(3 ether) in cash_unchk46()",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 7,
+      "code_snippet": "addr.send(10 ether) in bug_unchk7()",
+      "confidence": "medium"
+    }
+  ]
+}

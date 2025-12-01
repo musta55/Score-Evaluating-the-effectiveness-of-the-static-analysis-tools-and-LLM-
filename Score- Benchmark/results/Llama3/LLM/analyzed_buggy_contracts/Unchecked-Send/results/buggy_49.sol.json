@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_49.sol",
+  "contract_name": "TAMC",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 3,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " *Submitted for verification at Etherscan.io on 2019-09-23"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity ^0.5.11;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 5,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract TAMC {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 7,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "pragma solidity ^0.5.11;",
+        ""
+      ],
+      "context_after": [
+        "  function bug_unchk_send20() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send32() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "  function bug_unchk_send4() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 31,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        emit Transfer(address(0), msg.sender, totalSupply);",
+        "    }"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

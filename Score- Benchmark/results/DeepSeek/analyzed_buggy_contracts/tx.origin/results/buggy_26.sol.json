@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_26.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:37:27",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 14,
+      "code_snippet": "function withdrawAll_txorigin26(address payable _recipient,address owner_txorigin26) public {\n        require(tx.origin == owner_txorigin26);\n        _recipient.transfer(address(this).balance);\n    }",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check in withdrawAll_txorigin26 function."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 38,
+      "code_snippet": "function bug_txorigin20(address owner_txorigin20) public{\n        require(tx.origin == owner_txorigin20);\n    }",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check in bug_txorigin20 function."
+    }
+  ]
+}

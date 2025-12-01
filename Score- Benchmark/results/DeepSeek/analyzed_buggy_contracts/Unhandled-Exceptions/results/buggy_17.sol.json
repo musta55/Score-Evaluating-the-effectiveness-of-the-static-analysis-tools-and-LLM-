@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_17.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:53:10",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "addr_unchk3.send(42 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "addr_unchk7.send(10 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "addr_unchk30.send(42 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 50,
+      "code_snippet": "callee.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 60,
+      "code_snippet": "dst.send(msg.value)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 75,
+      "code_snippet": "addr_unchk14.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 80,
+      "code_snippet": "addr_unchk26.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code_snippet": "addr_unchk38.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 90,
+      "code_snippet": "UncheckedExternalCall_unchk4",
+      "confidence": "medium",
+      "reasoning": "External call not wrapped in require or try-catch."
+    }
+  ]
+}

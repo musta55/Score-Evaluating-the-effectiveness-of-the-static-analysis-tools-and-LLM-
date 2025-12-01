@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_1.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:36:57",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct token transfer without balance check."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 58,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct token transfer without balance check."
+    }
+  ]
+}

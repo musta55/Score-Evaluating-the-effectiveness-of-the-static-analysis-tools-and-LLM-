@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_32.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:29:52",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": -1,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Operations that transfer ether do not return a value, so their return values are unchecked."
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "contract": "buggy_28.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    assert(b <= a);",
+        "    return a - b;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 64,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "  string private _name;",
+        "function bug_intou12(uint8 p_intou12) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou12;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 78,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "    _symbol = symbol;",
+        "    _decimals = decimals;"
+      ],
+      "context_after": [
+        "function bug_intou19() public{",
+        "    uint8 vundflw =0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 93,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    balances_intou26[msg.sender] -= _value;  //bug",
+        "    balances_intou26[_to] += _value;  //bug"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 104,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "    return _decimals;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 118,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "mapping(address => uint) public lockTime_intou1;",
+        ""
+      ],
+      "context_after": [
+        "        lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 129,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "mapping(address => uint) balances_intou2;",
+        ""
+      ],
+      "context_after": [
+        "    require(balances_intou2[msg.sender] - _value >= 0);  //bug",
+        "    balances_intou2[msg.sender] -= _value;  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 143,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "    }",
+        "function withdraw_intou17() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou17 = 10;",
+        "        msg.sender.transfer(transferValue_intou17);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 154,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "    }",
+        "function withdraw_intou37() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou37 = 10;",
+        "        msg.sender.transfer(transferValue_intou37);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 168,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "function increaseLockTime_intou9(uint _secondsToIncrease) public {",
+        "        lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow"
+      ],
+      "context_after": [
+        "function withdraw_intou9() public {",
+        "        require(now > lockTime_intou9[msg.sender]);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 179,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "function increaseLockTime_intou25(uint _secondsToIncrease) public {",
+        "        lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow"
+      ],
+      "context_after": [
+        "function withdraw_intou25() public {",
+        "        require(now > lockTime_intou25[msg.sender]);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 193,
+      "code_snippet": "",
+      "confidence": "low",
+      "context_before": [
+        "",
+        "function transfer_intou38(address _to, uint _value) public returns (bool) {"
+      ],
+      "context_after": [
+        "    balances_intou38[msg.sender] -= _value;  //bug",
+        "    balances_intou38[_to] += _value;  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "balances_intou2[msg.sender] -= _value;",
+      "confidence": "high",
+      "context_before": [
+        "    assert(c >= a);",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  function ceil(uint256 a, uint256 m) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract ERC20Detailed is IERC20 {"
+      ],
+      "context_after": [
+        "mapping(address => uint) balances_intou22;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 63,
+      "code_snippet": "balances_intou14[msg.sender] -= _value;",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "  string private _name;"
+      ],
+      "context_after": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou12;   // overflow bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 73,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  uint8 private _decimals;"
+      ],
+      "context_after": [
+        "  constructor(string memory name, string memory symbol, uint8 decimals) public {",
+        "    _name = name;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 83,
+      "code_snippet": "balances_intou30[msg.sender] -= _value;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function name() public view returns(string memory) {",
+        "    return _name;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

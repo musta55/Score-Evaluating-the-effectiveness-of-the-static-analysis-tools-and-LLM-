@@ -1,0 +1,24 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 62,
+      "code_snippet": "require(token.transferFrom(msg.sender, relayer, _fee));",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        ""
+      ],
+      "context_after": [
+        "        // unique. Appendix F in the Ethereum Yellow paper (https://ethereum.github.io/yellowpaper/paper.pdf), defines",
+        "        // the valid range for s in (281): 0 < s < secp256k1n \u00f7 2 + 1, and for v in (282): v \u2208 {27, 28}. Most"
+      ]
+    }
+  ],
+  "success": true
+}

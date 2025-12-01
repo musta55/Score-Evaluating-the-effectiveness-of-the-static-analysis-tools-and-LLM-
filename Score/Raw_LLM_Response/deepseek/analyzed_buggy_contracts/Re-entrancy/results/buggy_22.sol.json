@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_22.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:15:32",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 42,
+      "code snippet": "if (!(msg.sender.send(1 ether) )) {\n            revert();\n        }\n",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 89,
+      "code snippet": "if (!(msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;",
+      "confidence": "high|medium"
+    }
+  ]
+}

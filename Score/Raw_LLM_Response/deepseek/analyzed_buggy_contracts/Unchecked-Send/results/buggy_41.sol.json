@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_41.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:55:09",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 15,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 23,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 40,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 58,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 76,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 94,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 102,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 120,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 138,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 156,
+      "code_snippet": "msg.sender.transfer(1 ether);"
+    }
+  ]
+}

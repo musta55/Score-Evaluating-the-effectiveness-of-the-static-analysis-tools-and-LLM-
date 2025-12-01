@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_22.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 10:11:25",
+  "findings": [
+    {
+      "bug_type": "TOD Vulnerability",
+      "line_number": 42,
+      "code snippet": "function setReward_TOD1() public payable {\n        require (!claimed_TOD1);\n        require(msg.sender == owner_TOD1);\n        owner_TOD1.transfer(reward_TOD1);\n        reward_TOD1 = msg.value;\n    }",
+      "confidence": "high|medium",
+      "reasoning": "While the function checks for claimed_TOD1 and matches the sender with owner_TOD1, it does not verify if the reward has already been transferred to another Tod instance. This could allow multiple claims on different Tods with the same address."
+    },
+    {
+      "bug_type": "TOD Vulnerability",
+      "line_number": 43,
+      "code snippet": "function claimReward_TOD1(uint256 submission) public {\n        require (!claimed_TOD1);\n        require(submission < 10);\n        msg.sender.transfer(reward_TOD1);\n        claimed_TOD1 = true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The function checks for submission < 10, which prevents spamming claims. However, it does not verify if the claimant is authorized to claim this specific Tod."
+    },
+    {
+      "bug_type": "TOD Vulnerability",
+      "line_number": 45,
+      "code snippet": "function setReward_TOD2() public payable {\n        require (!claimed_TOD2);\n        require(msg.sender == owner_TOD2);\n        owner_TOD2.transfer(reward_TOD2);\n        reward_TOD2 = msg.value;\n    }",
+      "confidence": "high|medium",
+      "reasoning": "Similar to setReward_TOD1, this function does not check if the reward has already been transferred elsewhere. This could lead to conflicts between different Tod instances."
+    },
+    {
+      "bug_type": "TOD Vulnerability",
+      "line_number": 46,
+      "code snippet": "function claimReward_TOD2(uint256 submission) public {\n        require (!claimed_TOD2);\n        require(submission < 10);\n        msg.sender.transfer(reward_TOD2);\n        claimed_TOD2 = true;\n    }",
+      "confidence": "medium",
+      "reasoning": "The function prevents multiple claims by checking submission < 10, but it does not verify if the claimant is authorized to claim this specific Tod."
+    }
+  ]
+}

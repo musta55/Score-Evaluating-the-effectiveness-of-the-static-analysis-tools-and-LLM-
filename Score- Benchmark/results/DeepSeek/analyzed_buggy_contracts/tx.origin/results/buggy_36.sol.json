@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_36.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:53:24",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_txorigin20 is checking the tx.origin of the caller and ensuring it matches a specific address. This could allow unauthorized execution if the origin check is bypassed or if there's no additional security layer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 43,
+      "code_snippet": "require(tx.origin == owner_txorigin28);",
+      "confidence": "high|medium",
+      "reasoning": "Similar to bug_txorigin20, this function checks the tx.origin of the caller. Without additional security measures, it could be exploited if the origin check is bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high|medium",
+      "reasoning": "This function checks if the caller's tx.origin matches a specific address. This could be exploited if there's no proper origin verification in place."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 47,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_txorigin32 checks the tx.origin of the caller. This could allow unauthorized execution if bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high|medium",
+      "reasoning": "This function checks the tx.origin of the caller. Without proper verification, it could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 52,
+      "code_snippet": "require(tx.origin == owner_txorigin12);",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_txorigin12 checks the tx.origin of the caller. This could allow unauthorized execution if bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 54,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_txorigin20 is checking the tx.origin of the caller. This could allow unauthorized execution if there's no additional security layer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 56,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high|medium",
+      "reasoning": "This function checks the tx.origin of the caller. Without proper verification, it could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 58,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_txorigin40 checks the tx.origin of the caller. This could allow unauthorized execution if bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 60,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high|medium",
+      "reasoning": "This function checks the tx.origin of the caller. Without proper verification, it could be exploited."
+    }
+  ]
+}

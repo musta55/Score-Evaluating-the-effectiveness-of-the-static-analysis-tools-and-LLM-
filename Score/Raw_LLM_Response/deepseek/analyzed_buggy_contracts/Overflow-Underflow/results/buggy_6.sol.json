@@ -1,0 +1,120 @@
+{
+  "contract": "buggy_6.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:45:44",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "The addition of p_intou36 to vundflw1 can cause an overflow since uint8 values wrap around when exceeding their maximum value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from vundflw can cause an underflow since uint8 values cannot go below zero."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime can cause an overflow if the value exceeds uint's maximum."
+    }
+  ]
+}

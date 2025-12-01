@@ -1,0 +1,26 @@
+{
+  "contract": "buggy_42.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:32:21",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 23,
+      "code_snippet": "balances_intou2[msg.sender] -= _value; //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 256,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;   // overflow bug",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_43.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:34:00",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow since adding _secondsToIncrease to lockTime_intou33 without checking if it exceeds uint's maximum value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "balances_intou2[msg.sender] -= _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential underflow when subtracting _value from balances_intou2 without checking if it goes below zero."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "balances_intou2[_to] += _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding _value to balances_intou2 without checking if it exceeds uint's maximum value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "balances_intou2[msg.sender] -= _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential underflow when subtracting _value from balances_intou2 without checking if it goes below zero."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "balances_intou2[_to] += _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding _value to balances_intou2 without checking if it exceeds uint's maximum value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from a uint variable that starts at 0 will cause an underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from a uint variable that starts at 0 will cause an underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from a uint variable that starts at 0 will cause an underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from a uint variable that starts at 0 will cause an underflow."
+    }
+  ]
+}

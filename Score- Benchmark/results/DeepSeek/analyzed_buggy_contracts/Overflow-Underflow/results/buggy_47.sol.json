@@ -1,0 +1,188 @@
+{
+  "contract": "buggy_47.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:39:25",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "balances_intou18[msg.sender] -= _value; //bug\n balances_intou18[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "msg.sender.transfer(transferValue_intou18);",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "balances_intou6[msg.sender] -= _value; //bug\n balances_intou6[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "balances_intou38[msg.sender] -= _value; //bug\n balances_intou38[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 79,
+      "code_snippet": "balances_intou10[msg.sender] -= _value; //bug\n balances_intou10[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "balances_intou22[msg.sender] -= _value; //bug\n balances_intou22[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 93,
+      "code_snippet": "balances_intou14[msg.sender] -= _value; //bug\n balances_intou14[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 98,
+      "code_snippet": "balances_intou30[msg.sender] -= _value; //bug\n balances_intou30[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 105,
+      "code_snippet": "balances_intou38[msg.sender] -= _value; //bug\n balances_intou38[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 105,
+      "code_snippet": "balances_intou6[msg.sender] -= _value; //bug\n balances_intou6[_to] += _value;",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou19; // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou27; // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou35; // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40; // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou39; // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou4[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "lockTime_intou15[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou19[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "lockTime_intou21[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "lockTime_intou41[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "lockTime_intou5[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou7[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "lockTime_intou12[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "lockTime_intou28[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "lockTime_intou43[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "lockTime_intou57[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    }
+  ]
+}

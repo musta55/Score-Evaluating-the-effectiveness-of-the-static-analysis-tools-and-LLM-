@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_38.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:47:10",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 62,
+      "code_snippet": "value.sub(tokensToBurn)",
+      "confidence": "high",
+      "reasoning": "The `transfer` function incorrectly subtracts the entire `value` from `_balances[msg.sender]` instead of just `tokensToBurn`, leading to potential over-transfers."
+    },
+    {
+      "bug_type": 62,
+      "line_number": 63,
+      "code_snippet": "_totalSupply = _totalSupply.sub(tokensToBurn);",
+      "confidence": "high",
+      "reasoning": "The `_totalSupply` is correctly updated, but the issue lies in how much is subtracted from `_balances[msg.sender]`."
+    }
+  ]
+}

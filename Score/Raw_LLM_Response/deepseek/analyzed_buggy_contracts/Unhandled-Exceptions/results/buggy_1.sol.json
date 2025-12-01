@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_1.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:24:45",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "call.send(5 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 2,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 8,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "addr.send(4 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 23,
+      "code_snippet": "dst.call.value(msg.value)\"",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "msg.sender.send(address(this).balance)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 52,
+      "code_snippet": "callee.call.value(1 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

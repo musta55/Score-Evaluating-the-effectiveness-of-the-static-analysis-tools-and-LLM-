@@ -1,0 +1,57 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:36:35",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code_snippet": "msg.sender.call.value(balances_re_ent8[msg.sender]\")",
+      "confidence": "high",
+      "reasoning": "The call to balances_re_ent8 may not update any state variable after the call, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 2,
+      "code_snippet": "msg.sender.transfer(transferValue_re_ent39);",
+      "confidence": "high",
+      "reasoning": "The transfer operation updates the sender's balance, potentially allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 4,
+      "code_snippet": "msg.sender.send(_weiToWithdraw);",
+      "confidence": "high",
+      "reasoning": "The send operation may bypass necessary checks, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 5,
+      "code_snippet": "msg.sender.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The send operation may bypass necessary checks, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 6,
+      "code_snippet": "msg.sender.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The send operation may bypass necessary checks, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 7,
+      "code_snippet": "msg.sender.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The send operation may bypass necessary checks, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 8,
+      "code_snippet": "msg.sender.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The send operation may bypass necessary checks, allowing re-entrancy."
+    }
+  ]
+}

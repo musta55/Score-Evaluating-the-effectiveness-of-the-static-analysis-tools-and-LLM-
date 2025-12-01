@@ -1,0 +1,266 @@
+{
+  "contract": "buggy_49.sol",
+  "contract_name": "TAMC",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp35 = msg.sender;}}"
+      ],
+      "context_after": [
+        "",
+        "  function bug_tmstmp40 () public payable {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => uint256) public balanceOf;",
+        ""
+      ],
+      "context_after": [
+        "\tuint pastBlockTime_tmstmp40; // Forces one bet per block",
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "require(now != pastBlockTime_tmstmp40); // only 1 transaction per block",
+      "confidence": "high",
+      "context_before": [
+        "            msg.sender.transfer(address(this).balance);",
+        "        }"
+      ],
+      "context_after": [
+        "  string public name = \"TAMC\";",
+        "  function bug_tmstmp33() view public returns (bool) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "pastBlockTime_tmstmp40 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        "    }"
+      ],
+      "context_after": [
+        "  function bug_tmstmp33() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "  string public name = \"TAMC\";",
+        "  function bug_tmstmp33() view public returns (bool) {"
+      ],
+      "context_after": [
+        "  }",
+        "  string public symbol = \"TAMC\";"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "  uint8 public decimals = 18;",
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "uint256 bugv_tmstmp3 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\t\twinner_tmstmp27 = msg.sender;}}",
+        "  uint8 public decimals = 18;"
+      ],
+      "context_after": [
+        "",
+        "  uint256 bugv_tmstmp3 = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "function bug_tmstmp13() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    constructor() public {"
+      ],
+      "context_after": [
+        "        emit Transfer(address(0), msg.sender, totalSupply);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "        balanceOf[msg.sender] = totalSupply;",
+        "        emit Transfer(address(0), msg.sender, totalSupply);"
+      ],
+      "context_after": [
+        "function bug_tmstmp13() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "uint256 bugv_tmstmp4 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "        emit Transfer(address(0), msg.sender, totalSupply);",
+        "    }"
+      ],
+      "context_after": [
+        "    return block.timestamp >= 1546300800;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 51,
+      "code_snippet": "function bug_tmstmp33() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "high",
+      "context_before": [
+        "        require(balanceOf[msg.sender] >= value);",
+        "        balanceOf[msg.sender] -= value;"
+      ],
+      "context_after": [
+        "        emit Transfer(msg.sender, to, value);",
+        "        return true;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "bugv_tmstmp1 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "        return true;",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "  uint256 bugv_tmstmp4 = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp35 = msg.sender;}",
+      "confidence": "medium",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract TAMC {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "require(now != pastBlockTime_tmstmp40); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp40); // only 1 transaction per block   //bug"
+      ],
+      "context_after": [
+        "        if(now % 15 == 0) { // winner    //bug",
+        "            msg.sender.transfer(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug msg.sender.transfer(address(this).balance);}",
+      "confidence": "high",
+      "context_before": [
+        "        pastBlockTime_tmstmp40 = now;       //bug",
+        "        if(now % 15 == 0) { // winner    //bug"
+      ],
+      "context_after": [
+        "        }",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "function bug_tmstmp13() view public returns (bool) { return block.timestamp >= 1546300800; }",
+      "confidence": "medium",
+      "context_before": [
+        "        emit Transfer(msg.sender, to, value);",
+        "        return true;"
+      ],
+      "context_after": [
+        "uint256 bugv_tmstmp5 = block.timestamp;",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

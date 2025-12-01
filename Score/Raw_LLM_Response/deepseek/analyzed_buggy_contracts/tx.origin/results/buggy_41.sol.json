@@ -1,0 +1,78 @@
+{
+  "contract": "buggy_41.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:00:00",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 3,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 7,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 10,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 15,
+      "code_snippet": "require(tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 19,
+      "code_snippet": "require(tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 24,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 28,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 32,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in multiple functions, making it vulnerable to phishing attacks."
+    }
+  ]
+}

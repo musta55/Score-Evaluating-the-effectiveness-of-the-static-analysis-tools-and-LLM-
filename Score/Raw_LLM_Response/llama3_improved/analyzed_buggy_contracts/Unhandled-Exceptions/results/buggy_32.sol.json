@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_32.sol",
+  "contract_name": "interface",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        ""
+      ],
+      "context_after": [
+        " * @title SafeMath",
+        " * @dev Unsigned math operations with safety checks that revert on error."
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "winner_unchk20.send(winAmount_unchk20);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 c = a - b;",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "addr_unchk40.send (2 ether) || 1==1,",
+      "confidence": "high",
+      "context_before": [
+        "     */",
+        "    function add(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        require(c >= a, \"SafeMath: addition overflow\");",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "}"
+      ],
+      "context_after": [
+        "/**",
+        " * Token contract interface for external use"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "addr_unchk4.send (42 ether) || 1==1,",
+      "confidence": "high",
+      "context_before": [
+        "    function balanceOf(address _owner) public view returns (uint256 value);",
+        "function my_func_unchk23(address payable dst) public payable{"
+      ],
+      "context_after": [
+        "    }",
+        "    function transfer(address _to, uint256 _value) public returns (bool success);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

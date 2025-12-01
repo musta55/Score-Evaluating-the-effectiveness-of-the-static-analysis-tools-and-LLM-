@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_34.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:45:36",
+  "findings": [
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 42,
+      "code snippet": "require(not_called_re_ent20); if( ! (msg.sender.send(1 ether) ) ){ revert(); } not_called_re_ent20 = false;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_re_ent20` allows multiple calls without checking the caller's balance. An attacker could exploit this by making multiple requests with insufficient funds, causing a denial of service or control over the contract."
+    }
+  ]
+}

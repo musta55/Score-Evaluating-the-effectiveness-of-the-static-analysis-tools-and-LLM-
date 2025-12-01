@@ -1,0 +1,48 @@
+{
+  "contract": "buggy_8.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:12:07",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 12,
+      "code_snippet": "require (tx.origin == owner_txorigin21);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in token transfers, making it vulnerable to phishing attacks.",
+      "event": "OwnershipTransferred"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code_snippet": "require (tx.origin == owner_txorigin21);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in token transfers, making it vulnerable to phishing attacks.",
+      "event": "OwnershipTransferred"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 78,
+      "code_snippet": "require (tx.origin == owner_txorigin21);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in token transfers, making it vulnerable to phishing attacks.",
+      "event": "OwnershipTransferred"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 90,
+      "code_snippet": "require (tx.origin == owner_txorigin21);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in token transfers, making it vulnerable to phishing attacks.",
+      "event": "OwnershipTransferred"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 105,
+      "code_snippet": "require (tx.origin == owner_txorigin21);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication in token transfers, making it vulnerable to phishing attacks.",
+      "event": "OwnershipTransferred"
+    }
+  ]
+}

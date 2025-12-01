@@ -1,0 +1,282 @@
+{
+  "contract": "buggy_15.sol",
+  "contract_name": "MD",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 4,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Tuesday, April 30, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity ^0.5.7;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 8,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "interface tokenRecipient {"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "context_before": [
+        "    // Public variables of the token",
+        "  function bug_txorigin20(address owner_txorigin20) public{"
+      ],
+      "context_after": [
+        "    }",
+        "  string public name;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "        require(tx.origin == owner_txorigin32);",
+        "    }"
+      ],
+      "context_after": [
+        "  function withdrawAll_txorigin38(address payable _recipient,address owner_txorigin38) public {",
+        "        require(tx.origin == owner_txorigin38);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "require(tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  uint8 public decimals = 18;"
+      ],
+      "context_after": [
+        "  function bug_txorigin4(address owner_txorigin4) public{",
+        "        require(tx.origin == owner_txorigin4);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "require(tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "context_before": [
+        "  uint256 public totalSupply;",
+        ""
+      ],
+      "context_after": [
+        "  function transferTo_txorigin7(address to, uint amount,address owner_txorigin7) public {",
+        "  require(tx.origin == owner_txorigin7);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  mapping (address => uint256) public balanceOf;"
+      ],
+      "context_after": [
+        "  require(tx.origin == owner_txorigin23);",
+        "  to.call.value(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => mapping (address => uint256)) public allowance;",
+        ""
+      ],
+      "context_after": [
+        "  function transferTo_txorigin27(address to, uint amount,address owner_txorigin27) public {",
+        "  require(tx.origin == owner_txorigin27);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  event Transfer(address indexed from, address indexed to, uint256 value);"
+      ],
+      "context_after": [
+        "    // This generates a public event on the blockchain that will notify clients",
+        "  function transferTo_txorigin31(address to, uint amount,address owner_txorigin31) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 56,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "context_before": [
+        "  to.call.value(amount);",
+        "}"
+      ],
+      "context_after": [
+        "",
+        "    // This notifies clients about the amount burnt"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 62,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "\trequire (tx.origin == owner_txorigin13);",
+        "\treceiver.transfer(amount);"
+      ],
+      "context_after": [
+        "  event Burn(address indexed from, uint256 value);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 68,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "     * Constructor function",
+        "     *"
+      ],
+      "context_after": [
+        "     */",
+        "    constructor("
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 74,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "        string memory tokenName,",
+        "        string memory tokenSymbol"
+      ],
+      "context_after": [
+        "        totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount",
+        "        balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 80,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "        symbol = tokenSymbol;                               // Set the symbol for display purposes",
+        "    }"
+      ],
+      "context_after": [
+        "        require(tx.origin == owner_txorigin14);",
+        "        _recipient.transfer(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 86,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function _transfer(address _from, address _to, uint _value) internal {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 92,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "        require(_to != address(0x0));",
+        "        // Check if the sender has enough"
+      ],
+      "context_after": [
+        "        // Check for overflows",
+        "        require(balanceOf[_to] + _value >= balanceOf[_to]);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 98,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "        uint previousBalances = balanceOf[_from] + balanceOf[_to];",
+        "        // Subtract from the sender"
+      ],
+      "context_after": [
+        "        // Add the same to the recipient",
+        "        balanceOf[_to] += _value;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,250 @@
+{
+  "contract": "buggy_15.sol",
+  "contract_name": "MD",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 4,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Tuesday, April 30, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity ^0.5.7;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "context_before": [
+        "    function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external;",
+        "}"
+      ],
+      "context_after": [
+        "contract  MD{",
+        "    // Public variables of the token"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou20;   // overflow bug"
+      ],
+      "context_after": [
+        "  string public name;",
+        "  function bug_intou32(uint8 p_intou32) public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw1 = vundflw1 + p_intou32;   // overflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  mapping(address => uint) balances_intou38;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw =0;",
+        "    vundflw = vundflw -10;   // underflow bug"
+      ],
+      "context_after": [
+        "  mapping (address => uint256) public balanceOf;",
+        "  function bug_intou23() public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 74,
+      "code_snippet": "vundflw1 =0; vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "        require(now > lockTime_intou13[msg.sender]);",
+        "        uint transferValue_intou13 = 10;"
+      ],
+      "context_after": [
+        "    }",
+        "  event Burn(address indexed from, uint256 value);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 80,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    /**",
+        "     * Constructor function"
+      ],
+      "context_after": [
+        "     * Initializes contract with initial supply tokens to the creator of the contract",
+        "     */"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 86,
+      "code_snippet": "vundflw1 =0; vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 initialSupply,",
+        "        string memory tokenName,"
+      ],
+      "context_after": [
+        "    ) public {",
+        "        totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 92,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "        name = tokenName;                                   // Set the name for display purposes",
+        "        symbol = tokenSymbol;                               // Set the symbol for display purposes"
+      ],
+      "context_after": [
+        "mapping(address => uint) balances_intou14;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 103,
+      "code_snippet": "balanceOf[msg.sender] -= _value;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function _transfer(address _from, address _to, uint _value) internal {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 115,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "        uint previousBalances = balanceOf[_from] + balanceOf[_to];",
+        "        // Subtract from the sender"
+      ],
+      "context_after": [
+        "        // Add the same to the recipient",
+        "        balanceOf[_to] += _value;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "context_before": [
+        "    // Public variables of the token",
+        "  function bug_intou20(uint8 p_intou20) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou20;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "  string public symbol;",
+        "  mapping(address => uint) balances_intou38;"
+      ],
+      "context_after": [
+        "function transfer_intou38(address _to, uint _value) public returns (bool) {",
+        "    require(balances_intou38[msg.sender] - _value >= 0);  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "    // 18 decimals is the strongly suggested default, avoid changing it",
+        "  function bug_intou4(uint8 p_intou4) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou4;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou23() public{",
+        "    uint8 vundflw =0;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

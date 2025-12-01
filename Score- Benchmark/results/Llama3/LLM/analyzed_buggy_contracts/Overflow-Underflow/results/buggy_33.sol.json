@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_33.sol",
+  "contract_name": "Owned",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "context_before": [
+        "    balances_intou2[msg.sender] -= _value;  //bug",
+        "    balances_intou2[_to] += _value;  //bug"
+      ],
+      "context_after": [
+        "  }",
+        "  address public owner;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function withdraw_intou17() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou17 = 10;",
+        "        msg.sender.transfer(transferValue_intou17);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  address public newOwner;"
+      ],
+      "context_after": [
+        "  function bug_intou27() public{",
+        "    uint8 vundflw =0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "",
+        "    constructor() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "context_before": [
+        "        owner = msg.sender;",
+        "    }"
+      ],
+      "context_after": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou32;   // overflow bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "        require(msg.sender == owner || msg.sender == address(this));",
+        "        _;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        newOwner = _newOwner;",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

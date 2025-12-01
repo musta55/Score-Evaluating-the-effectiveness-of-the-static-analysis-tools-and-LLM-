@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_19.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:00:43",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk3` in the `owned` contract sends 42 ether without any validation, allowing potential attackers to exploit this by calling the function without proper authorization."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 17,
+      "code_snippet": "addr.send (10 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk19` in the `owned` contract sends 10 ether without proper checks, which could be exploited by attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 23,
+      "code_snippet": "addr.send (5 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk4` in the `owned` contract sends 5 ether without any validation, creating an entry point for attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "addr.send (10 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk7` in the `owned` contract sends 10 ether without proper checks, which could be exploited by attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "medium",
+      "reasoning": "The function `my_func_uncheck48` in the `owned` contract sends a message without proper validation, creating an entry point for attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 50,
+      "code_snippet": "addr.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk3` in the `owned` contract sends 42 ether without any validation, allowing potential attackers to exploit this by calling the function without proper authorization."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 60,
+      "code_snippet": "addr.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk4` in the `owned` contract sends 5 ether without any validation, creating an entry point for attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 70,
+      "code_snippet": "addr.send(10 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk7` in the `owned` contract sends 10 ether without proper checks, which could be exploited by attackers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 80,
+      "code_snippet": "addr.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "The function `bug_unchk3` in the `owned` contract sends 42 ether without any validation, allowing potential attackers to exploit this by calling the function without proper authorization."
+    }
+  ]
+}

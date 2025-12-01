@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_39.sol",
+  "contract_name": "TAMCContract",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 5,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract TAMCContract {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 8,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract TAMCContract {"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping (address => uint256) public balanceOf;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 11,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping (address => uint256) public balanceOf;"
+      ],
+      "context_after": [
+        "  function bug_unchk_send32() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send32() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "  function bug_unchk_send4() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 17,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send4() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "  function bug_unchk_send7() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send7() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 23,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);",
+        ""
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  event Transfer(address indexed from, address indexed to, uint256 value);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

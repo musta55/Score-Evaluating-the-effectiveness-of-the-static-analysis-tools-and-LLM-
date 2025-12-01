@@ -1,0 +1,202 @@
+{
+  "contract": "buggy_42.sol",
+  "contract_name": "Owned",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "function bug_unchk_send28() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  address public newOwner;"
+      ],
+      "context_after": [
+        "  function bug_unchk_send27() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 19,
+      "code_snippet": "function bug_unchk_send21() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);",
+        ""
+      ],
+      "context_after": [
+        "        owner = msg.sender;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "function bug_unchk_send27() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "function bug_unchk_send3() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner || msg.sender == address(this));"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 29,
+      "code_snippet": "function bug_unchk_send3() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "        _;",
+        "    }"
+      ],
+      "context_after": [
+        "    function transferOwnership(address _newOwner) public onlyOwner {",
+        "        newOwner = _newOwner;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 34,
+      "code_snippet": "function bug_unchk_send9() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function bug_unchk_send9() payable public{"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 39,
+      "code_snippet": "function bug_unchk_send25() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "library SafeMath {",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "      return 0;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 44,
+      "code_snippet": "function bug_unchk_send19() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 49,
+      "code_snippet": "function bug_unchk_send26() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a / b;"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 54,
+      "code_snippet": "function bug_unchk_send11() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 59,
+      "code_snippet": "function bug_unchk_send12() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    uint256 c = a + b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 64,
+      "code_snippet": "function bug_unchk_send2() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function ceil(uint256 a, uint256 m) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    uint256 d = sub(c,1);",
+        "    return mul(div(d,m),m);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 69,
+      "code_snippet": "function bug_unchk_send31() payable public{msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "}"
+      ],
+      "context_after": [
+        "contract Token{",
+        "    function balanceOf(address who) external view returns (uint256);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

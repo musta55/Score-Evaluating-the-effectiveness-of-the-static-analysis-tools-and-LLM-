@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_50.sol",
+  "contract_name": "digitalNotary",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  address payable private manager;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "function withdrawLeftOver_unchk9() public {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "callee.send(42 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function callnotchecked_unchk25(address payable callee) public {",
+        "    callee.call.value(1 ether);"
+      ],
+      "context_after": [
+        "  uint private hashfee;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "high",
+      "context_before": [
+        "  uint private changehashownerfee;",
+        ""
+      ],
+      "context_after": [
+        "    {",
+        "        address owner;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "  mapping(bytes32 => HashRegistration[]) HashList;"
+      ],
+      "context_after": [
+        "  bool public payedOut_unchk20 = false;",
+        "address payable public winner_unchk20;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "addr_unchk4.send (42 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        payedOut_unchk20 = true;",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "  bool public payedOut_unchk45 = false;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 64,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "high",
+      "context_before": [
+        "  event  RegisterHashEvent(address indexed msgsender, bytes32 indexed hash, uint timestamp);",
+        ""
+      ],
+      "context_after": [
+        "    callee.call.value(1 ether);",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 74,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        manager = msg.sender;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "        hashfee = 5000000000000000;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 84,
+      "code_snippet": "addr_unchk40.send (2 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "bool public payedOut_unchk32 = false;"
+      ],
+      "context_after": [
+        "uint public winAmount_unchk32;",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

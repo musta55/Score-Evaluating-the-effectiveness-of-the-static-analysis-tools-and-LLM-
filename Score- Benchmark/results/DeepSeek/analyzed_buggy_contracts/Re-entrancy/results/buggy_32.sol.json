@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_32.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:39:54",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 42,
+      "code_snippet": "withdraw_balances_re_ent8",
+      "confidence": "medium",
+      "reasoning": "The function proceeds with withdrawal without verifying if the fallback function succeeded."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 56,
+      "code_snippet": "withdraw_balances_re_ent36",
+      "confidence": "medium",
+      "reasoning": "The function proceeds with withdrawal without verifying if the fallback function succeeded."
+    }
+  ]
+}

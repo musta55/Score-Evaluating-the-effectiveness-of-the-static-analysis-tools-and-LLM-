@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_28.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:40:14",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 17,
+      "code_snippet": "to.call.value(amount);",
+      "confidence": "high",
+      "reasoning": "Caller does not check tx.origin when transferring to another address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 33,
+      "code_snippet": "receiver.transfer(amount);",
+      "confidence": "high",
+      "reasoning": "Caller does not verify their own tx.origin before sending a transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 13,
+      "code_snippet": "transfer(to, amount);",
+      "confidence": "high",
+      "reasoning": "No tx.origin check on caller when transferring to another address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 27,
+      "code_snippet": "_balances[owner];",
+      "confidence": "medium",
+      "reasoning": "Does not verify the caller's tx.origin before accessing balance."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 39,
+      "code_snippet": "_allowed[from][msg.sender];",
+      "confidence": "high",
+      "reasoning": "Caller does not check their own tx.origin when calling this function from another address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 48,
+      "code_snippet": "_allowed[account][msg.sender];",
+      "confidence": "high",
+      "reasoning": "Caller does not verify their tx.origin when calling this function from another address."
+    }
+  ]
+}

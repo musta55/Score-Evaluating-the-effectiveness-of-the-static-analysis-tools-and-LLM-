@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_43.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:02:16",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function bug_txorigin36(  address owner_txorigin36) public{\n        require(tx.origin == owner_txorigin36);\n    }",
+      "confidence": "medium",
+      "reasoning": "The function only checks tx.origin but doesn't validate the caller's state, potentially allowing unauthorized access."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function transferOperator(address operator) public {\n        // restrict access\n        require(Operated.isActiveOperator(msg.sender), \"only active operator\");\n        Operated._transferOperator(operator);\n    }",
+      "confidence": "low",
+      "reasoning": "While it checks the caller's active state, additional context validation could enhance security."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function transferTo_txorigin39(address to, uint amount,address owner_txorigin39) public {\n  require(tx.origin == owner_txorigin39);\n  to.call.value(amount);\n}",
+      "confidence": "medium",
+      "reasoning": "Lacks caller validation beyond ownership, risking unauthorized access."
+    }
+  ]
+}

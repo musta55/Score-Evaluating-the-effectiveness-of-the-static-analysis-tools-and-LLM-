@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_45.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:02:48",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 4,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 9,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 12,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 16,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 24,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 30,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 34,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "No checks are present before transferring ether."
+    }
+  ]
+}

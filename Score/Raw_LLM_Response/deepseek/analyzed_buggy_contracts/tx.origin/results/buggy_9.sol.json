@@ -1,0 +1,120 @@
+{
+  "contract": "buggy_9.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:13:05",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 12,
+      "code_snippet": "require (tx.origin == owner_txorigin37);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 15,
+      "code_snippet": "require(tx.origin == owner_txorigin3);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 19,
+      "code_snippet": "require (tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 24,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 43,
+      "code_snippet": "require(tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 48,
+      "code_snippet": "require(tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 52,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 56,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 60,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 64,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 68,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing fake addresses to impersonate real owners.",
+      "event_type": "transfer"
+    }
+  ]
+}

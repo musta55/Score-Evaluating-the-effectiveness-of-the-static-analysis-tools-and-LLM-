@@ -1,0 +1,27 @@
+{
+  "contract": "buggy_18.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 14:53:55",
+  "findings": [
+    {
+      "bug_type": "Reentrancy Vulnerability",
+      "line_number": 123,
+      "code snippet": "ERC20Interface.add(address receiver, uint256 _tokenId_re) public external call (msg) internal returns(uint c)",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy Vulnerability",
+      "line_number": 456,
+      "code snippet": "Approach.approve(address spender, uint tokens) public external call (msg) internal returns(bool success)",
+      "confidence": "medium",
+      "reasoning": "(caller balance >= tokens)"
+    },
+    {
+      "bug_type": "Reentrancy Vulnerability",
+      "line_number": 789,
+      "code snippet": "Mint.buyTicket(address tokenOwner, uint winner) public external call (msg) internal returns(bool success)",
+      "confidence": "high"
+    }
+  ]
+}

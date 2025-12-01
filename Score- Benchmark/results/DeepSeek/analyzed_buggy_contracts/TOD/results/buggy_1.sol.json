@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_1.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 08:41:40",
+  "findings": [
+    {
+      "bug_type": "TOD_VULNERABILITY",
+      "line_number": 0,
+      "code snippet": "",
+      "confidence": "low|medium",
+      "reasoning": "The code appears to implement secure token functionality with proper visibility and access control. No sensitive data is exposed beyond what's intended."
+    }
+  ]
+}

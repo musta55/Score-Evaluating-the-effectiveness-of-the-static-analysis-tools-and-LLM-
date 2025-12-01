@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_32.sol",
+  "contract_name": "interface",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 134,
+      "code_snippet": "balances[msg.sender] = balances[msg.sender].sub(_value);",
+      "confidence": "medium",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 182,
+      "code_snippet": "balances[_from] = balances[_from].sub(_value);",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "       winner_TOD19.transfer(msg.value);"
+      ],
+      "context_after": [
+        "  mapping (address => mapping (address => uint256)) allowed; //A mapping of all allowances",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,9 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unchecked-Send",
+  "findings": [],
+  "success": false,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

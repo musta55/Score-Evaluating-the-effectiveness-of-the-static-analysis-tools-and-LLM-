@@ -1,0 +1,204 @@
+{
+  "contract": "buggy_38.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:25:21",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "bug_intou12(uint8 p_intou12) public{\n    uint8 vundflw1=0;\n    vundflw1 = vundflw1 - 10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "bug_intou11() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 45,
+      "code_snippet": "bug_intou19() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 46,
+      "code_snippet": "function bug_intou20(uint8 p_intou20) public{\n    uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou20;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou20` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 47,
+      "code_snippet": "function bug_intou32(uint8 p_intou32) public{\n    uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou32;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou32` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "function bug_intou14() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 52,
+      "code_snippet": "function bug_intou38() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 54,
+      "code_snippet": "function bug_intou23() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 56,
+      "code_snippet": "function bug_intou39() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 58,
+      "code_snippet": "function bug_intou36() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou36;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou36` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 59,
+      "code_snippet": "function bug_intou40() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou40;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou40` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 62,
+      "code_snippet": "function bug_intou3() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou3;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou3` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "function bug_intou7() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 65,
+      "code_snippet": "function bug_intou23() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 67,
+      "code_snippet": "function bug_intou2() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 69,
+      "code_snippet": "function bug_intou3() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou3;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou3` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "function bug_intou4() public{\n    uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou4;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou4` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 75,
+      "code_snippet": "function bug_intou31() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 76,
+      "code_snippet": "function bug_intou35() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 78,
+      "code_snippet": "function bug_intou40() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou40;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou40` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 81,
+      "code_snippet": "function bug_intou27() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 82,
+      "code_snippet": "function bug_intou36() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou36;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou36` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 84,
+      "code_snippet": "function bug_intou27() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 85,
+      "code_snippet": "function bug_intou36() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou36;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou36` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 90,
+      "code_snippet": "function bug_intou12() public{\n    uint8 vundflw =0;\n    vundflw = vundflw - 10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 92,
+      "code_snippet": "function bug_intou36() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou36;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou36` could exceed the maximum value for `uint8`, causing an overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 95,
+      "code_snippet": "function bug_intou27() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from a zero value causes an underflow, resulting in a negative value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 97,
+      "code_snippet": "function bug_intou36() public{\n    uint8 vundflw =0;\n    vundflw = vundflw + p_intou36;   // overflow bug\n}",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou36` could exceed the maximum value for `uint8`, causing an overflow."
+    }
+  ]
+}

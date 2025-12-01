@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_19.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:22:06",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 12,
+      "code_snippet": "function bug_txorigin12(address owner_txorigin12) public{\n        require(tx.origin == owner_txorigin12);\n    }",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 3,
+      "code_snippet": "function sendto_txorigin1(address payable receiver, uint amount,address owner_txorigin1) public {\n\trequire (tx.origin == owner_txorigin1);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 25,
+      "code_snippet": "function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public {\n\trequire (tx.origin == owner_txorigin17);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 39,
+      "code_snippet": "function sendto_txorigin39(address to, uint amount,address owner_txorigin39) public {\n  require(tx.origin == owner_txorigin39);\n  to.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    }
+  ]
+}

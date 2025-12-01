@@ -1,0 +1,68 @@
+{
+  "contract": "buggy_16.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 14:51:12",
+  "findings": [
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 1,
+      "code snippet": "function withdrawFunds_re_ent1 (uint256 _weiToWithdraw) public {\n        require(counter_re_ent1 <= 5);\n        if( ! (msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent1 += 1;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 2,
+      "code snippet": "function withdraw_balances_re_ent1 (uint256 _weiToWithdraw) public {\n        if( ! (msg.sender.send(_weiToWithdraw)) {\n            revert();\n        }\n        _weiToWithdraw[msg.sender] = 0;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 3,
+      "code snippet": "function callme_re_ent2 (uint256 _amount) public {\n        require(counter_re_ent2 <= 5);\n        if( ! (msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent2 += 1;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 4,
+      "code snippet": "function withdraw_balances_re_ent2 (uint256 _weiToWithdraw) public {\n        if( ! (msg.sender.send(_weiToWithdraw)) {\n            revert();\n        }\n        _weiToWithdraw[msg.sender] = 0;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 5,
+      "code snippet": "function callme_re_ent3 (uint256 _amount) public {\n        require(counter_re_ent3 <= 5);\n        if( ! (msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent3 += 1;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 6,
+      "code snippet": "function withdraw_balances_re_ent3 (uint256 _weiToWithdraw) public {\n        if( ! (msg.sender.send(_weiToWithdraw)) {\n            revert();\n        }\n        _weiToWithdraw[msg.sender] = 0;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 7,
+      "code snippet": "function callme_re_ent4 (uint256 _amount) public {\n        require(counter_re_ent4 <= 5);\n        if( ! (msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent4 += 1;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 8,
+      "code snippet": "function withdraw_balances_re_ent4 (uint256 _weiToWithdraw) public {\n        if( ! (msg.sender.send(_weiToWithdraw)) {\n            revert();\n        }\n        _weiToWithdraw[msg.sender] = 0;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 9,
+      "code snippet": "function callme_re_ent5 (uint256 _amount) public {\n        require(counter_re_ent5 <= 5);\n        if( ! (msg.sender.send(10 ether) ) {\n            revert();\n        }\n        counter_re_ent5 += 1;\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Reentrancy",
+      "line_number": 10,
+      "code snippet": "function withdraw_balances_re_ent5 (uint256 _weiToWithdraw) public {\n        if( ! (msg.sender.send(_weiToWithdraw)) {\n            revert();\n        }\n        _weiToWithdraw[msg.sender] = 0;\n    }",
+      "confidence": "high"
+    }
+  ]
+}

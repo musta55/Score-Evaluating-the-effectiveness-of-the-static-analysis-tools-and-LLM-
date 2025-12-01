@@ -1,0 +1,250 @@
+{
+  "contract": "buggy_50.sol",
+  "contract_name": "digitalNotary",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "context_before": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "  function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "require (tx.origin == owner_txorigin17);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require (tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "\trequire (tx.origin == owner_txorigin37);",
+        "\treceiver.transfer(amount);"
+      ],
+      "context_after": [
+        "  uint private hashfee;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin3);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  uint private changehashownerfee;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require (tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  uint private changehashownerfee;"
+      ],
+      "context_after": [
+        "    struct HashRegistration",
+        "    {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "context_before": [
+        "    struct HashRegistration",
+        "    {"
+      ],
+      "context_after": [
+        "        uint registrationtime;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin9);",
+        "\treceiver.transfer(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "context_before": [
+        "\trequire (tx.origin == owner_txorigin9);",
+        "\treceiver.transfer(amount);"
+      ],
+      "context_after": [
+        "  mapping(bytes32 => HashRegistration[]) HashList;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 51,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  uint private HashListLength;"
+      ],
+      "context_after": [
+        "  function transferTo_txorigin31(address to, uint amount,address owner_txorigin31) public {",
+        "  require(tx.origin == owner_txorigin31);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin31);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  event  RegisterHashEvent(address indexed msgsender, bytes32 indexed hash, uint timestamp);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 61,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "\trequire (tx.origin == owner_txorigin13);",
+        "\treceiver.transfer(amount);"
+      ],
+      "context_after": [
+        "  event  ChangeHashOwnershipEvent(address indexed msgsender, address indexed newowner, bytes32 indexed hash, uint timestamp);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    constructor() public"
+      ],
+      "context_after": [
+        "",
+        "        manager = msg.sender;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 69,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "        manager = msg.sender;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "        hashfee = 5000000000000000;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 73,
+      "code_snippet": "require (tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "        hashfee = 5000000000000000;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "        HashListLength = 0;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

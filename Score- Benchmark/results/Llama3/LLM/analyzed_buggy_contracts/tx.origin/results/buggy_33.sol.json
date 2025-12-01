@@ -1,0 +1,154 @@
+{
+  "contract": "buggy_33.sol",
+  "contract_name": "Owned",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "  address public owner;",
+        "  function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  address public newOwner;"
+      ],
+      "context_after": [
+        "  function transferTo_txorigin27(address to, uint amount,address owner_txorigin27) public {",
+        "  require(tx.origin == owner_txorigin27);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin27);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    constructor() public {"
+      ],
+      "context_after": [
+        "    }",
+        "function bug_txorigin32(  address owner_txorigin32) public{"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "function bug_txorigin32(  address owner_txorigin32) public{",
+        "        require(tx.origin == owner_txorigin32);"
+      ],
+      "context_after": [
+        "",
+        "    modifier onlyOwner {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner || msg.sender == address(this));"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function transferOwnership(address _newOwner) public onlyOwner {"
+      ],
+      "context_after": [
+        "    }",
+        "function withdrawAll_txorigin38(address payable _recipient,address owner_txorigin38) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "function withdrawAll_txorigin38(address payable _recipient,address owner_txorigin38) public {",
+        "        require(tx.origin == owner_txorigin38);"
+      ],
+      "context_after": [
+        "    }",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "require(tx.origin == owner);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    if (a == 0) {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

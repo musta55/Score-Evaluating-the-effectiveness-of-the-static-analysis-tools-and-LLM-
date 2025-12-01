@@ -1,0 +1,154 @@
+{
+  "contract": "buggy_27.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 5,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "interface IERC20 {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 10,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function totalSupply() external view returns (uint256);",
+        "  function balanceOf(address who) external view returns (uint256);"
+      ],
+      "context_after": [
+        "  function transfer(address to, uint256 value) external returns (bool);",
+        "  function approve(address spender, uint256 value) external returns (bool);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 15,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function transferFrom(address from, address to, uint256 value) external returns (bool);",
+        ""
+      ],
+      "context_after": [
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "library SafeMath {"
+      ],
+      "context_after": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 25,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "    uint256 c = a * b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 30,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 35,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return a - b;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 40,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    assert(c >= a);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 45,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "    uint256 c = add(a,m);",
+        "    uint256 d = sub(c,1);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

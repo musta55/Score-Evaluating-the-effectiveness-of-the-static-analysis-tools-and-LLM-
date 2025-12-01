@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_17.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:57:06",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "reasoning": "Uses a fixed timestamp check which can be affected by external factors like reorganization attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Depends on block.timestamp which can change during execution."
+    }
+  ]
+}

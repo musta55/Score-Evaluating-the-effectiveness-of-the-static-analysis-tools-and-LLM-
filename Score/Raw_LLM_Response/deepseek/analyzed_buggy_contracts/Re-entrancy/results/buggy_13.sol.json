@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 14:43:34",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code_snippet": "msg.sender.call.value(1 ether)",
+      "confidence": "high",
+      "reasoning": "External call to msg.sender.call.value(1 ether) without state update before another action."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 4,
+      "code_snippet": "msg.sender.send(1 ether)",
+      "confidence": "high",
+      "reasoning": "External send without state update, allowing reentrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 25,
+      "code_snippet": "lastPlayer_re_ent30.send(jackpot_re_ent30)",
+      "confidence": "high",
+      "reasoning": "External send without state update, allowing reentrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 14,
+      "code_snippet": "msg.sender.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "External send without state update, allowing reentrancy."
+    }
+  ]
+}

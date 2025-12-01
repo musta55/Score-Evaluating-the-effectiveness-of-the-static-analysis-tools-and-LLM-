@@ -1,0 +1,127 @@
+{
+  "contract": "buggy_39.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:27:09",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "balances_intou14[msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtracting _value from balances_intou14 could cause underflow if _value exceeds the current balance."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "balances_intou14[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Adding _value to balances_intou14 could cause overflow if the sum exceeds uint's maximum value."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 58,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "reasoning": "Adding two uint8 values could cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 65,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zero value in uint8 causes underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zero value in uint8 causes underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 79,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zero value in uint8 causes underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 92,
+      "code_snippet": "balanceOf[msg.sender] -= value;",
+      "confidence": "high",
+      "reasoning": "Subtracting from balanceOf could cause underflow if value exceeds the current balance."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 93,
+      "code_snippet": "balanceOf[to] += value;",
+      "confidence": "high",
+      "reasoning": "Adding to balanceOf could cause overflow if sum exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 102,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zero value in uint8 causes underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 109,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zero value in uint8 causes underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 123,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "reasoning": "Adding to lockTime could cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 128,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "reasoning": "Adding to lockTime could cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 142,
+      "code_snippet": "allowance[from][msg.sender] -= value;",
+      "confidence": "high",
+      "reasoning": "Subtracting from allowance could cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 152,
+      "code_snippet": "balanceOf[from] -= value;",
+      "confidence": "high",
+      "reasoning": "Subtracting from balanceOf could cause underflow if value exceeds the current balance."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 153,
+      "code_snippet": "balanceOf[to] += value;",
+      "confidence": "high",
+      "reasoning": "Adding to balanceOf could cause overflow if sum exceeds uint's maximum."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 154,
+      "code_snippet": "allowance[from][msg.sender] -= value;",
+      "confidence": "high",
+      "reasoning": "Subtracting from allowance could cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 162,
+      "code_snippet": "balanceOf[msg.sender] >= value;",
+      "confidence": "medium",
+      "reasoning": "The check is present, but the subtraction could still cause underflow."
+    }
+  ]
+}

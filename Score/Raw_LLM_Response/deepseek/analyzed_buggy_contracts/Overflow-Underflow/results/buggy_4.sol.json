@@ -1,0 +1,20 @@
+{
+  "contract": "buggy_4.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:27:40",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 12,
+      "code_snippet": "balances[msg.sender] -= _value; //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 13,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high"
+    }
+  ]
+}

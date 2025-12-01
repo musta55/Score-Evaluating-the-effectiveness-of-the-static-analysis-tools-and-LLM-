@@ -1,0 +1,155 @@
+{
+  "contract": "buggy_47.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:05:58",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 43,
+      "code_snippet": "function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code_snippet": "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 47,
+      "code_snippet": "function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 49,
+      "code_snippet": "function sendto_txorigin16(address owner_txorigin16) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 50,
+      "code_snippet": "function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 52,
+      "code_snippet": "function sendto_txorigin6(address payable _recipient,address owner_txorigin6) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 54,
+      "code_snippet": "function bug_txorigin16(address owner_txorigin16) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 56,
+      "code_snippet": "function sendto_txorigin29(address payable receiver, uint amount,address owner_txorigin29) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 58,
+      "code_snippet": "function sendto_txorigin34(address payable _recipient,address owner_txorigin34) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 60,
+      "code_snippet": "function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 62,
+      "code_snippet": "function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 64,
+      "code_snippet": "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 66,
+      "code_snippet": "function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 68,
+      "code_snippet": "function sendto_txorigin16(address owner_txorigin16) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 70,
+      "code_snippet": "function sendto_txorigin34(address payable _recipient,address owner_txorigin34) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 72,
+      "code_snippet": "function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 74,
+      "code_snippet": "function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 76,
+      "code_snippet": "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 78,
+      "code_snippet": "function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 80,
+      "code_snippet": "function sendto_txorigin16(address owner_txorigin16) public",
+      "confidence": "high",
+      "reasoning": "Missing tx.origin check allows external control"
+    }
+  ]
+}

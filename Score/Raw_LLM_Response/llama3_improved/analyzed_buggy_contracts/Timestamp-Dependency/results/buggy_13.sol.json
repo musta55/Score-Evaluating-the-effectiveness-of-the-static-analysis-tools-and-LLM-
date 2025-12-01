@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_13.sol",
+  "contract_name": "BitCash",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "  string public name;",
+        "  address winner_tmstmp14;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "uint256 bugv_tmstmp2 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp30;",
+        "function play_tmstmp30(uint startTime) public {"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp30 = msg.sender;}}",
+        "  uint8 public decimals = 18;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "uint256 bugv_tmstmp3 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "function play_tmstmp30(uint startTime) public {",
+        "\tif (startTime + (5 * 1 days) == block.timestamp){"
+      ],
+      "context_after": [
+        "  uint8 public decimals = 18;",
+        "    // 18 decimals is the strongly suggested default, avoid changing it"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "uint256 bugv_tmstmp4 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == block.timestamp){",
+        "\t\twinner_tmstmp30 = msg.sender;}}"
+      ],
+      "context_after": [
+        "    // 18 decimals is the strongly suggested default, avoid changing it",
+        "  function bug_tmstmp8 () public payable {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "        if(now % 15 == 0) { // winner    //bug",
+        "            msg.sender.transfer(address(this).balance);"
+      ],
+      "context_after": [
+        "    }",
+        "  uint256 public totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "uint256 bugv_tmstmp1 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp39;",
+        "function play_tmstmp39(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp39 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "    // Public variables of the token",
+        "  address winner_tmstmp23;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "function play_tmstmp23(uint startTime) public {",
+        "\tuint _vtime = block.timestamp;"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp23 = msg.sender;}}",
+        "  string public name;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){}",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp14;",
+        "function play_tmstmp14(uint startTime) public {"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp14 = msg.sender;}}",
+        "  string public symbol;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "require(now != pastBlockTime_tmstmp36); // only 1 transaction per block   //bug",
+      "confidence": "medium",
+      "context_before": [
+        "    // 18 decimals is the strongly suggested default, avoid changing it",
+        "  function bug_tmstmp8 () public payable {"
+      ],
+      "context_after": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "  uint256 public totalSupply;",
+        ""
+      ],
+      "context_after": [
+        "  address winner_tmstmp39;",
+        "function play_tmstmp39(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 46,
+      "code_snippet": "require(block.timestamp >= 1546300800);",
+      "confidence": "medium",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "  mapping (address => uint256) public balanceOf;",
+        "  function bug_tmstmp36 () public payable {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp36); // only 1 transaction per block   //bug"
+      ],
+      "context_after": [
+        "        if(now % 15 == 0) { // winner    //bug",
+        "            msg.sender.transfer(address(this).balance);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_2.sol",
+  "contract_name": "CareerOnToken",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 15,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  event Approval(address indexed a_owner, address indexed _spender, uint256 _value);",
+        "  function bug_unchk_send13() payable public{"
+      ],
+      "context_after": [
+        "  event OwnerChang(address indexed _old,address indexed _new,uint256 _coin_change);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 18,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnerChang(address indexed _old,address indexed _new,uint256 _coin_change);",
+        ""
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  uint256 public totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  uint256 public totalSupply;"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  string public name;                   //\u540d\u79f0\uff0c\u4f8b\u5982\"My test token\""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  string public name;                   //\u540d\u79f0\uff0c\u4f8b\u5982\"My test token\""
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  uint8 public decimals;               //\u8fd4\u56detoken\u4f7f\u7528\u7684\u5c0f\u6570\u70b9\u540e\u51e0\u4f4d\u3002\u6bd4\u5982\u5982\u679c\u8bbe\u7f6e\u4e3a3\uff0c\u5c31\u662f\u652f\u63010.001\u8868\u793a."
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 27,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  uint8 public decimals;               //\u8fd4\u56detoken\u4f7f\u7528\u7684\u5c0f\u6570\u70b9\u540e\u51e0\u4f4d\u3002\u6bd4\u5982\u5982\u679c\u8bbe\u7f6e\u4e3a3\uff0c\u5c31\u662f\u652f\u63010.001\u8868\u793a."
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  string public symbol;               //token\u7b80\u79f0,like MTT"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 30,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  string public symbol;               //token\u7b80\u79f0,like MTT"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  address public owner;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 33,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping (address => uint256) public balances;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

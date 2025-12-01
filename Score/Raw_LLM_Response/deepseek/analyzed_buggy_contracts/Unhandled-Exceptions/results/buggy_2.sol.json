@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_2.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:03:52",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 18,
+      "code_snippet": "call addr_unchk31.send (10 ether)\n",
+      "confidence": "medium",
+      "reasoning": "Potential issue: send operation may fail, but no error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 24,
+      "code_snippet": "addr_unchk30.send(42 ether)\n",
+      "confidence": "medium",
+      "reasoning": "Potential issue: send operation may fail, but no error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "addr_unchk31.send(10 ether)\n",
+      "confidence": "medium",
+      "reasoning": "Potential issue: send operation may fail, but no error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "winner_unchk38.send(subpot_unchk38)\n",
+      "confidence": "medium",
+      "reasoning": "Potential issue: send operation may fail, but no error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr_unchk40.send(2 ether)\n",
+      "confidence": "medium",
+      "reasoning": "Potential issue: send operation may fail, but no error handling."
+    }
+  ]
+}

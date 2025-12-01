@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_36.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:24:07",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 19,
+      "code snippet": "function setReward_TOD2() public payable {\n        require(!claimed_TOD2);\n\n        require(msg.sender == owner_TOD2);\n        owner_TOD2.transfer(reward_TOD2);\n        reward_TOD2 = msg.value;\n    }",
+      "confidence": "medium",
+      "reasoning": "The setReward function in token recipient contract allows for quick execution of setting rewards without proper checks on the order of operations, which could allow front running."
+    }
+  ]
+}

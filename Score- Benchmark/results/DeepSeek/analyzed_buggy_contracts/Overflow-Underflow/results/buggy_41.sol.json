@@ -1,0 +1,148 @@
+{
+  "contract": "buggy_41.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:31:39",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 variables can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high",
+      "reasoning": "Potential overflow in variable assignment."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 56,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 variables can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 57,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 variables can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "balances_intou30[msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if balance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 74,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Addition to balance may overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 85,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "reasoning": "Addition to lockTime can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 92,
+      "code_snippet": "transferValue_intou33 = 10;",
+      "confidence": "medium",
+      "reasoning": "Hard-coded value may not prevent overflow in subtraction."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 98,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtraction can cause underflow if value is too large."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 124,
+      "code_snippet": "balanceOf[msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if balance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 126,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Addition to balance may overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 134,
+      "code_snippet": "allowance[_from][msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if allowance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 142,
+      "code_snippet": "balanceOf[_from] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if balance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 146,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Addition to balance may overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 158,
+      "code_snippet": "allowance[_from][msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if allowance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 164,
+      "code_snippet": "balanceOf[_from] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if balance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 172,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Addition to balance may overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 180,
+      "code_snippet": "allowance[_from][msg.sender] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if allowance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 186,
+      "code_snippet": "balanceOf[_from] -= _value;",
+      "confidence": "high",
+      "reasoning": "Subtraction may underflow if balance is too low."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 194,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "high",
+      "reasoning": "Addition to balance may overflow."
+    }
+  ]
+}

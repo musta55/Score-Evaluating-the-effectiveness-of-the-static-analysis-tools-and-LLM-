@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_25.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:22:15",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "address.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "The address.send() call in sendToWinner_unchk20 does not have a try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 13,
+      "code_snippet": "addr.send(10 ether)",
+      "confidence": "medium",
+      "reasoning": "The addr.send() call in bug_unchk31 does not have a try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 24,
+      "code_snippet": "address.send(5 ether)",
+      "confidence": "medium",
+      "reasoning": "The address.send() call in unhandledsend_unchk38 does not have a try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 23,
+      "code_snippet": "addr.send(msg.value)",
+      "confidence": "medium",
+      "reasoning": "The addr.send() call in my_func_unchk23 does not have a try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "medium",
+      "reasoning": "The addr.send() call in bug_unchk30 does not have a try-catch or return value check."
+    }
+  ]
+}

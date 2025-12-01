@@ -1,0 +1,40 @@
+{
+  "contract": "buggy_2.sol",
+  "contract_name": "CareerOnToken",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 13,
+      "code_snippet": "(bool success,)=msg.sender.call.value(1 ether)=\"\";",
+      "confidence": "high",
+      "context_before": [
+        "        if( ! (msg.sender.send(1 ether) ) ){",
+        "            revert();"
+      ],
+      "context_after": [
+        "        not_called_re_ent27 = false;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance_re_ent40[msg.sender])=\"\";",
+      "confidence": "high",
+      "context_before": [
+        "function withdrawFunds_re_ent31 (uint256 _weiToWithdraw) public {",
+        "        require(balances_re_ent31[msg.sender] >= _weiToWithdraw);"
+      ],
+      "context_after": [
+        "        require(msg.sender.send(_weiToWithdraw));  //bug",
+        "        balances_re_ent31[msg.sender] -= _weiToWithdraw;"
+      ]
+    }
+  ],
+  "success": true
+}

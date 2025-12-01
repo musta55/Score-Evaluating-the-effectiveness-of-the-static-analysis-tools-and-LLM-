@@ -1,0 +1,44 @@
+{
+  "contract": "buggy_37.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:27:52",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code snippet": "function play_TOD5(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD5 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code snippet": "function getReward_TOD5() payable public{\n     winner_TOD5.transfer(msg.value);\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 102,
+      "code snippet": "function play_TOD7(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD7 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 103,
+      "code snippet": "function getReward_TOD7() payable public{\n     winner_TOD7.transfer(msg.value);\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 162,
+      "code snippet": "function play_TOD23(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD23 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 163,
+      "code snippet": "function getReward_TOD23() payable public{\n     winner_TOD23.transfer(msg.value);\n    }",
+      "confidence": "medium"
+    }
+  ]
+}

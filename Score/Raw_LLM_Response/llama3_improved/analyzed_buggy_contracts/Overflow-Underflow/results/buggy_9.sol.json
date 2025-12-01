@@ -1,0 +1,202 @@
+{
+  "contract": "buggy_9.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "transferValue_intou17 = 10;",
+      "confidence": "medium",
+      "context_before": [
+        "  *  Multiplies two numbers, throws on overflow.",
+        "  */"
+      ],
+      "context_after": [
+        "    if (a == 0) {",
+        "        return 0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {",
+        "    if (a == 0) {"
+      ],
+      "context_after": [
+        "    }",
+        "    c = a * b;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "transferValue_intou25 = 10;",
+      "confidence": "medium",
+      "context_before": [
+        "        return 0;",
+        "    }"
+      ],
+      "context_after": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 22,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        "    c = a * b;",
+        "    assert(c / a == b);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "transferValue_intou33 = 10;",
+      "confidence": "medium",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "  *  Integer division of two numbers, truncating the quotient."
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(balances_intou14[msg.sender] - _value >= 0);",
+      "confidence": "medium",
+      "context_before": [
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    // assert(b > 0); // Solidity automatically throws when dividing by 0"
+      ],
+      "context_after": [
+        "    // assert(a == b * c + a % b); // There is no case in which this doesn't hold",
+        "    return a / b;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "balances_intou14[msg.sender] -= _value;",
+      "confidence": "medium",
+      "context_before": [
+        "    // uint256 c = a / b;",
+        "    // assert(a == b * c + a % b); // There is no case in which this doesn't hold"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "balances_intou14[_to] += _value;",
+      "confidence": "medium",
+      "context_before": [
+        "    return a / b;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend)."
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "require(balances_intou30[msg.sender] - _value >= 0);",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "balances_intou30[msg.sender] -= _value;",
+      "confidence": "medium",
+      "context_before": [
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).",
+        "  */"
+      ],
+      "context_after": [
+        "    assert(b <= a);",
+        "    return a - b;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "balances_intou30[_to] += _value;",
+      "confidence": "medium",
+      "context_before": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

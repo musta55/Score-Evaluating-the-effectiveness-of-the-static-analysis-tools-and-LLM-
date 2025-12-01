@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_43.sol",
+  "contract_name": "EventMetadata",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "return startTime + (5 * 1 days) == block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    // state functions"
+      ],
+      "context_after": [
+        "    function _setMetadata(bytes memory metadata) internal {",
+        "        emit MetadataSet(metadata);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "return startTime + (5 * 1 days) == block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "function bug_tmstmp9() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract Operated {"
+      ],
+      "context_after": [
+        "  address winner_tmstmp2;",
+        "function play_tmstmp2(uint startTime) public {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "return now % 15 == 0;",
+      "confidence": "high",
+      "context_before": [
+        "\t\twinner_tmstmp2 = msg.sender;}}",
+        "  address private _operator;"
+      ],
+      "context_after": [
+        "    return block.timestamp >= 1546300800;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  uint256 bugv_tmstmp2 = block.timestamp;"
+      ],
+      "context_after": [
+        "",
+        "    // state functions"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "require(now % 15 == 0);",
+      "confidence": "high",
+      "context_before": [
+        "    function _setOperator(address operator) internal {",
+        "        require(_operator != operator, \"cannot set same operator\");"
+      ],
+      "context_after": [
+        "        emit OperatorUpdated(operator, hasActiveOperator());",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,68 @@
+{
+  "contract": "buggy_33.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:42:43",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 3,
+      "code_snippet": "addr.send (10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 4,
+      "code_snippet": "addr.send(5 ether);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 6,
+      "code_snippet": "addr_unchk31.send (10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 7,
+      "code_snippet": "addr_unchk4.send(42 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 8,
+      "code_snippet": "addr_unchk19.send (10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "addr_unchk30 +=1;",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 9,
+      "code_snippet": "addr.send (4 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 38,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr_unchk40.send (2 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

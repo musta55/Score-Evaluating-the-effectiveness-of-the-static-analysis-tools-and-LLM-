@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_43.sol",
+  "contract_name": "EventMetadata",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 15,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    // state functions"
+      ],
+      "context_after": [
+        "    function _setMetadata(bytes memory metadata) internal {",
+        "        emit MetadataSet(metadata);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "function bug_unchk_send28() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 27,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "contract Operated {",
+        ""
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  address private _operator;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 33,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  bool private _status;"
+      ],
+      "context_after": [
+        "  function bug_unchk_send27() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 39,
+      "code_snippet": "msg.sender.transferOperator(operator);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    // state functions"
+      ],
+      "context_after": [
+        "    function _setOperator(address operator) internal {",
+        "        require(_operator != operator, \"cannot set same operator\");"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

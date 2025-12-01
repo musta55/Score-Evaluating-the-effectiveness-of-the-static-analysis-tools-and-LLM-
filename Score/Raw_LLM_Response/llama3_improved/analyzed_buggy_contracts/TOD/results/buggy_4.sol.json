@@ -1,0 +1,74 @@
+{
+  "contract": "buggy_4.sol",
+  "contract_name": "PHO",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require(now >= 1589036400);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " */",
+        "interface IERC20 {"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "require(now >= 1620572400);",
+      "confidence": "high",
+      "context_before": [
+        "    function balanceOf(address who) external view returns (uint256);",
+        "    function transfer(address to, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require(now >= 1652108400);",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " * @title Token implementation"
+      ],
+      "context_after": [
+        "contract PHO is IERC20 {",
+        "  bool claimed_TOD26 = false;"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require(now >= 1683644400);",
+      "confidence": "high",
+      "context_before": [
+        "uint256 reward_TOD26;",
+        "function setReward_TOD26() public payable {"
+      ],
+      "context_after": [
+        "",
+        "        require(msg.sender == owner_TOD26);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

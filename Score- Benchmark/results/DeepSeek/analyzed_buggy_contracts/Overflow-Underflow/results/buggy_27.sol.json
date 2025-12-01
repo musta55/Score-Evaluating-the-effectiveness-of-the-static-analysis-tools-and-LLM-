@@ -1,0 +1,155 @@
+{
+  "contract": "buggy_27.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:51:24",
+  "findings": [
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou14;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 50,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou16;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 57,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 64,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou23;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 71,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou24;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 78,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou28;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 90,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou3;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 97,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou5;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 104,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou28;",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two 8-bit unsigned integers without overflow check can cause integer overflow, leading to incorrect value assignment."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 109,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 76,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 79,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 94,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 97,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 102,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of a positive number from an 8-bit unsigned integer without underflow check can result in negative value."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "tokensToTransfer = value.sub(tokensToBurn).sub(tokensToDanPan);",
+      "confidence": "medium|low",
+      "reasoning": "Subtraction of two large values without overflow check can cause integer overflow."
+    }
+  ]
+}

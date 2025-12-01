@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_6.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:24:31",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 15,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high",
+      "reasoning": "block.timestamp is used in critical logic for time comparison, potentially allowing manipulation if not properly controlled."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 23,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high",
+      "reasoning": "block.timestamp is used in critical logic for time comparison, potentially allowing manipulation if not properly controlled."
+    },
+    {
+      "bug_type": "Deprecated Timestamp Usage",
+      "line_number": 24,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4);",
+      "confidence": "medium",
+      "reasoning": "now is deprecated but still used, which may lead to unreliable timestamp comparisons."
+    },
+    {
+      "bug_type": "Deprecated Timestamp Usage",
+      "line_number": 32,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4);",
+      "confidence": "medium",
+      "reasoning": "now is deprecated but still used, which may lead to unreliable timestamp comparisons."
+    },
+    {
+      "bug_type": "Deprecated Timestamp Usage",
+      "line_number": 39,
+      "code_snippet": "if (startTime + (5 * 1 days) == now)",
+      "confidence": "medium",
+      "reasoning": "now is deprecated but still used, which may lead to unreliable timestamp comparisons."
+    }
+  ]
+}

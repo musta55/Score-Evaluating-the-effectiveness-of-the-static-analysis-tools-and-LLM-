@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44);",
+      "confidence": "high",
+      "context_before": [
+        "uint256 date;",
+        "address filesender;"
+      ],
+      "context_after": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))  {\n// comment1;\n} else {\n//comment2;\n}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function sendToWinner_unchk44() public {"
+      ],
+      "context_after": [
+        "        winner_unchk44.send(winAmount_unchk44);",
+        "        payedOut_unchk44 = true;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        newInfo.filesender = dappBoxOrigin;",
+        "        newInfo.fileHash = _fileHash;"
+      ],
+      "context_after": [
+        "        newInfo.contractAddress = _contractAddress;",
+        "        newInfo.identifier = _identifier;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

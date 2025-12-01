@@ -1,0 +1,2961 @@
+
+╔══════════════════════════════════════════════════════════════════╗
+║   DeepSeek-R1:7b Smart Contract Vulnerability Evaluation        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Model: deepseek-r1:7b
+Bug Types: 7
+Expected Performance: F1~0.15-0.20, Recall~10-15%
+Target: Beat Manticore (F1=0.1491), rank 5th/8
+
+Starting evaluation...
+
+
+======================================================================
+🔍 BUG TYPE: Re-entrancy
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 4
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 8
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 8 instances
+  ✓ Total findings: 8
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 1
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 2 instances
+  ✓ Total findings: 1
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 3
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 25
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 9 instances
+  ✓ Total findings: 9
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 14 instances
+  ✓ Total findings: 14
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 3 instances
+  ✓ Total findings: 2
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 2
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 7 instances
+  ✓ Total findings: 7
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for Re-entrancy...
+  → Running 1 reasoning passes for Re-entrancy
+    Pass 1/1: Identify external calls with reasoning
+      Found: 0 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+======================================================================
+🔍 BUG TYPE: Timestamp-Dependency
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 42
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 4
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 12
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 10 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+      Found: 9 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 10 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 7
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  ✓ Total findings: 2
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 3 instances
+  ✓ Total findings: 2
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 19 instances
+  ✓ Total findings: 19
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 12 instances
+  ✓ Total findings: 12
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 21
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for Timestamp-Dependency...
+  → Running 1 reasoning passes for Timestamp-Dependency
+    Pass 1/1: Find timestamp dependencies with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+======================================================================
+🔍 BUG TYPE: Unchecked-Send
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 0 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 7
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 0 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 0 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 11 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for Unchecked-Send...
+  → Running 1 reasoning passes for Unchecked-Send
+    Pass 1/1: Find unchecked send/call with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+======================================================================
+🔍 BUG TYPE: Unhandled-Exceptions
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 7 instances
+  ✓ Total findings: 7
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  ✓ Total findings: 2
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 8 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 7
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 16
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 7 instances
+  ✓ Total findings: 7
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 0
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 9 instances
+  ✓ Total findings: 9
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 5 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 19
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 0 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 11
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  ✓ Total findings: 5
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 9 instances
+  ✓ Total findings: 9
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 20
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  ✓ Total findings: 6
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 8 instances
+  ✓ Total findings: 8
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 9 instances
+  ✓ Total findings: 8
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 8 instances
+  ✓ Total findings: 8
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 6 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+      Found: 12 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for Unhandled-Exceptions...
+  → Running 1 reasoning passes for Unhandled-Exceptions
+    Pass 1/1: Find unhandled exceptions with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+======================================================================
+🔍 BUG TYPE: TOD
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 0
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 0
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 14
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ⚠ API call failed (attempt 2/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✗ API call failed after 3 attempts: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 18
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 4 instances
+  ✓ Total findings: 1
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 5
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 0
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 11
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for TOD...
+  → Running 1 reasoning passes for TOD
+    Pass 1/1: Find TOD (Transaction Order Dependence) with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+======================================================================
+🔍 BUG TYPE: tx.origin
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 1
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 12
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 14 instances
+  ✓ Total findings: 14
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+  ✓ Total findings: 8
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 2
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 12 instances
+  ✓ Total findings: 12
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 15
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 11 instances
+  ✓ Total findings: 11
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 12 instances
+  ✓ Total findings: 12
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 21
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for tx.origin...
+  → Running 1 reasoning passes for tx.origin
+    Pass 1/1: Find tx.origin with reasoning
+      Found: 14 instances
+  ✓ Total findings: 14
+
+======================================================================
+🔍 BUG TYPE: Overflow-Underflow
+======================================================================
+Found 50 contracts
+
+[1/50] buggy_1.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[2/50] buggy_10.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[3/50] buggy_11.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 18
+
+[4/50] buggy_12.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[5/50] buggy_13.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[6/50] buggy_14.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[7/50] buggy_15.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 10 instances
+  ✓ Total findings: 10
+
+[8/50] buggy_16.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[9/50] buggy_17.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[10/50] buggy_18.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[11/50] buggy_19.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[12/50] buggy_2.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[13/50] buggy_20.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 6
+
+[14/50] buggy_21.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 33
+
+[15/50] buggy_22.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[16/50] buggy_23.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[17/50] buggy_24.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[18/50] buggy_25.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[19/50] buggy_26.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[20/50] buggy_27.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 21
+
+[21/50] buggy_28.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 5 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 27
+
+[22/50] buggy_29.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[23/50] buggy_3.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 27
+
+[24/50] buggy_30.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 14
+
+[25/50] buggy_31.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[26/50] buggy_32.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 1 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 19
+
+[27/50] buggy_33.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[28/50] buggy_34.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 0
+
+[29/50] buggy_35.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 8
+
+[30/50] buggy_36.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  ⚠ API call failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[31/50] buggy_37.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[32/50] buggy_38.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 28
+
+[33/50] buggy_39.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 17
+
+[34/50] buggy_4.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[35/50] buggy_40.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 3
+
+[36/50] buggy_41.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 20
+
+[37/50] buggy_42.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[38/50] buggy_43.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 9
+
+[39/50] buggy_44.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 1 instances
+  ✓ Total findings: 1
+
+[40/50] buggy_45.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  ✓ Total findings: 3
+
+[41/50] buggy_46.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  ✓ Total findings: 4
+
+[42/50] buggy_47.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 7 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 30
+
+[43/50] buggy_48.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 10
+
+[44/50] buggy_49.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 5 instances
+  ✓ Total findings: 5
+
+[45/50] buggy_5.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 4
+
+[46/50] buggy_50.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 2 instances
+  ✓ Total findings: 2
+
+[47/50] buggy_6.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 4 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 16
+
+[48/50] buggy_7.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 52
+
+[49/50] buggy_8.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 13
+
+[50/50] buggy_9.sol
+
+📄 Analyzing None for Overflow-Underflow...
+  → Running 1 reasoning passes for Overflow-Underflow
+    Pass 1/1: Find integer overflow/underflow with reasoning
+      Found: 3 instances
+  → No findings in focused passes, trying main reasoning prompt...
+  ✓ Total findings: 38
+
+╔══════════════════════════════════════════════════════════════════╗
+║                     EVALUATION COMPLETE                          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Total Contracts Analyzed: 350
+Total Findings: 1874
+Time Elapsed: 1464.6 minutes
+Average: 251.1 seconds per contract
+
+Results saved to: tool_results/deepseek/analyzed_buggy_contracts
+
+Next step: Run comparison with ground truth
+  python3 compare_with_ground_truth.py --results-dir tool_results/deepseek
+
+results-dir tool_results/deepseek
+

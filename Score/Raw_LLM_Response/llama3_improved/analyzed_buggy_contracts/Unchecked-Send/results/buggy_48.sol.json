@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_48.sol",
+  "contract_name": "ERC20Interface",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 26,
+      "code_snippet": "function bug_unchk_send21() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "        c = a + b;",
+        "        require(c >= a);"
+      ],
+      "context_after": [
+        "    function sub(uint a, uint b) internal pure returns (uint c) {\t//public -> internal : compiler version up",
+        "        require(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 32,
+      "code_snippet": "function bug_unchk_send10() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "    function mul(uint a, uint b) internal pure returns (uint c) {\t//public -> internal : compiler version up"
+      ],
+      "context_after": [
+        "        require(a == 0 || c / a == b);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 38,
+      "code_snippet": "function bug_unchk_send22() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "        require(b > 0);",
+        "        c = a / b;"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 44,
+      "code_snippet": "function bug_unchk_send12() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "// ----------------------------------------------------------------------------",
+        "// ERC Token Standard #20 Interface"
+      ],
+      "context_after": [
+        "// ----------------------------------------------------------------------------",
+        "contract ERC20Interface {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 50,
+      "code_snippet": "function bug_unchk_send11() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "function bug_unchk_send21() payable public{",
+        "      msg.sender.transfer(1 ether);}\t\t\t\t\t\t\t//constant -> view : compiler version up"
+      ],
+      "context_after": [
+        "function bug_unchk_send10() payable public{",
+        "      msg.sender.transfer(1 ether);}\t\t\t\t//constant -> view : compiler version up"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 56,
+      "code_snippet": "function bug_unchk_send1() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "function bug_unchk_send22() payable public{",
+        "      msg.sender.transfer(1 ether);}\t//constant -> view : compiler version up"
+      ],
+      "context_after": [
+        "function bug_unchk_send12() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 62,
+      "code_snippet": "function bug_unchk_send27() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "function bug_unchk_send11() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "function bug_unchk_send1() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 68,
+      "code_snippet": "function bug_unchk_send31() payable public{\n      msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send27() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "  function bug_unchk_send31() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

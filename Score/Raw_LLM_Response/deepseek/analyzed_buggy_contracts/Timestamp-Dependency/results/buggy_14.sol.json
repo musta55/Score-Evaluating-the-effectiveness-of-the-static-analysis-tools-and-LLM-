@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_14.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:40:47",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "bug_tmstmp7() public {\n    uint _vtime = block.timestamp;\n    if (startTime + (5 * 1 days) == _vtime) {\n        winner_tmstmp7 = msg.sender;}\n}",
+      "confidence": "high",
+      "reasoning": "Uses block.timestamp without synchronization, allowing multiple transactions within the timeframe."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 43,
+      "code_snippet": "bug_tmstmp8() public payable {\n    require(msg.value == 10 ether);\n    require(now != pastBlockTime_tmstmp8);\n    pastBlockTime_tmstmp8 = now;\n    if (now % 15 == 0) {\n        msg.sender.transfer(address(this).balance);\n    }\n}",
+      "confidence": "high",
+      "reasoning": "Directly uses block.timestamp without proper synchronization."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 44,
+      "code_snippet": "bug_tmstmp9() public {\n    uint _vtime = block.timestamp;\n    if (startTime + (5 * 1 days) == _vtime) {\n        winner_tmstmp9 = msg.sender;}\n}",
+      "confidence": "high",
+      "reasoning": "Rely on block.timestamp for timing without synchronization."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 45,
+      "code_snippet": "bug_tmstmp10() public {\n    uint _vtime = block.timestamp;\n    if (startTime + (5 * 1 days) == _vtime) {\n        winner_tmstmp10 = msg.sender;}\n}",
+      "confidence": "high",
+      "reasoning": "Uses block.timestamp without synchronization."
+    }
+  ]
+}

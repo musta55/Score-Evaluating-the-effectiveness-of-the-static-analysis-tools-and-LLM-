@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_15.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:52:09",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 15,
+      "code_snippet": "allowance[msg.sender] = _value;",
+      "confidence": "high",
+      "reasoning": "The approve() function does not check the caller's balance before setting the allowance."
+    },
+    {
+      "bug_type": 16,
+      "line_number": 23,
+      "code_snippet": "spender.receiveApproval(msg.sender, _value, address(this), _extraData);",
+      "confidence": "high",
+      "reasoning": "The approveAndCall() function does not validate the caller's balance before setting the allowance and emitting approval."
+    }
+  ]
+}

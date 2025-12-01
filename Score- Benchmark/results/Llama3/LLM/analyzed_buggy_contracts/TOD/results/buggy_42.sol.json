@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_42.sol",
+  "contract_name": "Owned",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(staker[msg.sender].time + stakeTime <= now);",
+      "confidence": "high",
+      "context_before": [
+        "            winner_TOD17 = msg.sender;",
+        "        }"
+      ],
+      "context_after": [
+        "",
+        "function getReward_TOD17() payable public{"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "require(staker[msg.sender].time + stakeTime <= now);",
+      "confidence": "high",
+      "context_before": [
+        "  address payable winner_TOD27;",
+        "function play_TOD27(bytes32 guess) public{"
+      ],
+      "context_after": [
+        "       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

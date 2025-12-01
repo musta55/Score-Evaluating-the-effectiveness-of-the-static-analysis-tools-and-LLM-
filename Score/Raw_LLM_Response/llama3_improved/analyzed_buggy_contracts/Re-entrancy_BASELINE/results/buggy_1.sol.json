@@ -1,0 +1,24 @@
+{
+  "contract": "buggy_1.sol",
+  "contract_name": "EIP20Interface",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 94,
+      "code_snippet": "if (!(msg.sender.send(_weiToWithdraw));) { revert(); }",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  event Transfer(address indexed _from, address indexed _to, uint256 _value);"
+      ],
+      "context_after": [
+        "function bug_re_ent13() public{",
+        "        require(not_called_re_ent13);"
+      ]
+    }
+  ],
+  "success": true
+}

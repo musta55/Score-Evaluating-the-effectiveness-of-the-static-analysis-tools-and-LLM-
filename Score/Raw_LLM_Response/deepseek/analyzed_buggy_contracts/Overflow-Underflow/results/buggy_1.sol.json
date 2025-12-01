@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_1.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:13:56",
+  "findings": [
+    {
+      "bug_type": "Underflow",
+      "line_number": 5,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "reasoning": "Arithmetic operation without overflow protection leading to underflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 6,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "reasoning": "Arithmetic operation without overflow protection leading to underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 23,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "reasoning": "Arithmetic operation without overflow protection leading to potential overflow."
+    }
+  ]
+}

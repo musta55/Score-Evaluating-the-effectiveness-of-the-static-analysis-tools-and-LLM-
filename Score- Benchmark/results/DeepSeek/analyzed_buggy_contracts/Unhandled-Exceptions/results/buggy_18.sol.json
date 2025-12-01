@@ -1,0 +1,141 @@
+{
+  "contract": "buggy_18.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:57:22",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code snippet": "uint64 subpot_unchk34 = 10 ether;",
+      "confidence": "high|medium",
+      "reasoning": "The function `cash_unchk34` sends 10 ether without validation, which could allow attackers to exploit by sending insufficient funds or bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 8,
+      "code snippet": "address payable addr_unchk6;",
+      "confidence": "high|medium",
+      "reasoning": "The function `callnotchecked_unchk16` uses `callNotCheck` without parameter validation, risking unintended behavior if the external function fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 20,
+      "code snippet": "uint receivers_unchk18 +=1;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_unchk18` sends ether without checking if the address is valid, potentially allowing unauthorized transactions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code snippet": "uint receivers_unchk6 +=1;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_unchk6` sends ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 34,
+      "code snippet": "uint receivers_unchk10 +=1;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_unchk10` sends ether without checking recipient validity, risking unauthorized transactions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 45,
+      "code snippet": "uint receivers_unchk26 +=1;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_unchk26` sends ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 54,
+      "code snippet": "uint receivers_unchk34 +=1;",
+      "confidence": "high|medium",
+      "reasoning": "The function `bug_unchk34` sends ether without validation, allowing bypass of contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 62,
+      "code snippet": "uint toBurn = tokens.mul(burnPercent).div(1000);",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function calculates `toBurn` without validating the caller's balance, risking unauthorized token transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 65,
+      "code snippet": "balances[msg.sender] = balances[msg.sender].sub(tokens);",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function subtracts tokens without checking if the caller has sufficient balance, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 72,
+      "code snippet": "allowed[from][msg.sender] = allowed[from][msg.sender].sub(tokens);",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function allows tokens to be transferred without validating recipient allowance, risking unauthorized transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 75,
+      "code snippet": "balances[to] = balances[to].add(toSend);",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function adds tokens without validating recipient address, risking unauthorized transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 82,
+      "code snippet": "balances[address(0)] = balances[address(0)].add(toBurn);",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function adds burned tokens without validating recipient address, risking unauthorized transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code snippet": "msg.sender.send(address(this).balance);",
+      "confidence": "medium",
+      "reasoning": "The `withdrawLeftOver_unchk21` function sends the contract's balance without validation, risking unauthorized access."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 90,
+      "code snippet": "msg.sender.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk19` function sends 42 ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 95,
+      "code snippet": "msg.sender.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk16` function sends 5 ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 100,
+      "code snippet": "msg.sender.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk38` function sends 42 ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 105,
+      "code snippet": "msg.sender.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk40` function sends 5 ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 110,
+      "code snippet": "msg.sender.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk36` function sends 42 ether without validation, bypassing contract safeguards."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 115,
+      "code snippet": "msg.sender.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The `bug_unchk39` function sends 5 ether without validation, bypassing contract safeguards."
+    }
+  ]
+}

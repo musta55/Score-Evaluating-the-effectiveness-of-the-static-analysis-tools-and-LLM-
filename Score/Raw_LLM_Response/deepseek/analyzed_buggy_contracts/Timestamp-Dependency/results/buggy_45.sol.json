@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_45.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:00:57",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 25,
+      "code_snippet": "require(now != pastBlockTime_tmstmp32);",
+      "confidence": "HIGH",
+      "reasoning": "The use of 'now' without a delay creates a vulnerability where an attacker can predict the next block timestamp and manipulate the transaction timing."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 14,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4);",
+      "confidence": "HIGH",
+      "reasoning": "Same as above, no delay after setting 'pastBlockTime' allows prediction of block timestamp."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_25.sol",
+  "contract_name": "WhiteBetting",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_homeTeam;",
+        "    uint32 odd_drawTeam;"
+      ],
+      "context_after": [
+        "    uint32 odd_over;",
+        "    uint32 odd_under;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 25,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_drawTeam;",
+        "    uint32 odd_awayTeam;"
+      ],
+      "context_after": [
+        "    uint32 odd_under;",
+        "    uint32 odd_homeTeamAndDraw;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 26,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_awayTeam;",
+        "    uint32 odd_over;"
+      ],
+      "context_after": [
+        "    uint32 odd_homeTeamAndDraw;",
+        "    uint32 odd_homeAndAwayTeam;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 27,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_over;",
+        "    uint32 odd_under;"
+      ],
+      "context_after": [
+        "    uint32 odd_homeAndAwayTeam;",
+        "    uint32 odd_awayTeamAndDraw;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 28,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_under;",
+        "    uint32 odd_homeTeamAndDraw;"
+      ],
+      "context_after": [
+        "    uint32 odd_awayTeamAndDraw;",
+        "    // Checking the game status"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 29,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_homeTeamAndDraw;",
+        "    uint32 odd_homeAndAwayTeam;"
+      ],
+      "context_after": [
+        "    // Checking the game status",
+        "    uint8  open_status;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 30,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_homeAndAwayTeam;",
+        "    uint32 odd_awayTeamAndDraw;"
+      ],
+      "context_after": [
+        "    uint8  open_status;",
+        "    // Checking whether winning were paid"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

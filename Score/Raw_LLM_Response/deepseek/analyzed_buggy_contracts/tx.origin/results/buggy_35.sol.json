@@ -1,0 +1,98 @@
+{
+  "contract": "buggy_35.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:51:53",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code snippet": "function transferTo_txorigin1(address payable receiver, uint amount,address owner_txorigin1) public {\n        require(tx.origin == owner_txorigin1);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code snippet": "function transferTo_txorigin2(address payable receiver, uint amount,address owner_txorigin2) public {\n        require(tx.origin == owner_txorigin2);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 48,
+      "code snippet": "function transferTo_txorigin3(address payable receiver, uint amount,address owner_txorigin3) public {\n        require(tx.origin == owner_txorigin3);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 51,
+      "code snippet": "function transferTo_txorigin4(address payable receiver, uint amount,address owner_txorigin4) public {\n        require(tx.origin == owner_txorigin4);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 54,
+      "code snippet": "function transferTo_txorigin5(address payable receiver, uint amount,address owner_txorigin5) public {\n        require(tx.origin == owner_txorigin5);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 57,
+      "code snippet": "function transferTo_txorigin6(address payable receiver, uint amount,address owner_txorigin6) public {\n        require(tx.origin == owner_txorigin6);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 60,
+      "code snippet": "function transferTo_txorigin7(address payable receiver, uint amount,address owner_txorigin7) public {\n        require(tx.origin == owner_txorigin7);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 63,
+      "code snippet": "function transferTo_txorigin8(address payable receiver, uint amount,address owner_txorigin8) public {\n        require(tx.origin == owner_txorigin8);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 66,
+      "code snippet": "function transferTo_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {\n        require(tx.origin == owner_txorigin9);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 69,
+      "code snippet": "function transferTo_txorigin10(address payable receiver, uint amount,address owner_txorigin10) public {\n        require(tx.origin == owner_txorigin10);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 72,
+      "code snippet": "function transferTo_txorigin11(address payable receiver, uint amount,address owner_txorigin11) public {\n        require(tx.origin == owner_txorigin11);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 75,
+      "code snippet": "function transferTo_txorigin12(address payable receiver, uint amount,address owner_txorigin12) public {\n        require(tx.origin == owner_txorigin12);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 78,
+      "code snippet": "function transferTo_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {\n        require(tx.origin == owner_txorigin13);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 81,
+      "code snippet": "function transferTo_txorigin14(address payable receiver, uint amount,address owner_txorigin14) public {\n        require(tx.origin == owner_txorigin14);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 84,
+      "code snippet": "function transferTo_txorigin15(address payable receiver, uint amount,address owner_txorigin15) public {\n        require(tx.origin == owner_txorigin15);\n        to.call.value(amount);\n    }\n",
+      "confidence": "high"
+    }
+  ]
+}

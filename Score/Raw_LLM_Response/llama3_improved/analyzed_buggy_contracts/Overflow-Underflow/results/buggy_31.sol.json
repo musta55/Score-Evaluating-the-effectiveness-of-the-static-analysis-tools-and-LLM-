@@ -1,0 +1,74 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "vundflw = vundflw + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "    function transferFrom(address from, address to, uint256 value) external returns (bool);",
+        "}"
+      ],
+      "context_after": [
+        "interface Marmo {",
+        "    function signer() external view returns (address _signer);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        " * @dev Elliptic Curve Digital Signature Algorithm (ECDSA) operations.",
+        " *"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        " *",
+        " * These functions can be used to verify that a message was signed by the holder"
+      ],
+      "context_after": [
+        " */",
+        "library ECDSA {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "library ECDSA {",
+        "    /**"
+      ],
+      "context_after": [
+        "     * `signature`. This address can then be used for verification purposes.",
+        "     *"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

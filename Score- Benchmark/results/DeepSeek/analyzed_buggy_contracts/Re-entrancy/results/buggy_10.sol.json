@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_10.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 14:35:11",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 6,
+      "code_snippet": "msg.sender.transfer(transferValue_re_ent39);",
+      "confidence": "high",
+      "reasoning": "The transfer occurs before updating the balance, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 7,
+      "code_snippet": "msg.sender.send(balances_re_ent36[msg.sender]);",
+      "confidence": "high",
+      "reasoning": "The send occurs before updating the balance, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 8,
+      "code_snippet": "msg.sender.send(_weiToWithdraw);",
+      "confidence": "high",
+      "reasoning": "The send occurs before updating the balance, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 12,
+      "code_snippet": "msg.sender.call.value(userBalance_re_ent40[msg.sender])",
+      "confidence": "high",
+      "reasoning": "The call occurs before updating the balance, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 13,
+      "code_snippet": "msg.sender.call.value(userBalance_re_ent33[msg.sender])",
+      "confidence": "high",
+      "reasoning": "The call occurs before updating the balance, allowing re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 17,
+      "code_snippet": "_signers.push(msg.sender);",
+      "confidence": "high",
+      "reasoning": "The push occurs before updating the signers storage, allowing re-entrancy."
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_49.sol",
+  "contract_name": "TAMC",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "require(balances_intou14[msg.sender] - _value >= 0);",
+      "confidence": "high",
+      "context_before": [
+        "    return true;",
+        "  }"
+      ],
+      "context_after": [
+        "",
+        "  mapping(address => uint) balances_intou30;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(balances_intou30[msg.sender] - _value >= 0);",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_intou39() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "  uint8 public decimals = 18;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "",
+        "    constructor() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 54,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "        require(balanceOf[msg.sender] >= value);",
+        "        balanceOf[msg.sender] -= value;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 67,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  mapping(address => uint) public lockTime_intou13;"
+      ],
+      "context_after": [
+        "function increaseLockTime_intou13(uint _secondsToIncrease) public {",
+        "        lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 72,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function withdraw_intou13() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou13 = 10;",
+        "        msg.sender.transfer(transferValue_intou13);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "medium",
+      "context_before": [
+        "    balances_intou14[msg.sender] -= _value;  //bug",
+        "    balances_intou14[_to] += _value;  //bug"
+      ],
+      "context_after": [
+        "  }",
+        "  mapping (address => uint256) public balanceOf;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "  mapping (address => uint256) public balanceOf;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "function transfer_intou30(address _to, uint _value) public returns (bool) {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "medium",
+      "context_before": [
+        "    balances_intou30[msg.sender] -= _value;  //bug",
+        "    balances_intou30[_to] += _value;  //bug"
+      ],
+      "context_after": [
+        "  }",
+        "  string public name = \"TAMC\";"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou8;   // overflow bug"
+      ],
+      "context_after": [
+        "  string public symbol = \"TAMC\";",
+        "  function bug_intou39() public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "    uint8 vundflw =0;",
+        "    vundflw = vundflw -10;   // underflow bug"
+      ],
+      "context_after": [
+        "  uint8 public decimals = 18;",
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "  function bug_intou31() public{"
+      ],
+      "context_after": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        ""
+      ],
+      "context_after": [
+        "        balanceOf[msg.sender] = totalSupply;",
+        "        emit Transfer(address(0), msg.sender, totalSupply);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

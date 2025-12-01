@@ -1,0 +1,239 @@
+{
+  "contract": "buggy_21.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:38:07",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Addition of two uint8 variables can cause overflow if the result exceeds 256. Overflow would wrap around to a negative value, leading to incorrect calculations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 70,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 70,
+      "code snippet": "vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "medium",
+      "reasoning": "Subtraction of a value from a uint8 variable can cause underflow if the result becomes negative."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 91,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 91,
+      "code snippet": "vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "medium",
+      "reasoning": "Subtraction of a value from a uint8 variable can cause underflow if the result becomes negative."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 104,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 234,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 58,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Subtraction of a value from a uint8 variable can cause underflow if the result becomes negative."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 62,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 67,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 72,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 76,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 79,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 84,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 90,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 95,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 97,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 102,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 107,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 112,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 120,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 125,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 130,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 135,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 140,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 145,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 150,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 155,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 160,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 165,
+      "code snippet": "vundflw1 = vundflw1 - _value;   // underflow bug",
+      "confidence": "medium",
+      "reasoning": "Same as above, potential underflow when subtracting from a uint8 variable."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 234,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 234,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 234,
+      "code snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou;   // overflow bug",
+      "confidence": "high|medium",
+      "reasoning": "Same as above, potential overflow when adding two uint8 variables."
+    }
+  ]
+}

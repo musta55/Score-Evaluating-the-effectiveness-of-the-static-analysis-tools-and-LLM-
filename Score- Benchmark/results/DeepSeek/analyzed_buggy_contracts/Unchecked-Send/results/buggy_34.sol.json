@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_34.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:34:16",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high|medium",
+      "reasoning": "The `transfer` function does not check the caller's balance before transferring tokens, allowing unauthorized transfers."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 6,
+      "code snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high|medium",
+      "reasoning": "The `transfer` function bypasses balance checks, enabling unauthorized token transfers."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 18,
+      "code snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high|medium",
+      "reasoning": "The `transfer` function lacks necessary checks, allowing unauthorized token transfers."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 25,
+      "code snippet": "if(senderTimeElasped >= minAgeOfToken && (_totalSupply < _maxTotalSupply))",
+      "confidence": "medium",
+      "reasoning": "The `transfer` function does not validate caller balance before transferring tokens."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 30,
+      "code snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high|medium",
+      "reasoning": "The `approve` function does not check if the caller has sufficient tokens, allowing unauthorized transfers."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 47,
+      "code snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "medium",
+      "reasoning": "The `transferFrom` function does not properly validate caller balance before transferring tokens."
+    }
+  ]
+}

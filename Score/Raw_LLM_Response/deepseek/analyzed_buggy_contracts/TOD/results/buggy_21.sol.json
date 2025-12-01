@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_21.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 10:07:09",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 5,
+      "code snippet": "uint256 balance > 0;",
+      "severity": "medium",
+      "reasoning": "The check for `balance > 0` prevents negative balances but does not prevent attackers from bypassing the submission limit, which could reorder transactions."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 8,
+      "code snippet": "uint256 submission < 10;",
+      "severity": "medium",
+      "reasoning": "The submission value check allows attackers to potentially front-run by bypassing the limit, reordering transaction execution."
+    }
+  ]
+}

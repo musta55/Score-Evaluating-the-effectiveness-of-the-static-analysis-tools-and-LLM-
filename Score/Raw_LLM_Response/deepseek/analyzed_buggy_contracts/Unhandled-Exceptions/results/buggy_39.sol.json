@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_39.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:06:16",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44)",
+      "confidence": "medium",
+      "reasoning": "The sendToWinner_unchk44 function uses address.send() without a try-catch block, which could throw exceptions if the external call fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 17,
+      "code_snippet": "addr_unchk31.send(10 ether)",
+      "confidence": "medium",
+      "reasoning": "The bug_unchk31 function uses address.send() without a try-catch block, which could throw exceptions if the external call fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 20,
+      "code_snippet": "addr.send(42 ether)",
+      "confidence": "medium",
+      "reasoning": "The bug_unchk27 function uses address.send() without a try-catch block, which could throw exceptions if the external call fails."
+    }
+  ]
+}

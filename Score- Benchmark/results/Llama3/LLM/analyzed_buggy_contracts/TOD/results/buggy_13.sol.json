@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_13.sol",
+  "contract_name": "BitCash",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require (!claimed_TOD20);",
+      "confidence": "medium",
+      "context_before": [
+        "  bool claimed_TOD20 = false;",
+        "address payable owner_TOD20;"
+      ],
+      "context_after": [
+        "function setReward_TOD20() public payable {",
+        "        require (!claimed_TOD20);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "require (!claimed_TOD32);",
+      "confidence": "medium",
+      "context_before": [
+        "        require (!claimed_TOD20);",
+        ""
+      ],
+      "context_after": [
+        "        owner_TOD20.transfer(reward_TOD20);",
+        "        reward_TOD20 = msg.value;"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "require (!claimed_TOD38);",
+      "confidence": "medium",
+      "context_before": [
+        "        reward_TOD20 = msg.value;",
+        "    }"
+      ],
+      "context_after": [
+        "    function claimReward_TOD20(uint256 submission) public {",
+        "        require (!claimed_TOD20);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require (!claimed_TOD4);",
+      "confidence": "medium",
+      "context_before": [
+        "        require (!claimed_TOD20);",
+        "        require(submission < 10);"
+      ],
+      "context_after": [
+        "        msg.sender.transfer(reward_TOD20);",
+        "        claimed_TOD20 = true;"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "require (!claimed_TOD14);",
+      "confidence": "medium",
+      "context_before": [
+        "        claimed_TOD20 = true;",
+        "    }"
+      ],
+      "context_after": [
+        "  bool claimed_TOD32 = false;",
+        "address payable owner_TOD32;"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require (!claimed_TOD30);",
+      "confidence": "medium",
+      "context_before": [
+        "address payable owner_TOD32;",
+        "uint256 reward_TOD32;"
+      ],
+      "context_after": [
+        "        require (!claimed_TOD32);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "require (!claimed_TOD36);",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "        require(msg.sender == owner_TOD32);"
+      ],
+      "context_after": [
+        "        reward_TOD32 = msg.value;",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

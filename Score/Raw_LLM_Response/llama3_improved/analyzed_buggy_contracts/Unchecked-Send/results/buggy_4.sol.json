@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_4.sol",
+  "contract_name": "PHO",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 18,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        "interface IERC20 {"
+      ],
+      "context_after": [
+        "    function balanceOf(address who) external view returns (uint256);",
+        "    function transfer(address to, uint256 value) external returns (bool);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    function totalSupply() external view returns (uint256);",
+        "    function balanceOf(address who) external view returns (uint256);"
+      ],
+      "context_after": [
+        "    event Transfer(address indexed from, address indexed to, uint256 value);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 22,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    function transfer(address to, uint256 value) external returns (bool);",
+        "    event Transfer(address indexed from, address indexed to, uint256 value);"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "/**",
+        " * @title Token implementation"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 26,
+      "code_snippet": "transfer(sale, saleAmount);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " */",
+        "contract PHO is IERC20 {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 28,
+      "code_snippet": "transfer(evt, evtAmount);",
+      "confidence": "high",
+      "context_before": [
+        " * @title Token implementation",
+        " */"
+      ],
+      "context_after": [
+        "  function bug_unchk_send2() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 30,
+      "code_snippet": "transfer(team, teamAmount);",
+      "confidence": "high",
+      "context_before": [
+        "contract PHO is IERC20 {",
+        "  function bug_unchk_send2() payable public{"
+      ],
+      "context_after": [
+        "  string public name = \"PHO\";",
+        "  function bug_unchk_send17() payable public{"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

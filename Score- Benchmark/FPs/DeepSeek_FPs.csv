@@ -1,0 +1,9 @@
+BugType,FalsePositives,ExcludedByMajority,Total
+Re-entrancy,78,0,78
+Timestamp-Dependency,152,0,152
+Unchecked-Send,145,0,145
+Unhandled-Exceptions,159,0,159
+TOD,33,0,33
+Overflow-Underflow,200,0,200
+tx.origin,180,0,180
+Other,134,0,134

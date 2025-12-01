@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_10.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:08:09",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": -1,
+      "code_snippet": "The contract uses indexed parameters but lacks explicit atomicity in state updates, creating potential front-running opportunities.",
+      "confidence": "medium",
+      "reasoning": "Lack of atomic state updates and balance checks can allow attackers to interfere between transaction observation and execution."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_30.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:38:15",
+  "findings": [
+    {
+      "bug_type": "UnhandledExceptionsVulnerability",
+      "line_number": 42,
+      "code snippet": "addr_unchk6.send(42 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk6 in MinterRole contract allows external calls to send 42 ether without any validation or checks. This can lead to unintended execution of code and potential vulnerabilities."
+    },
+    {
+      "bug_type": "UnhandledExceptionsVulnerability",
+      "line_number": 10,
+      "code snippet": "addr_unchk7.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk7 in Pausable contract allows external calls to send 10 ether without any validation or checks, leading to potential exploitation."
+    },
+    {
+      "bug_type": "UnhandledExceptionsVulnerability",
+      "line_number": 24,
+      "code snippet": "addr_unchk31.send(10 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk31 in PauserRole contract allows external calls to send 10 ether without any validation or checks, leading to potential exploitation."
+    },
+    {
+      "bug_type": "UnhandledExceptionsVulnerability",
+      "line_number": 24,
+      "code snippet": "addr_unchk39.send(4 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk39 in Pausable contract allows external calls to send 4 ether without any validation or checks, leading to potential exploitation."
+    },
+    {
+      "bug_type": "UnhandledExceptionsVulnerability",
+      "line_number": 26,
+      "code snippet": "addr_unchk14.send(5 ether)",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk14 in Pausable contract allows external calls to send 5 ether without any validation or checks, leading to potential exploitation."
+    }
+  ]
+}

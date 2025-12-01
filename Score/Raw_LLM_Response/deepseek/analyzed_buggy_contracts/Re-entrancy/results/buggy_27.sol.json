@@ -1,0 +1,21 @@
+{
+  "contract": "buggy_27.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:27:40",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code snippet": "function transferOwnership(address newOwner) public {\n        // send userBalance[msg.sender] ethers to msg.sender\n        if( ! (msg.sender.send(userBalance_re_ent40[newOwner]) ) ) {\n            revert();\n        }\n        userBalance_re_ent40[newOwner] = 0;\n    }",
+      "context": {
+        "function": "transferOwnership",
+        "args": [
+          "address newOwner"
+        ],
+        "code_snippet": true
+      },
+      "reasoning": "The function calls an external transfer without verifying that the caller has already sent all required tokens. If the caller sends more tokens after this call, it could lead to unintended behavior or allow attackers to manipulate ownership further."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_15.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:27:07",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 25,
+      "code_snippet": "transfer(msg.sender, _to, _value)",
+      "confidence": "medium",
+      "reasoning": "Missing checksum signature on token transfer. Ethereum requires checksum signatures to prevent tampering."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 45,
+      "code_snippet": "approveAndCall(address _spender, uint256 _value, bytes memory _extraData)",
+      "confidence": "high",
+      "reasoning": "Risky function allowing approval requests with extra data. Missing parameters could enable malicious execution."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 10,
+      "code_snippet": "_transfer(msg.sender, _to, _value)",
+      "confidence": "medium",
+      "reasoning": "Invalid recipient handling. Doesn't prevent transfers to unintended addresses by burning tokens instead of rejecting."
+    }
+  ]
+}

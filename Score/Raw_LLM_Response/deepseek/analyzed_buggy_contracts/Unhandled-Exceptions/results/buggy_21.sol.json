@@ -1,0 +1,44 @@
+{
+  "contract": "buggy_21.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:10:03",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "my_func_unchk23(address payable dst) public payable {\n        dst.send(msg.value);\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 17,
+      "code_snippet": "if (! addr_unchk19.send (10 ether) || 1==1)\n      {revert();}",
+      "confidence": "low"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 3,
+      "code_snippet": "if (!addr_unchk4.send(42 ether) || 1==1)",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 80,
+      "code_snippet": "callnotchecked_unchk25(address payable callee) public {\n    callee.call.value(1 ether);\n  }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 39,
+      "code_snippet": "addr.send (4 ether);",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 62,
+      "code_snippet": "callnotchecked_unchk25(address payable callee) public {\n    callee.call.value(1 ether);\n  }",
+      "confidence": "medium"
+    }
+  ]
+}

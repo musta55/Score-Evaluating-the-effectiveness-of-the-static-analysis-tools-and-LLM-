@@ -1,0 +1,154 @@
+{
+  "contract": "buggy_17.sol",
+  "contract_name": "owned",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "    uint256 c = a * b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a / b;",
+        "    return c;"
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    require(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "    uint256 c = a + b;",
+        "    require(c >= a && c >= b);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "  function mod(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    require(b != 0);"
+      ],
+      "context_after": [
+        "  }",
+        "  function max256(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "  function min256(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    return a < b ? a : b;"
+      ],
+      "context_after": [
+        "",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        ""
+      ],
+      "context_after": [
+        "function bug_tmstmp1() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  constructor() public {"
+      ],
+      "context_after": [
+        "  }",
+        "address winner_tmstmp7;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 62,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp7 = msg.sender;}}"
+      ],
+      "context_after": [
+        "  modifier onlyOwner {",
+        "    require(msg.sender == owner);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 69,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "high",
+      "context_before": [
+        "uint256 bugv_tmstmp1 = block.timestamp;",
+        ""
+      ],
+      "context_after": [
+        "    owner = newOwner;",
+        "  }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

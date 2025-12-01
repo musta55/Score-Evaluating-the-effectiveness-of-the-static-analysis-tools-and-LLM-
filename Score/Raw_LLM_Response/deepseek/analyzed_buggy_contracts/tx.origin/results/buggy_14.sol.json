@@ -1,0 +1,36 @@
+{
+  "contract": "buggy_14.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:15:39",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 15,
+      "code_snippet": "function bug_txorigin32( address owner_txorigin32) public{\n        require(tx.origin == owner_txorigin32);\n    }",
+      "confidence": "medium",
+      "reasoning": "The function is defined but never used in the contract, increasing attack surface."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 19,
+      "code_snippet": "function bug_txorigin4( address owner_txorigin4) public{\n        require(tx.origin == owner_txorigin4);\n    }",
+      "confidence": "medium",
+      "reasoning": "The function is defined but never used in the contract, increasing attack surface."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 35,
+      "code_snippet": "function bug_txorigin30( address owner_txorigin30) public{\n        require(tx.origin == owner_txorigin30);\n    }",
+      "confidence": "medium",
+      "reasoning": "The function is defined but never used in the contract, increasing attack surface."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 41,
+      "code_snippet": "function bug_txorigin40( address owner_txorigin40) public{\n        require(tx.origin == owner_txorigin40);\n    }",
+      "confidence": "medium",
+      "reasoning": "The function is defined but never used in the contract, increasing attack surface."
+    }
+  ]
+}

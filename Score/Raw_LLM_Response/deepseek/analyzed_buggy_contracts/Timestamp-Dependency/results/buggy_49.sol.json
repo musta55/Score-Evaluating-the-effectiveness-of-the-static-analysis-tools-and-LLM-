@@ -1,0 +1,92 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:11:26",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 12,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "reasoning": "block.timestamp is used in a condition that could allow manipulation of the 'startTime' parameter, potentially leading to unintended behavior or attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 13,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "This condition could be manipulated by changing the startTime value to bypass the check."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 20,
+      "code_snippet": "require(msg.value == 10 ether);",
+      "confidence": "medium",
+      "reasoning": "The 'now' keyword is used in a condition that could be manipulated by changing the timestamp, potentially allowing unintended transactions."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 23,
+      "code_snippet": "require(now != pastBlockTime_tmstmp40)",
+      "confidence": "high",
+      "reasoning": "The 'now' keyword is used in a condition that could be manipulated by changing the timestamp, potentially allowing multiple transactions per block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 25,
+      "code_snippet": "pastBlockTime_tmstmp40 = now;",
+      "confidence": "high",
+      "reasoning": "Assigning the current timestamp to 'pastBlockTime_tmstmp40' could allow manipulation of transaction frequency."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 31,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "This condition could be manipulated by changing the startTime value to bypass the check."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 38,
+      "code_snippet": "block.timestamp >= 1546300800",
+      "confidence": "high",
+      "reasoning": "This condition is hardcoded and not tied to the current timestamp, potentially allowing unintended behavior."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "balanceOf[msg.sender] -= value;",
+      "confidence": "medium",
+      "reasoning": "The 'allowance' array is manipulated using block.timestamp, which could expose internal state."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 48,
+      "code_snippet": "balanceOf[from] -= value;",
+      "confidence": "medium",
+      "reasoning": "The 'allowance' array is manipulated using block.timestamp, which could expose internal state."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 54,
+      "code_snippet": "block.timestamp >= 1546300800",
+      "confidence": "high",
+      "reasoning": "This condition is hardcoded and not tied to the current timestamp, potentially allowing unintended behavior."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 62,
+      "code_snippet": "balanceOf[from] -= value;",
+      "confidence": "medium",
+      "reasoning": "The 'allowance' array is manipulated using block.timestamp, which could expose internal state."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 68,
+      "code_snippet": "block.timestamp >= 1546300800",
+      "confidence": "high",
+      "reasoning": "This condition is hardcoded and not tied to the current timestamp, potentially allowing unintended behavior."
+    }
+  ]
+}

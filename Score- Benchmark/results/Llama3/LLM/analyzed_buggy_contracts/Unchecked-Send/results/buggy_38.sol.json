@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_38.sol",
+  "contract_name": "ERC20Detailed",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 8,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "interface IERC20 {"
+      ],
+      "context_after": [
+        "  function balanceOf(address who) external view returns (uint256);",
+        "  function allowance(address owner, address spender) external view returns (uint256);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 11,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function balanceOf(address who) external view returns (uint256);",
+        "  function allowance(address owner, address spender) external view returns (uint256);"
+      ],
+      "context_after": [
+        "  function approve(address spender, uint256 value) external returns (bool);",
+        "  function transferFrom(address from, address to, uint256 value) external returns (bool);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function approve(address spender, uint256 value) external returns (bool);",
+        "  function transferFrom(address from, address to, uint256 value) external returns (bool);"
+      ],
+      "context_after": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 17,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  event Transfer(address indexed from, address indexed to, uint256 value);",
+        "  event Approval(address indexed owner, address indexed spender, uint256 value);"
+      ],
+      "context_after": [
+        "",
+        "library SafeMath {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "library SafeMath {"
+      ],
+      "context_after": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 23,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 26,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

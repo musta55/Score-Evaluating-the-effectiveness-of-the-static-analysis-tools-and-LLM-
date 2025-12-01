@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_45.sol",
+  "contract_name": "StockBet",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou36(uint8 p_intou36) public{",
+        "    uint8 vundflw1=0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_intou40(uint8 p_intou40) public{",
+        "    uint8 vundflw1=0;"
+      ],
+      "context_after": [
+        "}",
+        "  event OracleSet(address oracle);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function withdraw_intou33() public {"
+      ],
+      "context_after": [
+        "        uint transferValue_intou33 = 10;",
+        "        msg.sender.transfer(transferValue_intou33);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_intou27() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "  event PlayerBet(address player, uint guess);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "function increaseLockTime_intou13(uint _secondsToIncrease) public {",
+        "        lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow"
+      ],
+      "context_after": [
+        "function withdraw_intou13() public {",
+        "        require(now > lockTime_intou13[msg.sender]);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 63,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnerWins(address owner);",
+        ""
+      ],
+      "context_after": [
+        "        SETUP, PRICE_SET, OPEN, CLOSED, PLAYERS_WIN, OWNER_WIN",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "        NOT_PAID,",
+        "        PAID"
+      ],
+      "context_after": [
+        "",
+        "    struct Guess {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 125,
+      "code_snippet": "...",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function increaseLockTime_intou37(uint _secondsToIncrease) public {"
+      ],
+      "context_after": [
+        "    }",
+        "function withdraw_intou37() public {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

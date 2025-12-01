@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_46.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:26:37",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "addr.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "if (!addr_unchk31.send (10 ether) || 1==1)",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 45,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return value check."
+    }
+  ]
+}

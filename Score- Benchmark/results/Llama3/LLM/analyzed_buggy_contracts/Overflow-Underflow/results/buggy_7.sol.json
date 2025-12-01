@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_7.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "lockTime_intou21[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract Ownable"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function increaseLockTime_intou21(uint _secondsToIncrease) public {"
+      ],
+      "context_after": [
+        "    }",
+        "function withdraw_intou21() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "vundflw = vundflw + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "function withdraw_intou21() public {",
+        "        require(now > lockTime_intou21[msg.sender]);"
+      ],
+      "context_after": [
+        "        msg.sender.transfer(transferValue_intou21);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  bool private stopped;",
+        "  mapping(address => uint) balances_intou10;"
+      ],
+      "context_after": [
+        "function transfer_intou10(address _to, uint _value) public returns (bool) {",
+        "    require(balances_intou10[msg.sender] - _value >= 0);  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "    require(balances_intou10[msg.sender] - _value >= 0);  //bug",
+        "    balances_intou10[msg.sender] -= _value;  //bug"
+      ],
+      "context_after": [
+        "    return true;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  address private _owner;",
+        "  mapping(address => uint) balances_intou22;"
+      ],
+      "context_after": [
+        "function transfer_intou22(address _to, uint _value) public returns (bool) {",
+        "    require(balances_intou22[msg.sender] - _value >= 0);  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    require(balances_intou22[msg.sender] - _value >= 0);  //bug",
+        "    balances_intou22[msg.sender] -= _value;  //bug"
+      ],
+      "context_after": [
+        "    return true;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "  address private _master;",
+        ""
+      ],
+      "context_after": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou36;   // overflow bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw1 = vundflw1 + p_intou36;   // overflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou35() public{",
+        "    uint8 vundflw =0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou40(uint8 p_intou40) public{",
+        "    uint8 vundflw1=0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou40;   // overflow bug"
+      ],
+      "context_after": [
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);",
+        "  mapping(address => uint) public lockTime_intou33;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 57,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function increaseLockTime_intou33(uint _secondsToIncrease) public {"
+      ],
+      "context_after": [
+        "    }",
+        "function withdraw_intou33() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 61,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "function withdraw_intou33() public {",
+        "        require(now > lockTime_intou33[msg.sender]);"
+      ],
+      "context_after": [
+        "        msg.sender.transfer(transferValue_intou33);",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

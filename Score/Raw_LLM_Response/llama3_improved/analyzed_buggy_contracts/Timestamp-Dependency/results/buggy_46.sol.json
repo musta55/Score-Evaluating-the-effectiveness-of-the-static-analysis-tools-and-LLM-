@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){}",
+      "confidence": "high",
+      "context_before": [
+        "uint256 date;",
+        "address filesender;"
+      ],
+      "context_after": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "_date = now;",
+      "confidence": "medium",
+      "context_before": [
+        "}address winner_tmstmp31;",
+        "function play_tmstmp31(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp31 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        ""
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "_vtime = block.timestamp;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " */",
+        "    function SetFileExistenceProof(address dappBoxOrigin, string memory _fileHash, string memory _filePathHash, address _contractAddress ,BlockchainIdentification _identifier) public returns (bytes32)"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "return fileExistenceProofs[dappBoxOrigin][i].date, ...;",
+      "confidence": "high",
+      "context_before": [
+        "        FileExistenceStruct memory newInfo;",
+        "        uint256 _date = now;"
+      ],
+      "context_after": [
+        "        newInfo.date = _date;",
+        "        newInfo.filesender = dappBoxOrigin;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "        newInfo.fileHash = _fileHash;",
+        "        newInfo.filePathHash = _filePathHash;"
+      ],
+      "context_after": [
+        "        newInfo.identifier = _identifier;",
+        "        newInfo.QRCodeHash = QRCodeHash;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

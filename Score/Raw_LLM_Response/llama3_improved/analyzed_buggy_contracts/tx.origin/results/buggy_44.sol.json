@@ -1,0 +1,298 @@
+{
+  "contract": "buggy_44.sol",
+  "contract_name": "EventMetadata",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 6,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "pragma solidity ^0.5.0;"
+      ],
+      "context_after": [
+        "",
+        "contract EventMetadata {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "require(tx.origin == owner_txorigin11);",
+      "confidence": "high",
+      "context_before": [
+        "contract EventMetadata {",
+        ""
+      ],
+      "context_after": [
+        "        require(tx.origin == owner_txorigin40);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require(tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "context_before": [
+        "  event MetadataSet(bytes metadata);",
+        ""
+      ],
+      "context_after": [
+        "",
+        "    function _setMetadata(bytes memory metadata) internal {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "require(tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "context_before": [
+        "        emit MetadataSet(metadata);",
+        "    }"
+      ],
+      "context_after": [
+        "  require(tx.origin == owner_txorigin11);",
+        "  to.call.value(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require(tx.origin == owner_txorigin1);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "}"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin2);",
+      "confidence": "high",
+      "context_before": [
+        "contract Operated {",
+        ""
+      ],
+      "context_after": [
+        "        require(tx.origin == owner_txorigin10);",
+        "        _recipient.transfer(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require(tx.origin == owner_txorigin3);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  address private _operator;"
+      ],
+      "context_after": [
+        "        require(tx.origin == owner_txorigin22);",
+        "        _recipient.transfer(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  bool private _status;"
+      ],
+      "context_after": [
+        "  function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public {",
+        "\trequire (tx.origin == owner_txorigin33);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "require(tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ],
+      "context_after": [
+        "",
+        "    // state functions"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function _setOperator(address operator) internal {"
+      ],
+      "context_after": [
+        "        _operator = operator;",
+        "        emit OperatorUpdated(operator, hasActiveOperator());"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function sendto_txorigin1(address payable receiver, uint amount,address owner_txorigin1) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 60,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function _transferOperator(address operator) internal {"
+      ],
+      "context_after": [
+        "        require(_operator != address(0), \"operator not set\");",
+        "        _setOperator(operator);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function withdrawAll_txorigin2(address payable _recipient,address owner_txorigin2) public {"
+      ],
+      "context_after": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 70,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function _renounceOperator() internal {"
+      ],
+      "context_after": [
+        "        _operator = address(0);",
+        "        _status = false;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 75,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "context_before": [
+        "        emit OperatorUpdated(address(0), false);",
+        "    }"
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin17);",
+        "\treceiver.transfer(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 80,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "        require(!hasActiveOperator(), \"only when operator not active\");",
+        "        _status = true;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 85,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "        emit OperatorUpdated(_operator, true);",
+        "    }"
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin37);",
+        "\treceiver.transfer(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 90,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "        require(hasActiveOperator(), \"only when operator active\");",
+        "        _status = false;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

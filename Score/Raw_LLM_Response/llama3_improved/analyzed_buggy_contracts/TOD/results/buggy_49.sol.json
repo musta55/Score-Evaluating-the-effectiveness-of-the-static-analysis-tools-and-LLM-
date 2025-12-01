@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_49.sol",
+  "contract_name": "TAMC",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "reward_TOD14 = msg.value;",
+      "confidence": "high",
+      "context_before": [
+        "address payable owner_TOD14;",
+        "uint256 reward_TOD14;"
+      ],
+      "context_after": [
+        "        require (!claimed_TOD14);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "balanceOf[from] -= value;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        msg.sender.transfer(reward_TOD14);"
+      ],
+      "context_after": [
+        "    }",
+        "  mapping (address => uint256) public balanceOf;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

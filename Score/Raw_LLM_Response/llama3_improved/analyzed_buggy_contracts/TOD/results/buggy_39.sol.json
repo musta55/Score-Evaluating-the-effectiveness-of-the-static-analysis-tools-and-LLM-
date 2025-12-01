@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_39.sol",
+  "contract_name": "TAMCContract",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require (submission < 10);",
+      "confidence": "high",
+      "context_before": [
+        "        require (!claimed_TOD14);",
+        ""
+      ],
+      "context_after": [
+        "        owner_TOD14.transfer(reward_TOD14);",
+        "        reward_TOD14 = msg.value;"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "require (submission < 10);",
+      "confidence": "high",
+      "context_before": [
+        "    function claimReward_TOD14(uint256 submission) public {",
+        "        require (!claimed_TOD14);"
+      ],
+      "context_after": [
+        "",
+        "        msg.sender.transfer(reward_TOD14);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "require (submission < 10);",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => uint256) public balanceOf;",
+        ""
+      ],
+      "context_after": [
+        "address payable owner_TOD30;",
+        "uint256 reward_TOD30;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

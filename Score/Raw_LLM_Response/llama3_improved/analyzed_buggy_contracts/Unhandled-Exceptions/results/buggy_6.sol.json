@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_6.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  bool private stopped;",
+        "  function bug_unchk43() public{"
+      ],
+      "context_after": [
+        "if (!addr_unchk43.send (10 ether) || 1==1)",
+        "\t{revert();}"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "dst.call.value(msg.value)();",
+      "confidence": "high",
+      "context_before": [
+        "  function my_func_uncheck48(address payable dst) public payable{",
+        "        dst.call.value(msg.value)(\"\");"
+      ],
+      "context_after": [
+        "  address private _master;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  event Stopped();"
+      ],
+      "context_after": [
+        "{  address payable addr_unchk40;",
+        "   if (! addr_unchk40.send (2 ether))"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "addr_unchk40.send (2 ether));",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  event Started();"
+      ],
+      "context_after": [
+        "",
+        "function withdrawLeftOver_unchk33() public {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 51,
+      "code_snippet": "callee.send(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);"
+      ],
+      "context_after": [
+        "      {addr.send (42 ether); }",
+        "  event MasterRoleTransferred(address indexed previousMaster, address indexed newMaster);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 62,
+      "code_snippet": "addr_unchk19.send (10 ether) || 1==1",
+      "confidence": "high",
+      "context_before": [
+        "        emit OwnershipTransferred(address(0), _owner);",
+        "        emit MasterRoleTransferred(address(0), _master);"
+      ],
+      "context_after": [
+        "function callnotchecked_unchk37(address payable callee) public {",
+        "    callee.call.value(1 ether);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        return _owner;",
+        "    }"
+      ],
+      "context_after": [
+        "      {addr.send (42 ether); }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 79,
+      "code_snippet": "winner_unchk20.send(winAmount_unchk20);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "bool public payedOut_unchk9 = false;"
+      ],
+      "context_after": [
+        "function withdrawLeftOver_unchk9() public {",
+        "        require(payedOut_unchk9);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 94,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    {",
+        "        require(isMaster() || isOwner());"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 104,
+      "code_snippet": "winner_unchk32.send(winAmount_unchk32);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function isOwner() public view returns (bool)"
+      ],
+      "context_after": [
+        "        return msg.sender == _owner;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 114,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    {",
+        "        return msg.sender == _master;"
+      ],
+      "context_after": [
+        "function bug_unchk19() public{",
+        "address payable addr_unchk19;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 121,
+      "code_snippet": "addr_unchk4.send (42 ether))",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "    {",
+        "        _transferOwnership(newOwner);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 128,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    callee.send(5 ether);",
+        "  }"
+      ],
+      "context_after": [
+        "    function transferMasterRole(address newMaster) external onlyOwner",
+        "    {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

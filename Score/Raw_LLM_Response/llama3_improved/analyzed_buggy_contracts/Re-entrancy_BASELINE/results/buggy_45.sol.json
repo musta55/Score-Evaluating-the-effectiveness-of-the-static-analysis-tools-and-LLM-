@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_45.sol",
+  "contract_name": "StockBet",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "(bool success,)= msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "      }",
+        "  event GameOpened(uint256 initialPrice);"
+      ],
+      "context_after": [
+        "function callme_re_ent35() public{",
+        "        require(counter_re_ent35<=5);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 34,
+      "code_snippet": "(bool success,)= lastPlayer_re_ent9.call.value(jackpot_re_ent9)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "  event GameClosed();",
+        "  mapping(address => uint) userBalance_re_ent40;"
+      ],
+      "context_after": [
+        "        // send userBalance[msg.sender] ethers to msg.sender",
+        "        // if mgs.sender is a contract, it will call its fallback function"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 45,
+      "code_snippet": "(bool success,)= msg.sender.call.value(_weiToWithdraw)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "  event OracleSet(address oracle);",
+        "  mapping(address => uint) userBalance_re_ent33;"
+      ],
+      "context_after": [
+        "        // send userBalance[msg.sender] ethers to msg.sender",
+        "        // if mgs.sender is a contract, it will call its fallback function"
+      ]
+    }
+  ],
+  "success": true
+}

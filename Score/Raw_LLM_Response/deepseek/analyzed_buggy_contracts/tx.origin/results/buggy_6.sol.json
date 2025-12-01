@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_6.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:10:36",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 3,
+      "code_snippet": "require(tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 5,
+      "code_snippet": "require(tx.origin == owner_txorigin12);",
+      "confidence": "high",
+      "reasoning": "tx.origin used for authentication enables phishing"
+    }
+  ]
+}

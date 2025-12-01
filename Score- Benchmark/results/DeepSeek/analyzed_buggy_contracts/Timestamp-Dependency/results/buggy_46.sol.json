@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_46.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:04:14",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "SetFileExistenceProof() stores timestamps using now instead of block.timestamp.",
+      "confidence": "high",
+      "reasoning": "Using system time (now) may not match the block timestamp, causing inconsistent timestamps."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 54,
+      "code_snippet": "GetFileExistenceProof() and searchExistenceProoUsngQRf() use block.timestamp for comparisons.",
+      "confidence": "high",
+      "reasoning": "Block timestamps can vary, leading to incorrect proof retrieval."
+    }
+  ]
+}

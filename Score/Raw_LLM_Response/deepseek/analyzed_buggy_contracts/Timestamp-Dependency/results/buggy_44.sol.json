@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_44.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:59:43",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 2,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "medium",
+      "reasoning": "Direct assignment of block.timestamp without checks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 10,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "medium",
+      "reasoning": "Potential for multiple transactions in a single block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "medium",
+      "reasoning": "Potential for multiple transactions in a single block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 30,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "medium",
+      "reasoning": "Potential for multiple transactions in a single block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 40,
+      "code_snippet": "if (msg.value == 10 ether)",
+      "confidence": "low",
+      "reasoning": "No check on the number of transactions per block."
+    }
+  ]
+}

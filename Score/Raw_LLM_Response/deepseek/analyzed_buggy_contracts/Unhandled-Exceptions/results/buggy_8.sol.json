@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_8.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 08:31:52",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "if (!addr_unchk42.send(42 ether)) {receivers_unchk42 +=1;}",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk42() sends 42 ether to an address without checking if the caller is the owner. This can lead to unintended external behavior."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "winner_unchk3.send(winAmount_unchk3);",
+      "confidence": "medium",
+      "reasoning": "The function sendToWinner_unchk3() sends tokens without checking if the caller is authorized, potentially leading to unauthorized token transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "if (!addr_unchk19.send(10 ether) || 1==1) {revert();}",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk19() sends 10 ether without checking ownership, which can cause unintended external calls."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 26,
+      "code_snippet": "if (!addr_unchk30.send(42 ether)) {receivers_unchk30 +=1;}",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk30() sends 42 ether without verifying ownership, leading to potential unauthorized external actions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 8,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "medium",
+      "reasoning": "The function sendToWinner_unchk8() sends tokens without checking if the caller is authorized, which can result in unauthorized token transfers."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 39,
+      "code_snippet": "addr.send(4 ether);",
+      "confidence": "medium",
+      "reasoning": "The function bug_unchk39() sends 4 ether without verifying ownership, potentially leading to unauthorized external actions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr_unchk40.send(2 ether);",
+      "confidence": "medium",
+      "reasoning": "The function UncheckedExternalCall_unchk40() sends 2 ether without checking if the caller is authorized, which can cause unintended external calls."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 36,
+      "code_snippet": "dst.call.value(msg.value)({});",
+      "confidence": "medium",
+      "reasoning": "The function my_func_uncheck36() executes without checking if the caller is authorized, leading to potential unintended external actions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "medium",
+      "reasoning": "The function my_func_unchk35() sends ether without verifying ownership, which can result in unauthorized external actions."
+    }
+  ]
+}

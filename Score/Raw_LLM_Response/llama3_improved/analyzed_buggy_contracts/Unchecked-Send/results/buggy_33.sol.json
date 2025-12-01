@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_33.sol",
+  "contract_name": "Owned",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 15,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  address public newOwner;",
+        ""
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    constructor() public {",
+        "        owner = msg.sender;"
+      ],
+      "context_after": [
+        "function bug_unchk_send3() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 26,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    modifier onlyOwner {"
+      ],
+      "context_after": [
+        "        _;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 32,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    function transferOwnership(address _newOwner) public onlyOwner {",
+        "        newOwner = _newOwner;"
+      ],
+      "context_after": [
+        "function bug_unchk_send9() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 41,
+      "code_snippet": "token.transferFrom(msg.sender, address(this), stakeTokens  + findOnePercent(stakeTokens));",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 54,
+      "code_snippet": "require(token.transfer(msg.sender,staker[msg.sender].tokens));",
+      "confidence": "high",
+      "context_before": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 58,
+      "code_snippet": "require(token.transferFrom(owner, msg.sender ,staker[msg.sender].tokens * stakePercentage * 100 / 10000));",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    assert(c >= a);",
+        "    return c;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

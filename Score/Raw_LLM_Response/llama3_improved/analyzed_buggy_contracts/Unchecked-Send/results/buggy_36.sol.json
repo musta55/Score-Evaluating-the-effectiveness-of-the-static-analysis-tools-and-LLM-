@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_36.sol",
+  "contract_name": "owned",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 13,
+      "code_snippet": "msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "    constructor() public {",
+        "        owner = msg.sender;"
+      ],
+      "context_after": [
+        "function bug_unchk_send5() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 23,
+      "code_snippet": "msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function transferOwnership(address newOwner) onlyOwner public {"
+      ],
+      "context_after": [
+        "    }",
+        "function bug_unchk_send15() payable public{"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 32,
+      "code_snippet": "msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "contract tokenRecipient {",
+        "  function bug_unchk_send7() payable public{"
+      ],
+      "context_after": [
+        "  event receivedEther(address sender, uint amount);",
+        "  function bug_unchk_send23() payable public{"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 40,
+      "code_snippet": "msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "    function receiveApproval(address _from, uint256 _value, address _token, bytes memory _extraData) public {",
+        "        Token t = Token(_token);"
+      ],
+      "context_after": [
+        "        emit receivedTokens(_from, _value, _token, _extraData);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 49,
+      "code_snippet": "msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "        emit receivedEther(msg.sender, msg.value);",
+        "    }"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

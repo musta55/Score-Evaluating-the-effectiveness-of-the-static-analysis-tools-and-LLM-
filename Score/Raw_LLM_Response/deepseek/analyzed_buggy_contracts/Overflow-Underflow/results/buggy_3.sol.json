@@ -1,0 +1,197 @@
+{
+  "contract": "buggy_3.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:57:52",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable initialized to 0 results in negative value, which is not representable by uint8."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 44,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 56,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 57,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 58,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 69,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 70,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 71,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Same as above, underflow occurs."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 82,
+      "code_snippet": "vundflw = vundflw + p_intou32;",
+      "confidence": "high",
+      "reasoning": "Adding a large value to a uint8 variable can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 95,
+      "code_snippet": "vundflw = vundflw + p_intou32;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 106,
+      "code_snippet": "vundflw = vundflw + p_intou40;",
+      "confidence": "high",
+      "reasoning": "Adding a large value to a uint8 variable can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 127,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Subtracting a large value from a uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 128,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 129,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 150,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 151,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 152,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 173,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 174,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 175,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 196,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 207,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 218,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 230,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 241,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 253,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "high",
+      "reasoning": "Same as above, potential underflow."
+    }
+  ]
+}

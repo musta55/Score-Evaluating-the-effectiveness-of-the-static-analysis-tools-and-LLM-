@@ -1,0 +1,92 @@
+{
+  "contract": "buggy_18.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:21:33",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code snippet": "require(tx.origin == owner_txorigin12)",
+      "confidence": "high|medium",
+      "reasoning": "This function requires tx.origin to be equal to owner_txorigin12, which could allow unauthorized transactions if the origin is controlled by an external party."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 43,
+      "code snippet": "function bug_txorigin12(address owner_txorigin12) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin12, which could be exploited by controlling the origin field."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 44,
+      "code snippet": "function sendto_txorigin34(address payable receiver, uint amount,address owner_txorigin34) public",
+      "confidence": "high|medium",
+      "reasoning": "Requires tx.origin == owner_txorigin34; an attacker could bypass this by manipulating the origin."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 45,
+      "code snippet": "function bug_txorigin28(address owner_txorigin28) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin28, which could be bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 46,
+      "code snippet": "function transferTo_txorigin10(address to, uint tokens,address owner_txorigin10) public",
+      "confidence": "high|medium",
+      "reasoning": "Requires tx.origin == owner_txorigin10; could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 47,
+      "code snippet": "function bug_txorigin16(address owner_txorigin16) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin16, which could be bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 48,
+      "code snippet": "function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public",
+      "confidence": "high|medium",
+      "reasoning": "Requires tx.origin == owner_txorigin33; could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 49,
+      "code snippet": "function bug_txorigin24(address owner_txorigin24) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin24, which could be bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 50,
+      "code snippet": "function transferTo_txorigin15(address to, uint tokens,address owner_txorigin15) public",
+      "confidence": "high|medium",
+      "reasoning": "Requires tx.origin == owner_txorigin15; could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 51,
+      "code snippet": "function bug_txorigin20(address owner_txorigin20) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin20, which could be bypassed."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 52,
+      "code snippet": "function sendto_txorigin39(address payable receiver, uint amount,address owner_txorigin39) public",
+      "confidence": "high|medium",
+      "reasoning": "Requires tx.origin == owner_txorigin39; could be exploited."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 53,
+      "code snippet": "function bug_txorigin4(address owner_txorigin4) public",
+      "confidence": "high|medium",
+      "reasoning": "The function uses tx.origin == owner_txorigin4, which could be bypassed."
+    }
+  ]
+}

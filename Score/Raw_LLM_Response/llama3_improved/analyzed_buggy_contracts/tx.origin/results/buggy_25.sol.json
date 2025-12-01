@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_25.sol",
+  "contract_name": "WhiteBetting",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "require (tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "//",
+        ""
+      ],
+      "context_after": [
+        "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {",
+        "\trequire (tx.origin == owner_txorigin9);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require (tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {",
+        "\trequire (tx.origin == owner_txorigin9);"
+      ],
+      "context_after": [
+        "}",
+        "  address payable public owner;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  address payable public owner;"
+      ],
+      "context_after": [
+        "  // Game information",
+        "  struct GameInfo {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        "  // Game information",
+        "  struct GameInfo {"
+      ],
+      "context_after": [
+        "    uint256 timestamp;",
+        "    // game odds"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 timestamp;",
+        "    // game odds"
+      ],
+      "context_after": [
+        "    uint32 odd_drawTeam;",
+        "    uint32 odd_awayTeam;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_drawTeam;",
+        "    uint32 odd_awayTeam;"
+      ],
+      "context_after": [
+        "    uint32 odd_under;",
+        "    uint32 odd_homeTeamAndDraw;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_under;",
+        "    uint32 odd_homeTeamAndDraw;"
+      ],
+      "context_after": [
+        "    uint32 odd_awayTeamAndDraw;",
+        "    // Checking the game status"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "    uint32 odd_awayTeamAndDraw;",
+        "    // Checking the game status"
+      ],
+      "context_after": [
+        "    // Checking whether winning were paid",
+        "    bool   isDone;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "context_before": [
+        "    // Checking whether winning were paid",
+        "    bool   isDone;"
+      ],
+      "context_after": [
+        "function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public {",
+        "\trequire (tx.origin == owner_txorigin25);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public {",
+        "\trequire (tx.origin == owner_txorigin25);"
+      ],
+      "context_after": [
+        "}",
+        "  mapping(uint64 => GameInfo) public gameList;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

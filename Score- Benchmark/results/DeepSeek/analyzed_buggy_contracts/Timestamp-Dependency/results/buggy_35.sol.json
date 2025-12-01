@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_35.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:23:06",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high|medium",
+      "reasoning": "This line checks if the current timestamp matches a future time, which could allow replay attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high|medium",
+      "reasoning": "This line checks if the current timestamp matches a future time, which could allow replay attacks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high|medium",
+      "reasoning": "This line checks if the current timestamp matches a future time, which could allow replay attacks."
+    }
+  ]
+}

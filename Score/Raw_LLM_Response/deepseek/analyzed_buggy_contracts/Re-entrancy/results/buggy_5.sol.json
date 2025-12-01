@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_5.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:39:24",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 12,
+      "code snippet": "msg.sender.call.value(balances_re_ent21[msg.sender])",
+      "confidence": "high",
+      "reasoning": "The call to msg.sender allows for external control after state updates may not prevent re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 34,
+      "code snippet": "msg.sender.call.value(userBalance_re_ent12[msg.sender])",
+      "confidence": "high",
+      "reasoning": "External call after state updates may allow control transfer."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 56,
+      "code snippet": "msg.sender.call.value(balances_re_ent1[msg.sender])",
+      "confidence": "high",
+      "reasoning": "Potential external call after state updates could exploit."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 78,
+      "code snippet": "msg.sender.call.value(userBalance_re_ent19[msg.sender])",
+      "confidence": "high",
+      "reasoning": "External call after state updates may allow control."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 100,
+      "code snippet": "msg.sender.call.value(balances_re_ent3[msg.sender])",
+      "confidence": "high",
+      "reasoning": "Potential external call after state updates could exploit."
+    }
+  ]
+}

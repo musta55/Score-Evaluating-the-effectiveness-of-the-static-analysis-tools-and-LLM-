@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_14.sol",
+  "contract_name": "ERC20",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "if (! addr_unchk40.send (2 ether))  {\n// comment1;\n} else {\n//comment2;\n}",
+      "confidence": "high",
+      "context_before": [
+        "        require(b > 0);",
+        "        uint256 c = a / b;"
+      ],
+      "context_after": [
+        "        return c;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "if (! addr_unchk40.send (2 ether))  {\n// comment1;\n} else {\n//comment2;\n}",
+      "confidence": "high",
+      "context_before": [
+        "        return c;",
+        "    }"
+      ],
+      "context_after": [
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "        require(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "if (! addr_unchk31.send (10 ether) || 1==1)\n{revert();}\nelse\n{...}",
+      "confidence": "high",
+      "context_before": [
+        "        require(b <= a);",
+        "        uint256 c = a - b;"
+      ],
+      "context_after": [
+        "        return c;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "if (!addr_unchk7.send (10 ether) || 1==1)\n{revert();}\nelse\n{...}",
+      "confidence": "high",
+      "context_before": [
+        "        return c;",
+        "    }"
+      ],
+      "context_after": [
+        "    function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "        uint256 c = a + b;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "if (!addr_unchk8.send (42 ether))\n{\nreceivers_unchk30 +=1;\n} else \n{revert();}",
+      "confidence": "high",
+      "context_before": [
+        "        require(c >= a);",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "if (!addr_unchk20.send (10 ether) || 1==1)\n{revert();}\nelse\n{...}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function mod(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        return a % b;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "if (!addr_unchk32.send (5 ether))\n{\nreceivers_unchk30 +=1;\n} else \n{revert();}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "}"
+      ],
+      "context_after": [
+        "interface IERC20 {",
+        "    function totalSupply() external view returns (uint256);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "if (!addr_unchk8.send (42 ether))\n{\nreceivers_unchk30 +=1;\n} else \n{revert();}",
+      "confidence": "high",
+      "context_before": [
+        "    function totalSupply() external view returns (uint256);",
+        ""
+      ],
+      "context_after": [
+        "",
+        "    function transfer(address to, uint256 value) external returns (bool);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 56,
+      "code_snippet": "if (!addr_unchk44.send (5 ether))\n{\nreceivers_unchk30 +=1;\n} else \n{revert();}",
+      "confidence": "high",
+      "context_before": [
+        "    function transfer(address to, uint256 value) external returns (bool);",
+        ""
+      ],
+      "context_after": [
+        "",
+        "    function approve(address spender, uint256 value) external returns (bool);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 60,
+      "code_snippet": "if (!addr_unchk44.send (5 ether))\n{\nreceivers_unchk30 +=1;\n} else \n{revert();}",
+      "confidence": "high",
+      "context_before": [
+        "    function approve(address spender, uint256 value) external returns (bool);",
+        ""
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 64,
+      "code_snippet": "if (!addr_unchk40.send (2 ether))\n{\n// comment1;\n} else \n{...}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    event Transfer(address indexed from, address indexed to, uint256 value);"
+      ],
+      "context_after": [
+        "    event Burn(address indexed from, uint256 value);",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

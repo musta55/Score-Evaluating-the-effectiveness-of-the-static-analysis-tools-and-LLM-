@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "require(tx.origin == owner_txorigin39);",
+      "confidence": "high",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract DocumentSigner {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "  require(tx.origin == owner_txorigin39);",
+        "  to.call.value(amount);"
+      ],
+      "context_after": [
+        "  mapping(bytes32=>string) public docs;",
+        "  function bug_txorigin36(  address owner_txorigin36) public{"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  mapping(bytes32=>address[]) public signers;"
+      ],
+      "context_after": [
+        "    modifier validDoc(bytes32 _docHash) {",
+        "        require(bytes(docs[_docHash]).length != 0, \"Document is not submitted\");"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "require (tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function transferTo_txorigin31(address to, uint amount,address owner_txorigin31) public {"
+      ],
+      "context_after": [
+        "  to.call.value(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "  function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {",
+        "\trequire (tx.origin == owner_txorigin13);"
+      ],
+      "context_after": [
+        "}",
+        "  event NewDocument(bytes32 _docHash);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "        bytes32 _docHash = getHash(_doc);",
+        "        if(bytes(docs[_docHash]).length == 0) {"
+      ],
+      "context_after": [
+        "            emit NewDocument(_docHash);",
+        "        }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "require (tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "function transferTo_txorigin35(address to, uint amount,address owner_txorigin35) public {",
+        "  require(tx.origin == owner_txorigin35);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

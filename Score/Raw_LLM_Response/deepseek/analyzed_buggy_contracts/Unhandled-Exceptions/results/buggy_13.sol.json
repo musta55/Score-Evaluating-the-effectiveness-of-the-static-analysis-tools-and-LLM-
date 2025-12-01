@@ -1,0 +1,120 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:39:00",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "uint64 subpot_unchk46 = 3 ether;",
+      "confidence": "high",
+      "reasoning": "The code attempts to send ether but does not handle the case where `send` fails, potentially leaving the contract in an inconsistent state."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "if (! addr_unchk4.send (42 ether))  {[//comment1];}",
+      "confidence": "high",
+      "reasoning": "If `addr_unchk4.send(42 ether)` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "if (! addr_unchk7.send (10 ether) || 1==1) {[//comment2];}",
+      "confidence": "high",
+      "reasoning": "The condition `1 == 1` is always true, so the contract does not handle the case where `send` fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "address payable addr_unchk40;",
+      "confidence": "high",
+      "reasoning": "The code attempts to send ether but does not handle the case where `send` fails, potentially leaving the contract in an inconsistent state."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 5,
+      "code_snippet": "if (! addr_unchk4.send (2 ether)) {[//comment1];}",
+      "confidence": "high",
+      "reasoning": "If `addr_unchk4.send(2 ether)` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "if (! addr_unchk7.send (10 ether) || 1==1) {[//comment2];}",
+      "confidence": "high",
+      "reasoning": "The condition `1 == 1` is always true, so the contract does not handle the case where `send` fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "address payable addr_unchk40;",
+      "confidence": "high",
+      "reasoning": "The code attempts to send ether but does not handle the case where `send` fails, potentially leaving the contract in an inconsistent state."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 27,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 13,
+      "code_snippet": "callee.call.value(msg.value)('');",
+      "confidence": "high",
+      "reasoning": "If `callee.call.value()` fails, the contract does not handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 8,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 39,
+      "code_snippet": "addr.send (4 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 36,
+      "code_snippet": "addr.send (4 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "addr.send (4 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 27,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "if (! addr_unchk7.send (10 ether) || 1==1) {[//comment2];}",
+      "confidence": "high",
+      "reasoning": "The condition `1 == 1` is always true, so the contract does not handle the case where `send` fails."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "addr_unchk40.send(2 ether);",
+      "confidence": "high",
+      "reasoning": "If `send` fails, the contract does not revert or handle the error."
+    }
+  ]
+}

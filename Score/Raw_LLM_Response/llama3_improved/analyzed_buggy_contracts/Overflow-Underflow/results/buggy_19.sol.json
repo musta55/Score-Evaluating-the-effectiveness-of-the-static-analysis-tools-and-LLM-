@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_19.sol",
+  "contract_name": "has",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "vundflw = vundflw + p_intou12;",
+      "confidence": "medium",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        " * @dev Math operations with safety checks that throw on error",
+        " */"
+      ],
+      "context_after": [
+        "",
+        "  /**"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "medium",
+      "context_before": [
+        "  */",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "      return 0;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ],
+      "context_after": [
+        "",
+        "  /**"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "medium",
+      "context_before": [
+        "  */",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "  /**",
+        "  * @dev Substracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend)."
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "medium",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  * @dev Adds two numbers, throws on overflow.",
+        "  */"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "    uint256 c = a + b;",
+        "    assert(c >= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "/**"
+      ],
+      "context_after": [
+        " * @dev The owned contract has an owner address, and provides basic authorization",
+        " *      control functions, this simplifies the implementation of \"user permissions\"."
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 59,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "contract owned {",
+        "  function bug_intou12(uint8 p_intou12) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou12;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "medium",
+      "context_before": [
+        "    /**",
+        "     * @dev The owned constructor sets the original `owner` of the contract to the sender"
+      ],
+      "context_after": [
+        "     */",
+        "    constructor() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "    }",
+        "function bug_intou11() public{"
+      ],
+      "context_after": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 77,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "medium",
+      "context_before": [
+        "    /**",
+        "     * @dev Throws if called by any account other than the owner."
+      ],
+      "context_after": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

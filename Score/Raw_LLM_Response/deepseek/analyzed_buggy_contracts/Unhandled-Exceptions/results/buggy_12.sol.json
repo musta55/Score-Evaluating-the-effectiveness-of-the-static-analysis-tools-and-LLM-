@@ -1,0 +1,57 @@
+{
+  "contract": "buggy_12.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:35:23",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "unhandledsend_unchk2(address payable callee) public {\n    callee.send(5 ether);\n  }",
+      "confidence": "high",
+      "reasoning": "Directly sends 5 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 178,
+      "code_snippet": "unhandledsend_unchk26(address payable callee) public {\n    callee.send(5 ether);\n  }",
+      "confidence": "high",
+      "reasoning": "Directly sends 5 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 198,
+      "code_snippet": "bug_unchk42() public {\n    address payable addr_unchk42;\n    if (!addr_unchk42.send(42 ether))\n        {revert();}\n  }",
+      "confidence": "high",
+      "reasoning": "Sends 42 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 178,
+      "code_snippet": "unhandledsend_unchk38(address payable callee) public {\n    callee.send(5 ether);\n  }",
+      "confidence": "high",
+      "reasoning": "Directly sends 5 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 178,
+      "code_snippet": "unhandledsend_unchk14(address payable callee) public {\n    callee.send(5 ether);\n  }",
+      "confidence": "high",
+      "reasoning": "Directly sends 5 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 198,
+      "code_snippet": "bug_unchk30() public {\n    address payable addr_unchk30;\n    if (!addr_unchk30.send(42 ether))\n        {revert();}\n  }",
+      "confidence": "high",
+      "reasoning": "Sends 42 ether without any checks, allowing external code execution."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 67,
+      "code_snippet": "cash_unchk22(uint roundIndex, uint subpotIndex, address payable winner_unchk22)public {\n    uint64 subpot_unchk22 = 10 ether;\n    winner_unchk22.send(subpot_unchk22);\n    subpot_unchk22= 0;\n}",
+      "confidence": "high",
+      "reasoning": "Sends 10 ether without any checks, allowing external code execution."
+    }
+  ]
+}

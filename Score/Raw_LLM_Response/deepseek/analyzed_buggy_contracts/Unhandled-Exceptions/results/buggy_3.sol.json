@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_3.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:35:14",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "call.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The method `call.send()` is called without any try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 2,
+      "code_snippet": "delegateCall.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The method `delegateCall.send()` is called without any try-catch or return value check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 3,
+      "code_snippet": "address.send(5 ether);",
+      "confidence": "medium",
+      "reasoning": "The method `address.send()` is called without any try-catch or return value check."
+    }
+  ]
+}

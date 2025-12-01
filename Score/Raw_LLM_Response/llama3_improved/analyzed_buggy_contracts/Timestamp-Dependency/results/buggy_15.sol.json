@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_15.sol",
+  "contract_name": "MD",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp23 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp23;",
+        "function play_tmstmp23(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp23 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp14 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  string public name;",
+        "  address winner_tmstmp14;"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == block.timestamp){",
+        "\t\twinner_tmstmp14 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp30 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  string public symbol;",
+        "  address winner_tmstmp30;"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == block.timestamp){",
+        "\t\twinner_tmstmp30 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp35 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_tmstmp8 () public payable {",
+        "\tuint pastBlockTime_tmstmp8; // Forces one bet per block"
+      ],
+      "context_after": [
+        "        require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug",
+        "        pastBlockTime_tmstmp8 = now;       //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp27 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "        if(now % 15 == 0) { // winner    //bug",
+        "            msg.sender.transfer(address(this).balance);"
+      ],
+      "context_after": [
+        "    }",
+        "  uint256 public totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp31 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    // This creates an array with all balances"
+      ],
+      "context_after": [
+        "function play_tmstmp39(uint startTime) public {",
+        "\tuint _vtime = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "if(now % 15 == 0) { // winner msg.sender.transfer(address(this).balance); }",
+      "confidence": "high",
+      "context_before": [
+        "        require(now != pastBlockTime_tmstmp36); // only 1 transaction per block   //bug",
+        "        pastBlockTime_tmstmp36 = now;       //bug"
+      ],
+      "context_after": [
+        "            msg.sender.transfer(address(this).balance);",
+        "        }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

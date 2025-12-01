@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_13.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:14:21",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 2,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for ownership verification but can be spoofed, enabling phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 5,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "reasoning": "Same as above."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 9,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "reasoning": "Same as above."
+    }
+  ]
+}

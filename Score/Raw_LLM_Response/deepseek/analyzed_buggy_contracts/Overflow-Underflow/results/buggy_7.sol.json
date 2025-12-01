@@ -1,0 +1,372 @@
+{
+  "contract": "buggy_7.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:49:27",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "msg.sender.transfer(transferValue_intou1);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 45,
+      "code_snippet": "lockTime_intou2[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 46,
+      "code_snippet": "msg.sender.transfer(transferValue_intou2);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 48,
+      "code_snippet": "lockTime_intou3[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 49,
+      "code_snippet": "msg.sender.transfer(transferValue_intou3);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 52,
+      "code_snippet": "lockTime_intou4[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 53,
+      "code_snippet": "msg.sender.transfer(transferValue_intou4);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 56,
+      "code_snippet": "lockTime_intou7[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 60,
+      "code_snippet": "msg.sender.transfer(transferValue_intou7);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 68,
+      "code_snippet": "msg.sender.transfer(transferValue_intou9);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 76,
+      "code_snippet": "msg.sender.transfer(transferValue_intou13);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 80,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 84,
+      "code_snippet": "msg.sender.transfer(transferValue_intou17);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 88,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 92,
+      "code_snippet": "msg.sender.transfer(transferValue_intou25);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 96,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 100,
+      "code_snippet": "msg.sender.transfer(transferValue_intou37);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 104,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 108,
+      "code_snippet": "msg.sender.transfer(transferValue_intou9);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 112,
+      "code_snippet": "lockTime_intou38[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 116,
+      "code_snippet": "msg.sender.transfer(transferValue_intou38);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 120,
+      "code_snippet": "lockTime_intou40[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 124,
+      "code_snippet": "msg.sender.transfer(transferValue_intou40);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 128,
+      "code_snippet": "lockTime_intou36[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 132,
+      "code_snippet": "msg.sender.transfer(transferValue_intou36);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 136,
+      "code_snippet": "lockTime_intou47[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 140,
+      "code_snippet": "msg.sender.transfer(transferValue_intou47);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 144,
+      "code_snippet": "lockTime_intou39[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 148,
+      "code_snippet": "msg.sender.transfer(transferValue_intou39);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 152,
+      "code_snippet": "lockTime_intou4[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 156,
+      "code_snippet": "msg.sender.transfer(transferValue_intou4);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 160,
+      "code_snippet": "lockTime_intou7[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 164,
+      "code_snippet": "msg.sender.transfer(transferValue_intou7);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 168,
+      "code_snippet": "lockTime_intou27[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 172,
+      "code_snippet": "msg.sender.transfer(transferValue_intou27);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 176,
+      "code_snippet": "lockTime_intou31[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 180,
+      "code_snippet": "msg.sender.transfer(transferValue_intou31);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 184,
+      "code_snippet": "lockTime_intou35[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 188,
+      "code_snippet": "msg.sender.transfer(transferValue_intou35);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 192,
+      "code_snippet": "lockTime_intou40[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 196,
+      "code_snippet": "msg.sender.transfer(transferValue_intou40);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 200,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 204,
+      "code_snippet": "msg.sender.transfer(transferValue_intou37);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 208,
+      "code_snippet": "lockTime_intou4[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 212,
+      "code_snippet": "msg.sender.transfer(transferValue_intou4);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 216,
+      "code_snippet": "lockTime_intou39[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 220,
+      "code_snippet": "msg.sender.transfer(transferValue_intou39);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 224,
+      "code_snippet": "lockTime_intou4[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Adding _secondsToIncrease to lockTime could exceed 255."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 228,
+      "code_snippet": "msg.sender.transfer(transferValue_intou4);",
+      "confidence": "high",
+      "reasoning": "Transfer of 10 units without balance check."
+    }
+  ]
+}

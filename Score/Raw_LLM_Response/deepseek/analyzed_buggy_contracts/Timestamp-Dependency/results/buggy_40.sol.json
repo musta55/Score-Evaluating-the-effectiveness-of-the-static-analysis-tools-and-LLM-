@@ -1,0 +1,38 @@
+{
+  "contract": "buggy_40.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:48:31",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp4 = now;       //bug\n        if(now % 15 == 0) { // winner    //bug\n            msg.sender.transfer(address(this).balance);\n        }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 8,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp8 = now;       //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 26,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp26); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp26 = now;       //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 39,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp39); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp39 = now;       //bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 40,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp40); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp40 = now;       //bug",
+      "confidence": "high"
+    }
+  ]
+}

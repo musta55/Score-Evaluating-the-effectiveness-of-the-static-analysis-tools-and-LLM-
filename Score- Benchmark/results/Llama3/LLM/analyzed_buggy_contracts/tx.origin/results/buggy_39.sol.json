@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_39.sol",
+  "contract_name": "TAMCContract",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "require(tx.origin == owner_txorigin14);",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract TAMCContract {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "require(tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "  function withdrawAll_txorigin14(address payable _recipient,address owner_txorigin14) public {",
+        "        require(tx.origin == owner_txorigin14);"
+      ],
+      "context_after": [
+        "    }",
+        "  mapping (address => uint256) public balanceOf;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function withdrawAll_txorigin30(address payable _recipient,address owner_txorigin30) public {"
+      ],
+      "context_after": [
+        "        _recipient.transfer(address(this).balance);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "require(tx.origin == owner_txorigin39);",
+      "confidence": "high",
+      "context_before": [
+        "  string public name = \"TAMC\";",
+        "  function bug_txorigin8(address owner_txorigin8) public{"
+      ],
+      "context_after": [
+        "    }",
+        "  string public symbol = \"TAMC\";"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "  function transferTo_txorigin39(address to, uint amount,address owner_txorigin39) public {",
+        "  require(tx.origin == owner_txorigin39);"
+      ],
+      "context_after": [
+        "}",
+        "  uint8 public decimals = 18;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "    uint256 public totalSupply = 1000000000 * (uint256(10) ** decimals);",
+        ""
+      ],
+      "context_after": [
+        "  require(tx.origin == owner_txorigin31);",
+        "  to.call.value(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  event Transfer(address indexed from, address indexed to, uint256 value);"
+      ],
+      "context_after": [
+        "    constructor() public {",
+        "        balanceOf[msg.sender] = totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "        emit Transfer(address(0), msg.sender, totalSupply);",
+        "    }"
+      ],
+      "context_after": [
+        "  require(tx.origin == owner_txorigin35);",
+        "  to.call.value(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "        require(balanceOf[msg.sender] >= value);",
+        "        balanceOf[msg.sender] -= value;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        "        balanceOf[to] += value;",
+        "        emit Transfer(msg.sender, to, value);"
+      ],
+      "context_after": [
+        "    }",
+        "function bug_txorigin40(address owner_txorigin40) public{"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

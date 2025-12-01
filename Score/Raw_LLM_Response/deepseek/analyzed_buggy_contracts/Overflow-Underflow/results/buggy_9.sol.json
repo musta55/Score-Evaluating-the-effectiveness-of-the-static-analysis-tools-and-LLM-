@@ -1,0 +1,274 @@
+{
+  "contract": "buggy_9.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:56:56",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 45,
+      "code_snippet": "balances_intou3[msg.sender] -= _value;  //bug",
+      "confidence": "medium",
+      "reasoning": "Subtraction without underflow check can lead to negative balances."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 46,
+      "code_snippet": "balances_intou3[_to] += _value;  //bug",
+      "confidence": "medium",
+      "reasoning": "Addition without underflow check can lead to negative balances."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 48,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 52,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 54,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 57,
+      "code_snippet": "balances_intou30[msg.sender] -= _value;  //bug",
+      "confidence": "medium",
+      "reasoning": "Subtraction without underflow check can lead to negative balances."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 58,
+      "code_snippet": "balances_intou30[_to] += _value;  //bug",
+      "confidence": "medium",
+      "reasoning": "Addition without underflow check can lead to negative balances."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 60,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "totalSupply = _initialSupply;                      // Update total supply with the decimal amount",
+      "confidence": "medium",
+      "reasoning": "No overflow check during supply update."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 68,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 72,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 76,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 80,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou39;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 82,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 86,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 90,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 92,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 96,
+      "code_snippet": "lockTime_intou14[msg.sender] += _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 98,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 102,
+      "code_snippet": "lockTime_intou19[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 106,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou23;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 108,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 112,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 116,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou27;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 118,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 122,
+      "code_snippet": "lockTime_intou30[msg.sender] += _value;  //bug",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 124,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 128,
+      "code_snippet": "lockTime_intou34[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 132,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 136,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 140,
+      "code_snippet": "lockTime_intou38[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 144,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou39;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 146,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 150,
+      "code_snippet": "lockTime_intou42[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "high",
+      "reasoning": "Potential overflow when adding two uint values. Overflow can cause incorrect lock time increments."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 154,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;   // overflow bug",
+      "confidence": "high",
+      "reasoning": "Addition of two uint8 values can cause an overflow."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 156,
+      "code_snippet": "vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtraction without underflow check can lead to negative values."
+    }
+  ]
+}

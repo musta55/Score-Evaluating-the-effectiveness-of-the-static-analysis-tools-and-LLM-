@@ -1,0 +1,20 @@
+{
+  "contract": "buggy_26.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:48:25",
+  "findings": [
+    {
+      "bug_type": "Overflow-Vulnerability",
+      "line_number": 23,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow-Vulnerability",
+      "line_number": 45,
+      "code_snippet": "vundflw = vundflw + p_intou8;   // overflow bug",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "contract": "buggy_22.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 18:20:57",
+  "findings": [
+    {
+      "bug_type": "Timestamp Manipulation",
+      "line_number": 15,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "MEDIUM",
+      "reasoning": "block.timestamp is used in a condition that could be manipulated to bypass intended checks.",
+      "event_name": null
+    },
+    {
+      "bug_type": "Timestamp Misuse",
+      "line_number": 16,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "MEDIUM",
+      "reasoning": "The use of block.timestamp without proper synchronization could lead to unintended behavior.",
+      "event_name": null
+    },
+    {
+      "bug_type": "Timestamp Misuse",
+      "line_number": 25,
+      "code_snippet": "require(now != pastBlockTime_tmstmp25);",
+      "confidence": "MEDIUM",
+      "reasoning": "The use of now without proper synchronization could lead to multiple checks passing.",
+      "event_name": null
+    },
+    {
+      "bug_type": "Timestamp Misuse",
+      "line_number": 38,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "MEDIUM",
+      "reasoning": "The use of block.timestamp without proper synchronization could lead to unintended behavior.",
+      "event_name": null
+    }
+  ]
+}

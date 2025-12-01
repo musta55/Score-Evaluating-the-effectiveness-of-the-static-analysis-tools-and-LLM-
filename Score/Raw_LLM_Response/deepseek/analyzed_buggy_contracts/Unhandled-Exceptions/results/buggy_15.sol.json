@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_15.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:43:14",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 6,
+      "code_snippet": ".send(3 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": ".send(10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 43,
+      "code_snippet": ".send(42 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 50,
+      "code_snippet": ".send(10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 82,
+      "code_snippet": "callee.call.value(1 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 95,
+      "code_snippet": "winner.send(winAmount)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 102,
+      "code_snippet": ".send(4 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

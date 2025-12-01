@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_31.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "interface Marmo {"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        "library ECDSA {"
+      ],
+      "context_after": [
+        "     * @dev Returns the address that signed a hashed message (`hash`) with",
+        "     * `signature`. This address can then be used for verification purposes."
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

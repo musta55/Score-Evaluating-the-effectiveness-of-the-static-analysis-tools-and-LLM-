@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_30.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:27:53",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "function bug_unchk_send7() payable public{\n      msg.sender.transfer(1 ether);\n}",
+      "confidence": "high|medium",
+      "reasoning": "The function bug_unchk_send7() directly transfers 1 ether without any authorization checks. This bypasses the intended operator and pauser permissions, allowing unauthorized users to send tokens."
+    }
+  ]
+}

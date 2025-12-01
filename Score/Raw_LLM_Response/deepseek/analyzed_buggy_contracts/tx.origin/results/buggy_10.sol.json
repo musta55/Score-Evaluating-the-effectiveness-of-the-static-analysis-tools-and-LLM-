@@ -1,0 +1,88 @@
+{
+  "contract": "buggy_10.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:11:45",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 2,
+      "code_snippet": "require(tx.origin == owner_txorigin39);",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This line checks if the current address is the same as owner_txorigin39. If compromised, attackers can impersonate this address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 4,
+      "code_snippet": "function bug_txorigin36(  address owner_txorigin36) public{ require(tx.origin == owner_txorigin36); }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. If tx.origin is compromised, attackers can bypass authentication."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 6,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This line authenticates based on tx.origin. Compromise allows attackers to impersonate the address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 9,
+      "code_snippet": "function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public { require (tx.origin == owner_txorigin13); receiver.transfer(amount); }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to send transactions without authorization."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 12,
+      "code_snippet": "function submitDocument(string memory _doc) public { ... }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to bypass document submission."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 15,
+      "code_snippet": "function signDocument(bytes32 _docHash) public validDoc(_docHash){ address[] storage _signers = signers[_docHash]; for(uint i = 0; i < _signers.length; i++) { if(_signers[i] == msg.sender) return; } _signers.push(msg.sender);}",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to add themselves as signers."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 18,
+      "code_snippet": "function bug_txorigin40(address owner_txorigin40) public{ require(tx.origin == owner_txorigin40); }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to bypass this check."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 21,
+      "code_snippet": "function getDetail(bytes32 _docHash) public validDoc(_docHash) view returns(string memory _doc, address[] memory _signers) { _doc = docs[_docHash]; _signers = signers[_docHash]; }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to access document details."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 24,
+      "code_snippet": "function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public { require (tx.origin == owner_txorigin33); receiver.transfer(amount); }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to send transactions without authorization."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 27,
+      "code_snippet": "function transferTo_txorigin27(address to, uint amount,address owner_txorigin27) public { require(tx.origin == owner_txorigin27); to.call.value(amount); }",
+      "confidence": "high",
+      "reasoning": "Used for authentication, making tx.origin vulnerable to phishing.",
+      "explanation": "This function authenticates based on tx.origin. Compromise allows attackers to bypass this check."
+    }
+  ]
+}

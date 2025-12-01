@@ -1,0 +1,44 @@
+{
+  "contract": "buggy_41.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 20:50:04",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 12,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 34,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8);",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 15,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 37,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp)",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 48,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8);",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 60,
+      "code_snippet": "if (now % 15 == 0)",
+      "confidence": "high"
+    }
+  ]
+}

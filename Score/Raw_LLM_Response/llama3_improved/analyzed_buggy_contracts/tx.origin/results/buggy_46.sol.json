@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "struct FileExistenceStruct {"
+      ],
+      "context_after": [
+        "address filesender;",
+        "string fileHash;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "require(tx.origin == dappBoxOrigin);",
+      "confidence": "high",
+      "context_before": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ],
+      "context_after": [
+        "BlockchainIdentification identifier;",
+        "}function bug_txorigin36(  address owner_txorigin36) public{"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "        FileExistenceStruct memory newInfo;",
+        "        uint256 _date = now;"
+      ],
+      "context_after": [
+        "        newInfo.date = _date;",
+        "        newInfo.filesender = dappBoxOrigin;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "        newInfo.contractAddress = _contractAddress;",
+        "        newInfo.identifier = _identifier;"
+      ],
+      "context_after": [
+        "",
+        "        fileExistenceProofs[dappBoxOrigin].push(newInfo);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "  to.call.value(amount);",
+        "}"
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 56,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        "    function GetFileExistenceProof(address dappBoxOrigin,string memory fileHash, string memory filePathHash) public view returns(uint256,address,address,BlockchainIdentification,bytes32) {"
+      ],
+      "context_after": [
+        "        for(uint i = 0 ; i < fileExistenceProofs[dappBoxOrigin].length ; i++)",
+        "        {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 62,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "          bool res = compareStrings(fileHash,fileExistenceProofs[dappBoxOrigin][i].fileHash) &&",
+        "          compareStrings(filePathHash,fileExistenceProofs[dappBoxOrigin][i].filePathHash);"
+      ],
+      "context_after": [
+        "            {",
+        "                return( fileExistenceProofs[dappBoxOrigin][i].date,"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 68,
+      "code_snippet": "require(tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "                fileExistenceProofs[dappBoxOrigin][i].contractAddress,",
+        "                fileExistenceProofs[dappBoxOrigin][i].identifier,"
+      ],
+      "context_after": [
+        "            }",
+        "        }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_30.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:36:06",
+  "findings": [
+    {
+      "function": "operatorSend",
+      "reason": "Calls _send without proper parameter validation, allowing attackers to bypass checks by passing different parameters through multiple contract instances."
+    },
+    {
+      "function": "_callTokensToSend",
+      "reason": "Uses getInterfaceImplementer which could allow attackers to bypass interface implementations or create unintended behavior across contract instances."
+    },
+    {
+      "function": "_approve",
+      "reason": "Allows approval without verifying the caller's intent, potentially enabling malicious approvals through parameter manipulation."
+    },
+    {
+      "function": "operatorBurn",
+      "reason": "Calls _burn with parameters that could be exploited by attackers to bypass burn checks or cause unintended token transfers."
+    },
+    {
+      "function": "claimReward",
+      "reason": "Uses a private variable without proper bounds checking, allowing attackers to bypass the reward verification check."
+    },
+    {
+      "function": "bug_",
+      "reason": "Multiple bug functions that allow attackers to call the contract multiple times and bypass checks by managing their respective flags."
+    },
+    {
+      "function": "_move",
+      "reason": "Uses from and to addresses without proper validation, allowing attackers to control token transfers through unintended parties."
+    },
+    {
+      "function": "operatorSend"
+    },
+    {
+      "function": "_callTokensToSend"
+    },
+    {
+      "function": "_callTokensReceived"
+    },
+    {
+      "function": "bug_"
+    },
+    {
+      "function": "_callTokensReceived"
+    },
+    {
+      "function": "operatorBurn"
+    },
+    {
+      "function": "claimReward"
+    },
+    {
+      "function": "_callTokensToSend"
+    },
+    {
+      "function": "operatorSend"
+    },
+    {
+      "function": "_callTokensReceived"
+    },
+    {
+      "function": "bug_"
+    },
+    {
+      "function": "_callTokensReceived"
+    },
+    {
+      "function": "operatorBurn"
+    },
+    {
+      "function": "claimReward"
+    },
+    {
+      "function": "_callTokensToSend"
+    },
+    {
+      "function": "operatorSend"
+    },
+    {
+      "function": "_callTokensReceived"
+    },
+    {
+      "function": "bug_"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_29.sol",
+  "contract_name": "for",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "    function allowance(address owner, address spender) external view returns (uint256);",
+        "function bug_intou23() public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        "function bug_intou23() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "    function balanceOf(address account) external view returns (uint256);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "context_before": [
+        "mapping(address => uint) balances_intou14;",
+        ""
+      ],
+      "context_after": [
+        "    require(balances_intou14[msg.sender] - _value >= 0);  //bug",
+        "    balances_intou14[msg.sender] -= _value;  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "vundflw =0;",
+      "confidence": "high",
+      "context_before": [
+        "    return true;",
+        "  }"
+      ],
+      "context_after": [
+        "",
+        "contract RaffleToken is ERC20Interface, IERC20Interface {}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "context_before": [
+        "contract RaffleToken is ERC20Interface, IERC20Interface {}",
+        ""
+      ],
+      "context_after": [
+        " * @dev Wrappers over Solidity's arithmetic operations with added overflow",
+        " * checks."
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "transferValue_intou13 = 10;",
+      "confidence": "high",
+      "context_before": [
+        " *",
+        " * Arithmetic operations in Solidity wrap on overflow. This can easily result"
+      ],
+      "context_after": [
+        " * error, which is the standard behavior in high level programming languages.",
+        " * `SafeMath` restores this intuition by reverting the transaction when an"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 52,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        " * operation overflows.",
+        " *"
+      ],
+      "context_after": [
+        " * class of bugs, so it's recommended to use it always.",
+        " */"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 57,
+      "code_snippet": "transferValue_intou33 = 10;",
+      "confidence": "high",
+      "context_before": [
+        "library SafeMath {",
+        "    /**"
+      ],
+      "context_after": [
+        "     * overflow.",
+        "     *"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

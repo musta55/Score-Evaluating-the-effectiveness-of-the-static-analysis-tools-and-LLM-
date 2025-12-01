@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract ProofOfExistence {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 6,
+      "code_snippet": "vundflw1 = vundflw1 -10;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "pragma solidity >=0.4.21 <0.6.0;"
+      ],
+      "context_after": [
+        "contract ProofOfExistence {",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 8,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract ProofOfExistence {"
+      ],
+      "context_after": [
+        "enum BlockchainIdentification {Ixxo,Ethereum,Gochain}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 9,
+      "code_snippet": "vundflw1=0; vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "contract ProofOfExistence {",
+        ""
+      ],
+      "context_after": [
+        "",
+        "struct FileExistenceStruct {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    {",
+        "        FileExistenceStruct memory newInfo;"
+      ],
+      "context_after": [
+        "        bytes32 QRCodeHash = generateQRCodeForFile(dappBoxOrigin,_fileHash,_filePathHash,_contractAddress ,_identifier);",
+        "        newInfo.date = _date;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "vundflw =0; vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 _date = now;",
+        "        bytes32 QRCodeHash = generateQRCodeForFile(dappBoxOrigin,_fileHash,_filePathHash,_contractAddress ,_identifier);"
+      ],
+      "context_after": [
+        "        newInfo.filesender = dappBoxOrigin;",
+        "        newInfo.fileHash = _fileHash;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "        newInfo.fileHash = _fileHash;",
+        "        newInfo.filePathHash = _filePathHash;"
+      ],
+      "context_after": [
+        "        newInfo.identifier = _identifier;",
+        "        newInfo.QRCodeHash = QRCodeHash;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 3,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " *Submitted for verification at Etherscan.io on 2019-09-24"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity >=0.4.21 <0.6.0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 7,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "context_before": [
+        "pragma solidity >=0.4.21 <0.6.0;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "enum BlockchainIdentification {Ixxo,Ethereum,Gochain}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "vundflw1 = 0;",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "enum BlockchainIdentification {Ixxo,Ethereum,Gochain}"
+      ],
+      "context_after": [
+        "struct FileExistenceStruct {",
+        "uint256 date;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "enum BlockchainIdentification {Ixxo,Ethereum,Gochain}",
+        ""
+      ],
+      "context_after": [
+        "uint256 date;",
+        "address filesender;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "uint256 date;",
+        "address filesender;"
+      ],
+      "context_after": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "string filePathHash;",
+        "address contractAddress;"
+      ],
+      "context_after": [
+        "BlockchainIdentification identifier;",
+        "}function bug_intou36(uint8 p_intou36) public{"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_17.sol",
+  "contract_name": "owned",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    require(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "    require(b > 0);",
+        "    uint256 c = a / b;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    uint256 c = a - b;",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "callee.send(42 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    require(c >= a && c >= b);",
+        "    return c;"
+      ],
+      "context_after": [
+        "  function mod(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    require(b != 0);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function mod(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    require(b != 0);"
+      ],
+      "context_after": [
+        "  }",
+        "  function max256(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "addr_unchk40.send(2 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function min256(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    return a < b ? a : b;"
+      ],
+      "context_after": [
+        "",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

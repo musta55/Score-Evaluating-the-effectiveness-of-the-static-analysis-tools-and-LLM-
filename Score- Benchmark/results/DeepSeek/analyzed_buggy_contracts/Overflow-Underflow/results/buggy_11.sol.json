@@ -1,0 +1,134 @@
+{
+  "contract": "buggy_11.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:17:18",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "msg.sender.transfer(transferValue_intou37);",
+      "confidence": "medium",
+      "reasoning": "Potential overflow in transfer operation without bounds checking."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 44,
+      "code_snippet": "msg.sender.transfer(transferValue_intou37);",
+      "confidence": "medium",
+      "reasoning": "Potential overflow in transfer operation without bounds checking."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "reasoning": "Adding without bounds checking can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 57,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "reasoning": "Adding without bounds checking can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 70,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 77,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "reasoning": "Adding without bounds checking can cause overflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 84,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 92,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 99,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 106,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 113,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 120,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 127,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 134,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 141,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 148,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting from a zeroed uint8 variable can cause underflow."
+    }
+  ]
+}

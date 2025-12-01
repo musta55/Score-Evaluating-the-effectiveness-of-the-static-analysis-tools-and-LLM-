@@ -1,0 +1,48 @@
+{
+  "contract": "buggy_22.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:32:06",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner_txorigin24);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin36);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 20,
+      "code_snippet": "require(tx.origin == owner_txorigin20);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 8,
+      "code_snippet": "require(tx.origin == owner_txorigin8);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin28);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin40);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 32,
+      "code_snippet": "require(tx.origin == owner_txorigin32);"
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 4,
+      "code_snippet": "require(tx.origin == owner_txorigin4);"
+    }
+  ]
+}

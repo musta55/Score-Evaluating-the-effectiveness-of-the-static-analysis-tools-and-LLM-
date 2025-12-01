@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_46.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:04:03",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 3,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used in a validation check without proper security, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 10,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used in a transfer function without proper security, making it vulnerable to phishing attacks."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 16,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used in a validation check without proper security, making it vulnerable to phishing attacks."
+    }
+  ]
+}

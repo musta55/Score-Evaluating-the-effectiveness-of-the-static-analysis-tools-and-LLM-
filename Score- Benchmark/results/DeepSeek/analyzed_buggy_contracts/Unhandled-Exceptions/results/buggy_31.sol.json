@@ -1,0 +1,38 @@
+{
+  "contract": "buggy_31.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:39:49",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 12,
+      "code_snippet": "addr_unchk7.send(10 ether)"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 14,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8)"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 20,
+      "code_snippet": "addr_unchk40.send(2 ether)"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 36,
+      "code_snippet": "addr_unchk30.send(42 ether)"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 38,
+      "code_snippet": "addr_unchk31.send(10 ether)"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 52,
+      "code_snippet": "callee.call.value(1 ether)"
+    }
+  ]
+}

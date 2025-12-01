@@ -1,0 +1,298 @@
+{
+  "contract": "buggy_9.sol",
+  "contract_name": "Ownable",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "require (tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "require(tx.origin == owner_txorigin3);",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "        return 0;"
+      ],
+      "context_after": [
+        "    c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require (tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  *  Integer division of two numbers, truncating the quotient.",
+        "  */"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin19);",
+      "confidence": "high",
+      "context_before": [
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    // assert(b > 0); // Solidity automatically throws when dividing by 0"
+      ],
+      "context_after": [
+        "    // assert(a == b * c + a % b); // There is no case in which this doesn't hold",
+        "    return a / b;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require (tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).",
+        "  */"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin31);",
+      "confidence": "high",
+      "context_before": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "require (tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "  /**",
+        "  *  Adds two numbers, throws on overflow."
+      ],
+      "context_after": [
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256 c) {",
+        "    c = a + b;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "require(tx.origin == owner_txorigin37);",
+      "confidence": "high",
+      "context_before": [
+        "    assert(c >= a);",
+        "    return c;"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "require (tx.origin == owner_txorigin38);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract Ownable {"
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin17);",
+        "\treceiver.transfer(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 60,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "    constructor() public {",
+        "        owner = msg.sender;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "require (tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function bug_txorigin32(  address owner_txorigin32) public{"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 70,
+      "code_snippet": "require(tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "context_before": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner);"
+      ],
+      "context_after": [
+        "    }",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 75,
+      "code_snippet": "require (tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract TokenERC20 is Ownable {"
+      ],
+      "context_after": [
+        "",
+        "    // Public variables of the token"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 80,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        "  function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public {",
+        "\trequire (tx.origin == owner_txorigin37);"
+      ],
+      "context_after": [
+        "}",
+        "  string public name;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 85,
+      "code_snippet": "require (tx.origin == owner_txorigin30);",
+      "confidence": "high",
+      "context_before": [
+        "  function transferTo_txorigin3(address to, uint amount,address owner_txorigin3) public {",
+        "  require(tx.origin == owner_txorigin3);"
+      ],
+      "context_after": [
+        "}",
+        "  string public symbol;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 90,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "context_before": [
+        "  function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {",
+        "\trequire (tx.origin == owner_txorigin9);"
+      ],
+      "context_after": [
+        "}",
+        "  uint8 public decimals;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 95,
+      "code_snippet": "require (tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function sendto_txorigin25(address payable receiver, uint amount,address owner_txorigin25) public {"
+      ],
+      "context_after": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 100,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "context_before": [
+        "  uint256 private _totalSupply;",
+        "  function transferTo_txorigin19(address to, uint amount,address owner_txorigin19) public {"
+      ],
+      "context_after": [
+        "  to.call.value(amount);",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

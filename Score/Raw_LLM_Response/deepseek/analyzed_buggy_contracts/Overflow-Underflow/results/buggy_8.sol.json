@@ -1,0 +1,86 @@
+{
+  "contract": "buggy_8.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:51:18",
+  "findings": [
+    {
+      "bug_type": "Overflow",
+      "line_number": 42,
+      "code_snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou40;   // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 53,
+      "code_snippet": "uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 64,
+      "code_snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou35;   // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 75,
+      "code_snippet": "uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 86,
+      "code_snippet": "uint8 vundflw1=0;\n    vundflw1 = vundflw1 + p_intou39;   // overflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 24,
+      "code_snippet": "lockTime_intou1[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 35,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 46,
+      "code_snippet": "lockTime_intou17[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 57,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 103,
+      "code_snippet": "balanceOf[_to] - _value >= 0",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 125,
+      "code_snippet": "balanceOf[_to] + _value > balanceOf[_to]",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 147,
+      "code_snippet": "balanceOf[_to] - _value >= 0",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 169,
+      "code_snippet": "balanceOf[_to] + _value > balanceOf[_to]",
+      "confidence": "high"
+    }
+  ]
+}

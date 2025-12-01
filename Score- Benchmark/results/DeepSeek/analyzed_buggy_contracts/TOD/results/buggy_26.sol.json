@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_26.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 10:27:25",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 52,
+      "code_snippet": "uint256 _balances[sender] = _balances[sender].sub(amount);",
+      "confidence": "high",
+      "reasoning": "The _transfer function uses the current sender's balance before subtracting the amount, which is vulnerable to Tod attacks after obtaining the private key."
+    }
+  ]
+}

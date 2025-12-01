@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_9.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:10:16",
+  "findings": [
+    {
+      "bug_type": "TOD_VULNERABILITY",
+      "line_number": 42,
+      "code snippet": "constructor() TokenERC20(18*10**16, 12*10**16, \"XL Token\", \"XL\", 8) public {}",
+      "confidence": "medium|low",
+      "reasoning": "The constructor does not validate that the cap is greater than or equal to the initial supply. This could allow for negative or zero total supply if the cap is set lower than the initial supply, which would break the invariant of the token's total supply."
+    },
+    {
+      "bug_type": "TOD_VULNERABILITY",
+      "line_number": 42,
+      "code snippet": "function play_TOD33(bytes32 guess) public{\n    if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n        winner_TOD33 = msg.sender;\n    }\n}",
+      "confidence": "high",
+      "reasoning": "The play_TOD33 function lacks any security checks beyond verifying the guess. An attacker could perform a brute force attack by sending many guesses until they find one that matches 'hello'. This would allow them to transfer tokens without authorization."
+    },
+    {
+      "bug_type": "TOD_VULNERABILITY",
+      "line_number": 42,
+      "code snippet": "function getReward_TOD33() payable public{\n    winner_TOD33.transfer(msg.value);\n}",
+      "confidence": "high",
+      "reasoning": "The getReward_TOD33 function directly transfers the token without any validation. If an attacker can guess correctly, they could siphon off tokens from the contract."
+    }
+  ]
+}

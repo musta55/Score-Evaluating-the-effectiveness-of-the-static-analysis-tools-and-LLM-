@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_14.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:41:52",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 15,
+      "code_snippet": "dst.call.value(msg.value)",
+      "confidence": "medium",
+      "reasoning": "External call without handling on failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 62,
+      "code_snippet": "winner_unchk46.send(subpot_unchk46)",
+      "confidence": "high",
+      "reasoning": "Send operation may fail, but no error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 75,
+      "code_snippet": "_approve(msg.sender, _allowed[from][msg.sender].sub(value))",
+      "confidence": "medium",
+      "reasoning": "External function call with no error handling."
+    }
+  ]
+}

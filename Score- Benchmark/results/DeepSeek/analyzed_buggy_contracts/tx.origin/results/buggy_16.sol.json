@@ -1,0 +1,15 @@
+{
+  "contract": "buggy_16.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:18:20",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner_txorigin27);",
+      "confidence": "low",
+      "reasoning": "The function transferTo_txorigin27 does not check tx.origin, allowing external calls without proper authorization."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_9.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {",
+        "    if (a == 0) {"
+      ],
+      "context_after": [
+        "    }",
+        "    c = a * b;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "winner_unchk8.send(winAmount_unchk8);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "    c = a * b;"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    return c;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "  *  Integer division of two numbers, truncating the quotient."
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "addr_unchk4.send (42 ether));",
+      "confidence": "high",
+      "context_before": [
+        "  */",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    // uint256 c = a / b;",
+        "    // assert(a == b * c + a % b); // There is no case in which this doesn't hold"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    // uint256 c = a / b;",
+        "    // assert(a == b * c + a % b); // There is no case in which this doesn't hold"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "addr_unchk40.send (2 ether));",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).",
+        "  */"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

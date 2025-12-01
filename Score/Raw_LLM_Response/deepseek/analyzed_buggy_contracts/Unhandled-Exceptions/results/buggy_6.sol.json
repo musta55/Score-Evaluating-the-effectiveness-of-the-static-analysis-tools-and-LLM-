@@ -1,0 +1,32 @@
+{
+  "contract": "buggy_6.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 02:15:27",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "call().send(5 ether);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 46,
+      "code_snippet": "dst.call.value(msg.value);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": 105,
+      "line_number": 28,
+      "code_snippet": "addr_unchk40.send(2 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": 39,
+      "line_number": 67,
+      "code_snippet": "addr_unchk3.send(10 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

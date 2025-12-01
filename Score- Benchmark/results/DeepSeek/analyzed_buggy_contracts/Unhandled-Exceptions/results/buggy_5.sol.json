@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_5.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:51:13",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "call addr_unchk42 +=1;",
+      "confidence": "medium",
+      "reasoning": "Missing balance check before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 43,
+      "code_snippet": "if (!addr_unchk43.send (10 ether) || 1==1)",
+      "confidence": "low",
+      "reasoning": "Redundant condition and missing balance check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 62,
+      "code_snippet": "call addr_unchk7 +=1;",
+      "confidence": "medium",
+      "reasoning": "Missing balance check before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code_snippet": "if (!addr_unchk19.send (10 ether) || 1==1)",
+      "confidence": "low",
+      "reasoning": "Redundant condition and missing balance check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 86,
+      "code_snippet": "call addr_unchk30 +=1;",
+      "confidence": "medium",
+      "reasoning": "Missing balance check before sending ether."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 95,
+      "code_snippet": "call addr_unchk8 +=1;",
+      "confidence": "low",
+      "reasoning": "Redundant condition and missing balance check."
+    }
+  ]
+}

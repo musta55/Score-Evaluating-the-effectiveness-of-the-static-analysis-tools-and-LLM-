@@ -1,0 +1,23 @@
+{
+  "contract": "buggy_17.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:55:25",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 15,
+      "code_snippet": "balanceOf[_from] = balanceOf[_from].sub(_value);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 23,
+      "code_snippet": "allowance[_from][msg.sender] = allowance[_from][msg.sender].sub(_value);"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 14,
+      "code_snippet": "balanceOf[_from] = balanceOf[_from].sub(_value);"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_41.sol",
+  "contract_name": "AO",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "_transfer(_from, _to, _value);",
+      "confidence": "high",
+      "context_before": [
+        "interface tokenRecipient {",
+        "    function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external;"
+      ],
+      "context_after": [
+        "",
+        "contract AO {"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "_transfer(msg.sender, _to, _value);",
+      "confidence": "high",
+      "context_before": [
+        "uint256 reward_TOD20;",
+        "function setReward_TOD20() public payable {"
+      ],
+      "context_after": [
+        "",
+        "        require(msg.sender == owner_TOD20);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "spender.receiveApproval(msg.sender, _value, address(this), _extraData);",
+      "confidence": "high",
+      "context_before": [
+        "        claimed_TOD20 = true;",
+        "    }"
+      ],
+      "context_after": [
+        "  bool claimed_TOD32 = false;",
+        "address payable owner_TOD32;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

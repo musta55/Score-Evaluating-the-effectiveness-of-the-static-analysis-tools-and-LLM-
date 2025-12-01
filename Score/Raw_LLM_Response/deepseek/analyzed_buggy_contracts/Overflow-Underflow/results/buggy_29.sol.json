@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_29.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:55:52",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 44,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 45,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 46,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 47,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 48,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 49,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting 10 from a uint8 variable can result in negative values without proper checks."
+    }
+  ]
+}

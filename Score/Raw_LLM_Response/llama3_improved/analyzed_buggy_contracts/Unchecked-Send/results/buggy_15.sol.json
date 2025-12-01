@@ -1,0 +1,202 @@
+{
+  "contract": "buggy_15.sol",
+  "contract_name": "MD",
+  "bug_type": "Unchecked-Send",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 3,
+      "code_snippet": "function bug_unchk_send17() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " * Source Code first verified at https://etherscan.io on Tuesday, April 30, 2019"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity ^0.5.7;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 5,
+      "code_snippet": "function bug_unchk_send3() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "interface tokenRecipient {"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 7,
+      "code_snippet": "function bug_unchk_send9() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "pragma solidity ^0.5.7;",
+        ""
+      ],
+      "context_after": [
+        "    function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external;",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 25,
+      "code_snippet": "function bug_unchk_send25() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send25() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "",
+        "    // This creates an array with all balances"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 27,
+      "code_snippet": "function bug_unchk_send27() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  uint256 public totalSupply;",
+        ""
+      ],
+      "context_after": [
+        "  function bug_unchk_send19() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 31,
+      "code_snippet": "function bug_unchk_send31() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping (address => uint256) public balanceOf;"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  mapping (address => mapping (address => uint256)) public allowance;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "function bug_unchk_send20() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  string public symbol;",
+        "  function bug_unchk_send9() payable public{"
+      ],
+      "context_after": [
+        "  uint8 public decimals = 18;",
+        "    // 18 decimals is the strongly suggested default, avoid changing it"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 32,
+      "code_snippet": "function bug_unchk_send32() payable public{ msg.sender.transfer(1 ether);}",
+      "confidence": "high",
+      "context_before": [
+        "  mapping (address => uint256) public balanceOf;",
+        "  function bug_unchk_send26() payable public{"
+      ],
+      "context_after": [
+        "  mapping (address => mapping (address => uint256)) public allowance;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 4,
+      "code_snippet": "function transfer(address _to, uint256 _value) public returns (bool success) { _transfer(msg.sender, _to, _value); return true; }",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Tuesday, April 30, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity ^0.5.7;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 23,
+      "code_snippet": "function approveAndCall(address _spender, uint256 _value, bytes memory _extraData) public returns (bool success) { tokenRecipient spender = tokenRecipient(_spender); if (approve(_spender, _value)) { spender.receiveApproval(msg.sender, _value, address(this), _extraData); return true; } }",
+      "confidence": "high",
+      "context_before": [
+        "  uint8 public decimals = 18;",
+        "    // 18 decimals is the strongly suggested default, avoid changing it"
+      ],
+      "context_after": [
+        "      msg.sender.transfer(1 ether);}",
+        "  uint256 public totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "function burn(uint256 _value) public returns (bool success) { require(balanceOf[msg.sender] >= _value); balanceOf[msg.sender] -= _value; totalSupply -= _value; emit Burn(msg.sender, _value); return true; }",
+      "confidence": "high",
+      "context_before": [
+        "    // Public variables of the token",
+        "  function bug_unchk_send17() payable public{"
+      ],
+      "context_after": [
+        "  string public name;",
+        "  function bug_unchk_send3() payable public{"
+      ]
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "sub_type": "Unchecked-Send",
+      "severity": "Violation",
+      "line_number": 30,
+      "code_snippet": "function burnFrom(address _from, uint256 _value) public returns (bool success) { require(balanceOf[_from] >= _value); require(_value <= allowance[_from][msg.sender]); balanceOf[_from] -= _value; allowance[_from][msg.sender] -= _value; totalSupply -= _value; emit Burn(_from, _value); return true; }",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_unchk_send19() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ],
+      "context_after": [
+        "  function bug_unchk_send26() payable public{",
+        "      msg.sender.transfer(1 ether);}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_17.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:28:16",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8; // overflow bug",
+      "confidence": "high",
+      "reasoning": "The addition of `p_intou8` to `vundflw1` can cause an overflow if the sum exceeds the maximum value for uint8. This is a potential security vulnerability as it could lead to undefined behavior."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 -10; // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from `vundflw1` can cause an underflow if the value is already at its minimum, leading to negative values which are undefined for uint8 variables."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 44,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high",
+      "reasoning": "The subtraction of 10 from `vundflw` can cause an underflow, resulting in a negative value which is invalid for a uint8 variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 45,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease; //overflow",
+      "confidence": "medium",
+      "reasoning": "Adding `_secondsToIncrease` to `lockTime_intou37[msg.sender]` can cause an overflow if the sum exceeds the maximum value for the variable type, potentially leading to incorrect lock time calculations."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 46,
+      "code_snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease; //overflow",
+      "confidence": "medium",
+      "reasoning": "Adding `_secondsToIncrease` to `lockTime_intou9[msg.sender]` can cause an overflow, leading to incorrect lock time values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 47,
+      "code_snippet": "lockTime_intou25[msg.sender] += _secondsToIncrease; //overflow",
+      "confidence": "medium",
+      "reasoning": "Adding `_secondsToIncrease` to `lockTime_intou25[msg.sender]` can cause an overflow, resulting in incorrect lock time values."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 48,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from `vundflw` can cause an underflow, resulting in a negative value which is invalid for a uint8 variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 49,
+      "code_snippet": "balanceOf[_from] = balanceOf[_from].sub(_value); //bug",
+      "confidence": "high",
+      "reasoning": "Subtracting `_value` from `balanceOf[_from]` can cause an underflow if the result is negative, which is invalid for a uint256 variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "balanceOf[_to] = balanceOf[_to].add(_value); //bug",
+      "confidence": "high",
+      "reasoning": "Adding `_value` to `balanceOf[_to]` can cause an overflow if the sum exceeds the maximum value for a uint256 variable."
+    }
+  ]
+}

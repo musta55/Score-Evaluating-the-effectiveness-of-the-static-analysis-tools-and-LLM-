@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_2.sol",
+  "contract_name": "CareerOnToken",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 11,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw =0;",
+        "    vundflw = vundflw -10;   // underflow bug"
+      ],
+      "context_after": [
+        "  event Transfer(address indexed _from, address indexed _to, uint256 _value);",
+        "  function bug_intou31() public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_intou31() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "  event Approval(address indexed a_owner, address indexed _spender, uint256 _value);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou32;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function increaseLockTime_intou13(uint _secondsToIncrease) public {"
+      ],
+      "context_after": [
+        "    }",
+        "function withdraw_intou13() public {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "context_before": [
+        "function increaseLockTime_intou25(uint _secondsToIncrease) public {",
+        "        lockTime_intou25[msg.sender] += _secondsToIncrease;  //overflow"
+      ],
+      "context_after": [
+        "function withdraw_intou25() public {",
+        "        require(now > lockTime_intou25[msg.sender]);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "        require(now > lockTime_intou25[msg.sender]);",
+        "        uint transferValue_intou25 = 10;"
+      ],
+      "context_after": [
+        "    }",
+        "  uint256 public totalSupply;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou36;",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_intou19() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "  string public name;                   //\u540d\u79f0\uff0c\u4f8b\u5982\"My test token\""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou40;",
+      "confidence": "high",
+      "context_before": [
+        "  mapping(address => uint) balances_intou26;",
+        ""
+      ],
+      "context_after": [
+        "    require(balances_intou26[msg.sender] - _value >= 0);  //bug",
+        "    balances_intou26[msg.sender] -= _value;  //bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 3,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "/**",
+        " * Source Code first verified at https://etherscan.io on Tuesday, May 7, 2019"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity ^0.5.1;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "medium",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract CareerOnToken {"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "balances[msg.sender] -= _value;",
+      "confidence": "medium",
+      "context_before": [
+        "  function bug_intou27() public{",
+        "    uint8 vundflw =0;"
+      ],
+      "context_after": [
+        "}",
+        "  event Transfer(address indexed _from, address indexed _to, uint256 _value);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "balances[_to] += _value;",
+      "confidence": "medium",
+      "context_before": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ],
+      "context_after": [
+        "  function bug_intou31() public{",
+        "    uint8 vundflw =0;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,24 @@
+{
+  "contract": "buggy_26.sol",
+  "contract_name": "UBBCToken",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 33,
+      "code_snippet": "require(success);  //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        return c;"
+      ],
+      "context_after": [
+        "",
+        "    function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    }
+  ],
+  "success": true
+}

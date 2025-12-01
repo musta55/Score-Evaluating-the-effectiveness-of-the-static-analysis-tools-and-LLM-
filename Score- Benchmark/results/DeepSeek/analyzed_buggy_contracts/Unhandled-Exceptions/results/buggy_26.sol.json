@@ -1,0 +1,62 @@
+{
+  "contract": "buggy_26.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:23:56",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "function callnotchecked_unchk13(address callee) public {\n    callee.call.value(1 ether);\n}",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 4,
+      "code_snippet": "function unhandledsend_unchk14(address payable callee) public {\n    callee.send(5 ether);\n}",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 23,
+      "code_snippet": "function my_func_unchk23(address payable dst) public payable{\n        dst.send(msg.value);\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 14,
+      "code_snippet": "function balanceOf(address account) public view returns (uint256) {\n        return _balances[account];\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "function bug_unchk30() public{\naddress payable addr_unchk30;\nif (!addr_unchk30.send(42 ether))\n    {revert();}\n}",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 19,
+      "code_snippet": "function my_func_uncheck36(address payable dst) public payable{\n        dst.send(msg.value);\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 27,
+      "code_snippet": "function bug_unchk39(address payable addr) public\n      {addr.send (4 ether);}",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 18,
+      "code_snippet": "function sendToWinner_unchk40() public {\n        address payable addr_unchk40;\n        if (! addr_unchk40.send (2 ether))\n            {comment2;}\n        else\n            {comment1;}\n        }\n",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 3,
+      "code_snippet": "function my_func_unchk23(address payable dst) public payable{\n        dst.send(msg.value);\n    }",
+      "confidence": "medium"
+    }
+  ]
+}

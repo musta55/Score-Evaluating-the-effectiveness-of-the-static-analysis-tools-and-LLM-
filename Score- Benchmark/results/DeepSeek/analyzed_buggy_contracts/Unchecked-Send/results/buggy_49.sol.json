@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:10:52",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 14,
+      "code_snippet": "balanceOf[msg.sender] = totalSupply;\nemit Transfer(address(0), msg.sender, totalSupply);",
+      "confidence": "high",
+      "reasoning": "The constructor emits a transfer without any validation, allowing unauthorized transfers."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "msg.sender.transfer(1 ether);",
+      "confidence": "high",
+      "reasoning": "Directly sends ether without any checks in the bug_unchk_send*() functions."
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 47,
+      "code_snippet": "allowance[msg.sender][spender] = value;",
+      "confidence": "high",
+      "reasoning": "The approve function bypasses sender validation when setting allowance."
+    }
+  ]
+}

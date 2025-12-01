@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_43.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:17:05",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "UncheckedExternalCall_unchk4",
+      "confidence": "medium",
+      "reasoning": "The function UncheckedExternalCall_unchk4 does not handle exceptions, allowing external code to execute arbitrary functions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 13,
+      "code_snippet": "function unhandledsend_unchk14(address payable callee) public {\n    callee.send(5 ether);\n}",
+      "confidence": "high",
+      "reasoning": "The function does not handle exceptions when called from outside the contract."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 37,
+      "code_snippet": "function unhandledsend_unchk37(address payable callee) public {\n    callee.call.value(1 ether);\n}",
+      "confidence": "high",
+      "reasoning": "The function does not handle exceptions when called from outside the contract."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 40,
+      "code_snippet": "function UncheckedExternalCall_unchk40 () public {\n    address payable addr_unchk40;\n    if (! addr_unchk40.send(2 ether))\n        {// comment1;\n        }\n    else\n        {//comment2;\n        }\n}",
+      "confidence": "medium",
+      "reasoning": "The function does not handle exceptions and allows external code to execute arbitrary functions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 30,
+      "code_snippet": "function bug_unchk39(address payable addr) public {\n    addr.send(4 ether);\n}",
+      "confidence": "high",
+      "reasoning": "The function does not handle exceptions when called from outside the contract."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 18,
+      "code_snippet": "function sendToWinner_unchk44() public {\n    require(!payedOut_unchk44);\n    winner_unchk44.send(winAmount_unchk44);\n    paidOut_unchk44 = true;\n}",
+      "confidence": "medium",
+      "reasoning": "The function does not handle exceptions and may allow external code to execute arbitrary functions."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_8.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "if (!addr_unchk42.send(42 ether)) {receivers_unchk42 +=1;} else {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "address payable addr_unchk42;",
+        "if (!addr_unchk42.send(42 ether))"
+      ],
+      "context_after": [
+        "else",
+        "\t{revert();}"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "if (!addr_unchk43.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "else",
+        "\t{revert();}"
+      ],
+      "context_after": [
+        "  address public owner;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 18,
+      "code_snippet": "if (! addr_unchk4.send (42 ether))  // comment1;",
+      "confidence": "high",
+      "context_before": [
+        "  address public owner;",
+        ""
+      ],
+      "context_after": [
+        "",
+        "function withdrawLeftOver_unchk33() public {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if (!addr_unchk7.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function withdrawLeftOver_unchk33() public {"
+      ],
+      "context_after": [
+        "        msg.sender.send(address(this).balance);",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (! addr_unchk19.send (10 ether) || 1==1) {revert();}",
+      "confidence": "high",
+      "context_before": [
+        "        msg.sender.send(address(this).balance);",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        ""
+      ],
+      "context_after": [
+        "   * @dev The Ownable constructor sets the original `owner` of the contract to the sender",
+        "   * account."
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "   * @dev The Ownable constructor sets the original `owner` of the contract to the sender",
+        "   * account."
+      ],
+      "context_after": [
+        "  constructor () public {",
+        "    owner = msg.sender;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "addr.send(msg.value);",
+      "confidence": "high",
+      "context_before": [
+        "  constructor () public {",
+        "    owner = msg.sender;"
+      ],
+      "context_after": [
+        "function unhandledsend_unchk26(address payable callee) public {",
+        "    callee.send(5 ether);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "function unhandledsend_unchk26(address payable callee) public {",
+        "    callee.send(5 ether);"
+      ],
+      "context_after": [
+        "",
+        "  /**"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "callee.send(msg.value);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "   */",
+        "  modifier onlyOwner() {"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

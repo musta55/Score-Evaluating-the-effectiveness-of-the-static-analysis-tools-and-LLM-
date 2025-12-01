@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_21.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 15:07:46",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code snippet": "token.transfer(1 ether) in Token contract",
+      "confidence": "high",
+      "reasoning": "The token.transfer function allows multiple calls without checking previous calls, enabling re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 2,
+      "code snippet": "token.transfer(1 ether) in Token contract",
+      "confidence": "high",
+      "reasoning": "The token.transfer function allows multiple calls without checking previous calls, enabling re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 3,
+      "code snippet": "transferValue_re_ent25 = redeems.eth; in claimReward_re_ent25 contract",
+      "confidence": "high",
+      "reasoning": "The transfer function allows multiple calls without checking previous calls, enabling re-entrancy."
+    }
+  ]
+}

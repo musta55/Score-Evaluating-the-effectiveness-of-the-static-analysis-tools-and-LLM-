@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_46.sol",
+  "contract_name": "ProofOfExistence",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "uint256 _date = now;",
+      "confidence": "high",
+      "context_before": [
+        "function setReward_TOD36() public payable {",
+        "        require (!claimed_TOD36);"
+      ],
+      "context_after": [
+        "        require(msg.sender == owner_TOD36);",
+        "        owner_TOD36.transfer(reward_TOD36);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "_date = now;",
+      "confidence": "high",
+      "context_before": [
+        "        require(submission < 10);",
+        ""
+      ],
+      "context_after": [
+        "        claimed_TOD36 = true;",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

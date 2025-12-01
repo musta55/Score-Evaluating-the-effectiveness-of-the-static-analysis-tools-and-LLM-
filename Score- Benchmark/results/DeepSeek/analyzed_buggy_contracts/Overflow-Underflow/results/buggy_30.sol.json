@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_30.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:01:09",
+  "findings": [
+    {
+      "bug_type": "Overflow/Void",
+      "line_number": 42,
+      "code snippet": "require(balances_intou29[msg.sender] - _value >= 0); //bug\n balances_intou29[msg.sender] -= _value; //bug\n balances_intou29[_to] += _value; //bug",
+      "explanation": "The code attempts to transfer tokens without checking if the source balance has sufficient funds, leading to potential overflow.",
+      "reference": "Solidity Code at lines 42-45 in SKYBITToken contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 10,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 10-12 in MinterRole contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 35,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 35-37 in PauserRole contract."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 12,
+      "code snippet": "vundflw = vundflw + p_intou12; // overflow bug",
+      "explanation": "Adding without bounds check can cause integer overflow.",
+      "reference": "Solidity Code at lines 12-14 in SKYBITToken contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 7,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 7-9 in Pausable contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 20,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 20-22 in SKYBITToken contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 14,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 14-16 in MinterRole contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 28,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 28-30 in PauserRole contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 17,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 17-19 in SKYBITToken contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 23,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 23-25 in MinterRole contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 19,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 19-21 in Pausable contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 30,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 30-32 in SKYBITToken contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 4,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 4-6 in MinterRole contract."
+    },
+    {
+      "bug_type": "Underflow",
+      "line_number": 2,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "explanation": "Subtracting without bounds check can lead to negative values, causing underflow.",
+      "reference": "Solidity Code at lines 2-4 in Pausable contract."
+    }
+  ]
+}

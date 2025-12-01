@@ -1,0 +1,71 @@
+{
+  "contract": "buggy_44.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 01:21:04",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "callnotcheck_unchk13(address callee) public {\n    callee.call.value(1 ether);\n}",
+      "confidence": "medium",
+      "reasoning": "The function callnotcheck_unchk13 directly invokes a call without handling potential exceptions."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk19() public{\naddress payable addr_unchk19;\nif (!addr_unchk19.send(10 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk19 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk3() public{\naddress payable addr_unchk3;\nif (!addr_unchk3.send(42 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk19() public{\naddress payable addr_unchk19;\nif (!addr_unchk19.send(10 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk19 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk3() public{\naddress payable addr_unchk3;\nif (!addr_unchk3.send(42 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk19() public{\naddress payable addr_unchk19;\nif (!addr_unchk19.send(10 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk19 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk3() public{\naddress payable addr_unchk3;\nif (!addr_unchk3.send(42 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk19() public{\naddress payable addr_unchk19;\nif (!addr_unchk19.send(10 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk19 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code_snippet": "bug_unchk3() public{\naddress payable addr_unchk3;\nif (!addr_unchk3.send(42 ether) || 1==1)\n    {revert();}\n}",
+      "confidence": "high",
+      "reasoning": "The function bug_unchk3 calls addr.send without handling the possibility of an error, leading to a potential revert failure."
+    }
+  ]
+}

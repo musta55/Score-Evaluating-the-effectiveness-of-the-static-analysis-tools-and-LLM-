@@ -1,0 +1,9 @@
+{
+  "contract": "buggy_47.sol",
+  "contract_name": "has",
+  "bug_type": "Re-entrancy",
+  "findings": [],
+  "success": false,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_40.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:29:25",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high|medium",
+      "reasoning": "The subtraction of 10 from `vundflw` can cause an underflow if the value is already at zero or below, leading to incorrect results."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 5,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high|medium",
+      "reasoning": "The subtraction of 10 from `vundflw` can cause an underflow if the value is already at zero or below, leading to incorrect results."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high|medium",
+      "reasoning": "The subtraction of 10 from `vundflw` can cause an underflow if the value is already at zero or below, leading to incorrect results."
+    }
+  ]
+}

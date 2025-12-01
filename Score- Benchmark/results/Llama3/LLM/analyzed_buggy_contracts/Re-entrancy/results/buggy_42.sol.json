@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_42.sol",
+  "contract_name": "Owned",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 13,
+      "code_snippet": "balances_re_ent38[msg.sender] -= _weiToWithdraw;",
+      "confidence": "high",
+      "context_before": [
+        "\t    if (!(lastPlayer_re_ent2.send(jackpot_re_ent2)))",
+        "        revert();"
+      ],
+      "context_after": [
+        "      jackpot_re_ent2    = address(this).balance;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 21,
+      "code_snippet": "userBalance_re_ent26[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        "        require(balances_re_ent17[msg.sender] >= _weiToWithdraw);",
+        "        // limit the withdrawal"
+      ],
+      "context_after": [
+        "        require(success);  //bug",
+        "        balances_re_ent17[msg.sender] -= _weiToWithdraw;"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 25,
+      "code_snippet": "balances_re_ent31[msg.sender] -= _weiToWithdraw;",
+      "confidence": "high",
+      "context_before": [
+        "        balances_re_ent17[msg.sender] -= _weiToWithdraw;",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "  bool not_called_re_ent27 = true;"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 34,
+      "code_snippet": "userBalance_re_ent40[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        "        not_called_re_ent27 = false;"
+      ],
+      "context_after": [
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 38,
+      "code_snippet": "redeemableEther_re_ent17[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    constructor() public {"
+      ],
+      "context_after": [
+        "    }",
+        "mapping(address => uint) redeemableEther_re_ent32;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

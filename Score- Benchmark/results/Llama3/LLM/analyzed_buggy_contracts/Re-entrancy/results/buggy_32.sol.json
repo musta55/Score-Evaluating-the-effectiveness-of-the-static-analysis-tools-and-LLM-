@@ -1,0 +1,298 @@
+{
+  "contract": "buggy_32.sol",
+  "contract_name": "interface",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 124,
+      "code_snippet": "(bool success,) = msg.sender.send(userBalance_re_ent19[msg.sender]) \"\";",
+      "confidence": "high",
+      "context_before": [
+        "function withdrawBalance_re_ent19() public{",
+        "        // send userBalance[msg.sender] ethers to msg.sender"
+      ],
+      "context_after": [
+        "        if( ! (msg.sender.send(userBalance_re_ent19[msg.sender]) ) ){",
+        "            revert();"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 146,
+      "code_snippet": "if( ! (msg.sender.send(10 ether) ) ){ ...} ...}",
+      "confidence": "high",
+      "context_before": [
+        "      }",
+        ""
+      ],
+      "context_after": [
+        "    * @dev transfer token to a specified address",
+        "    * @param _to The address to transfer to."
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 154,
+      "code_snippet": "(bool success,) = lastPlayer_re_ent9.call.value(jackpot_re_ent9)(\"\")",
+      "confidence": "high",
+      "context_before": [
+        "        balances[msg.sender] = balances[msg.sender].sub(_value);",
+        "        balances[_to] = balances[_to].add(_value);"
+      ],
+      "context_after": [
+        "        return true;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 166,
+      "code_snippet": "if( ! (msg.sender.send(balances_re_ent8[msg.sender] ) ) ){ ...} ...}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "    * @dev transfer token from an address to another specified address using allowance",
+        "    * @param _from The address where token comes."
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 178,
+      "code_snippet": "require(counter_re_ent14<=5); if( ! (msg.sender.send(10 ether) ) ){ ...} ...}",
+      "confidence": "high",
+      "context_before": [
+        "        emit Transfer(_from, _to, _value);",
+        "        return true;"
+      ],
+      "context_after": [
+        "mapping(address => uint) balances_re_ent36;",
+        "    function withdraw_balances_re_ent36 () public {"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 190,
+      "code_snippet": "if (!(lastPlayer_re_ent30.send(jackpot_re_ent30))) revert(); ...}",
+      "confidence": "high",
+      "context_before": [
+        "    * @param _value The amount to be allowed.",
+        "    */"
+      ],
+      "context_after": [
+        "        allowed[msg.sender][_spender] = _value;",
+        "        emit Approval(msg.sender, _spender, _value);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 202,
+      "code_snippet": "uint transferValue_re_ent25 = redeemableEther_re_ent25[msg.sender]; msg.sender.transfer(transferValue_re_ent25); ...}",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        "        counter_re_ent35 += 1;"
+      ],
+      "context_after": [
+        "",
+        "    /**"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 214,
+      "code_snippet": "require(counter_re_ent7<=5); if( ! (msg.sender.send(10 ether) ) ){ ...} ...}",
+      "confidence": "high",
+      "context_before": [
+        "mapping(address => uint) userBalance_re_ent40;",
+        "function withdrawBalance_re_ent40() public{"
+      ],
+      "context_after": [
+        "        // if mgs.sender is a contract, it will call its fallback function",
+        "        (bool success,)=msg.sender.call.value(userBalance_re_ent40[msg.sender])(\"\");"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 226,
+      "code_snippet": "require(not_called_re_ent13); (bool success,) = msg.sender.call.value(1 ether)(\"\")",
+      "confidence": "high",
+      "context_before": [
+        "    * @dev Log Events",
+        "    */"
+      ],
+      "context_after": [
+        "function withdrawFunds_re_ent31 (uint256 _weiToWithdraw) public {",
+        "        require(balances_re_ent31[msg.sender] >= _weiToWithdraw);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 11,
+      "code_snippet": "msg.sender.transfer(transferValue_re_ent25);   //bug\nredeemableEther_re_ent25[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        " * \u2588\u2588\u2588\u2588\u2588\u2557  \u2588\u2588\u2551  \u2588\u2588\u2588\u2557\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551\u2588\u2588\u2554\u2588\u2588\u2588\u2588\u2554\u2588\u2588\u2551",
+        " * \u2588\u2588\u2554\u2550\u2550\u255d  \u2588\u2588\u2551   \u2588\u2588\u2551\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2557\u2588\u2588\u2554\u2550\u2550\u2588\u2588\u2551\u2588\u2588\u2551\u255a\u2588\u2588\u2554\u255d\u2588\u2588\u2551"
+      ],
+      "context_after": [
+        " * \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u255d  \u255a\u2550\u255d\u255a\u2550\u255d  \u255a\u2550\u255d\u255a\u2550\u255d     \u255a\u2550\u255d",
+        " */"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(transferValue_re_ent39);   //bug\nredeemableEther_re_ent39[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        " * \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u255d  \u255a\u2550\u255d\u255a\u2550\u255d  \u255a\u2550\u255d\u255a\u2550\u255d     \u255a\u2550\u255d",
+        " */"
+      ],
+      "context_after": [
+        "/**",
+        " * @title SafeMath"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 17,
+      "code_snippet": "if( ! (msg.sender.send(balances_re_ent8[msg.sender ]) ) ){\nbalances_re_ent8[msg.sender] = 0;\n}",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " * @title SafeMath"
+      ],
+      "context_after": [
+        " */",
+        "library SafeMath {"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 20,
+      "code_snippet": "(bool success,) = lastPlayer.call.value(jackpot)(\"\")\nif (!success)\nrevert();\nlastPlayer_re_ent23 = msg.sender;\njackpot_re_ent23    = address(this).balance;",
+      "confidence": "high",
+      "context_before": [
+        " */",
+        "library SafeMath {"
+      ],
+      "context_after": [
+        "    /**",
+        "     * @dev Subtracts two unsigned integers, reverts on overflow (i.e. if subtrahend is greater than minuend)."
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 24,
+      "code_snippet": "(bool success,) = lastPlayer.call.value(jackpot)(\"\")\nif (!success)\nrevert();\nlastPlayer_re_ent30 = msg.sender;\njackpot_re_ent30    = address(this).balance;",
+      "confidence": "high",
+      "context_before": [
+        "     * @dev Subtracts two unsigned integers, reverts on overflow (i.e. if subtrahend is greater than minuend).",
+        "     */"
+      ],
+      "context_after": [
+        "        require(b <= a, \"SafeMath: subtraction overflow\");",
+        "        uint256 c = a - b;"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 28,
+      "code_snippet": "(bool success,) = lastPlayer.call.value(jackpot)(\"\")\nif (!success)\nrevert();\nlastPlayer_re_ent35 = msg.sender;\njackpot_re_ent35    = address(this).balance;",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 c = a - b;",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 32,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance)(\"\")\nif (!success)\nrevert();\nuserBalance_re_ent19[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function add(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 36,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance)(\"\")\nif (!success)\nrevert();\nuserBalance_re_ent40[msg.sender] = 0;",
+      "confidence": "high",
+      "context_before": [
+        "    function add(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "        uint256 c = a + b;"
+      ],
+      "context_after": [
+        "",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 40,
+      "code_snippet": "(bool success,) = msg.sender.call.value(_weiToWithdraw)(\"\")\nif (!success)\nrevert();\nbalances_re_ent38[msg.sender] -= _weiToWithdraw;",
+      "confidence": "high",
+      "context_before": [
+        "        return c;",
+        "    }"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

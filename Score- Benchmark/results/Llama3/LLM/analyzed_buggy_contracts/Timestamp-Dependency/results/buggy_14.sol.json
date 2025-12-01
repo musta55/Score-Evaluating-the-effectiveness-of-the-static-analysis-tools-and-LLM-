@@ -1,0 +1,138 @@
+{
+  "contract": "buggy_14.sol",
+  "contract_name": "ERC20",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 12,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){ winner_tmstmp14 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        if (a == 0) {"
+      ],
+      "context_after": [
+        "        }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){ winner_tmstmp30 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        uint256 c = a * b;"
+      ],
+      "context_after": [
+        "",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp27 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "        return c;",
+        "    }"
+      ],
+      "context_after": [
+        "    function div(uint256 a, uint256 b) internal pure returns (uint256) {",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp31 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        require(b > 0);"
+      ],
+      "context_after": [
+        "",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){ winner_tmstmp35 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "        return c;",
+        "    }"
+      ],
+      "context_after": [
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "        require(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){ winner_tmstmp38 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "        require(b <= a);",
+        "        uint256 c = a - b;"
+      ],
+      "context_after": [
+        "        return c;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){ winner_tmstmp39 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        uint256 c = a + b;",
+        "        require(c >= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "medium",
+      "context_before": [
+        "        require(c >= a);",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

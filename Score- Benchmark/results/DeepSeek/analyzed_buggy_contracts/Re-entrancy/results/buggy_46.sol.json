@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_46.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:22:40",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 25,
+      "code_snippet": "SetFileExistenceProof function calls .call()",
+      "confidence": "high",
+      "reasoning": "The external call in SetFileExistenceProof may allow state modification after the call, leading to potential re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 68,
+      "code_snippet": "withdrawBalance_re_ent40 function calls .call()",
+      "confidence": "high",
+      "reasoning": "The external call in withdrawBalance_re_ent40 may allow state modification after the call, leading to potential re-entrancy."
+    }
+  ]
+}

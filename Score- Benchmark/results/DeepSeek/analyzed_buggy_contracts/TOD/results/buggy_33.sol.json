@@ -1,0 +1,134 @@
+{
+  "contract": "buggy_33.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:14:12",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code_snippet": "function play_TOD17(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD17 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD17 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code_snippet": "function getReward_TOD17() payable public{\n \n       winner_TOD17.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 58,
+      "code_snippet": "function play_TOD27(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD27 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD27 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 59,
+      "code_snippet": "function getReward_TOD27() payable public{\n \n       winner_TOD27.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 64,
+      "code_snippet": "function play_TOD35(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD35 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD35 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 65,
+      "code_snippet": "function getReward_TOD35() payable public{\n \n       winner_TOD35.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 70,
+      "code_snippet": "function play_TOD19(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD19 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD19 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 71,
+      "code_snippet": "function getReward_TOD19() payable public{\n \n       winner_TOD19.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 76,
+      "code_snippet": "function play_TOD31(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD31 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD31 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 77,
+      "code_snippet": "function getReward_TOD31() payable public{\n \n       winner_TOD31.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 82,
+      "code_snippet": "function play_TOD33(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD33 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD33 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 83,
+      "code_snippet": "function getReward_TOD33() payable public{\n \n       winner_TOD33.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 88,
+      "code_snippet": "function play_TOD39(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD39 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD39 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 89,
+      "code_snippet": "function getReward_TOD39() payable public{\n \n       winner_TOD39.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 102,
+      "code_snippet": "function play_TOD35(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD35 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD35 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 103,
+      "code_snippet": "function getReward_TOD35() payable public{\n \n       winner_TOD35.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 108,
+      "code_snippet": "function play_TOD39(bytes32 guess) public{\n \n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n\n            winner_TOD39 = msg.sender;\n        }\n    }",
+      "confidence": "high",
+      "reasoning": "Directly assigning msg.sender to winner_TOD39 without validation exposes internal address."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 109,
+      "code_snippet": "function getReward_TOD39() payable public{\n \n       winner_TOD39.transfer(msg.value);\n    }",
+      "confidence": "high",
+      "reasoning": "Transfer without validation allows attackers to access internal addresses."
+    }
+  ]
+}

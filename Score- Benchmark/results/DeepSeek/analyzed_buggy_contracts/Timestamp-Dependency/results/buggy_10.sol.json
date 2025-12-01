@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_10.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:22:18",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "The function uses block.timestamp without considering that an attacker can influence the timestamp to include transactions at specific times."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 68,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime)",
+      "confidence": "high",
+      "reasoning": "Similar to line 42, this function also uses block.timestamp without considering potential manipulation."
+    }
+  ]
+}

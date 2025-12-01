@@ -1,0 +1,218 @@
+{
+  "contract": "buggy_12.sol",
+  "contract_name": "ERC20",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "require(tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "context_before": [
+        "library SafeMath {",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "require(tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "context_before": [
+        "     */",
+        "    function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        // benefit is lost if 'b' is also tested.",
+        "        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "require(tx.origin == owner_txorigin12);",
+      "confidence": "high",
+      "context_before": [
+        "        if (a == 0) {",
+        "            return 0;"
+      ],
+      "context_after": [
+        "",
+        "        uint256 c = a * b;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "require(tx.origin == owner_txorigin1);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        uint256 c = a * b;"
+      ],
+      "context_after": [
+        "",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require(tx.origin == owner_txorigin2);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        return c;"
+      ],
+      "context_after": [
+        "",
+        "    /**"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "require(tx.origin == owner_txorigin3);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require(tx.origin == owner_txorigin4);",
+      "confidence": "high",
+      "context_before": [
+        "     */",
+        "    function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        require(b > 0);",
+        "        uint256 c = a / b;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "require(tx.origin == owner_txorigin5);",
+      "confidence": "high",
+      "context_before": [
+        "        require(b > 0);",
+        "        uint256 c = a / b;"
+      ],
+      "context_after": [
+        "",
+        "        return c;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "require(tx.origin == owner_txorigin6);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "        return c;"
+      ],
+      "context_after": [
+        "",
+        "    /**"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "require(tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    /**"
+      ],
+      "context_after": [
+        "     */",
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "context_before": [
+        "     */",
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "        uint256 c = a - b;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "require(tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "        uint256 c = a - b;",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 51,
+      "code_snippet": "require(tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "     * @dev Adds two unsigned integers, reverts on overflow.",
+        "     */"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

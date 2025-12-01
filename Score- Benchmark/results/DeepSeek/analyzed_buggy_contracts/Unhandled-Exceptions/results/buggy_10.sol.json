@@ -1,0 +1,50 @@
+{
+  "contract": "buggy_10.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:27:07",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 6,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 16,
+      "code_snippet": "addr.send(address(this).balance);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 20,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "medium",
+      "reasoning": "Direct external call without error handling."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 23,
+      "code_snippet": "addr_unchk40.send(2 ether);",
+      "confidence": "medium",
+      "reasoning": "External call without surrounding try-catch or return check."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 31,
+      "code_snippet": "addr.send(42 ether);",
+      "confidence": "medium",
+      "reasoning": "External call without try-catch or return check."
+    }
+  ]
+}

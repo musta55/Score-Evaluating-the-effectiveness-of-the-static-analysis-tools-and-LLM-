@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_6.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "uint256 bugv_tmstmp2 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\t\twinner_tmstmp2 = msg.sender;}}",
+        "  bool private stopped;"
+      ],
+      "context_after": [
+        "    return block.timestamp >= 1546300800;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "uint256 bugv_tmstmp1 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  bool private stopped;",
+        "  function bug_tmstmp17() view public returns (bool) {"
+      ],
+      "context_after": [
+        "  }",
+        "  address private _owner;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require(now != pastBlockTime_tmstmp20); ...",
+      "confidence": "high",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "  event Stopped();",
+        "  function bug_tmstmp13() view public returns (bool) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "require(now != pastBlockTime_tmstmp32); ...",
+      "confidence": "high",
+      "context_before": [
+        "  event Started();",
+        "  uint256 bugv_tmstmp5 = block.timestamp;"
+      ],
+      "context_after": [
+        "  uint256 bugv_tmstmp1 = block.timestamp;",
+        "  event MasterRoleTransferred(address indexed previousMaster, address indexed newMaster);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4); ...",
+      "confidence": "high",
+      "context_before": [
+        "    {",
+        "        stopped = false;"
+      ],
+      "context_after": [
+        "        _master = msg.sender;",
+        "        emit OwnershipTransferred(address(0), _owner);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); ...",
+      "confidence": "high",
+      "context_before": [
+        "function bug_tmstmp9() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ],
+      "context_after": [
+        "",
+        "    function owner() public view returns (address)"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "require(now != pastBlockTime_tmstmp36); ...",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "function bug_tmstmp25() view public returns (bool) {"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_tmstmp37() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ],
+      "context_after": [
+        "  address private _master;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "if (now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp31;",
+        "function play_tmstmp31(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp31 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "  event Stopped();",
+        "  function bug_tmstmp13() view public returns (bool) {"
+      ],
+      "context_after": [
+        "  }",
+        "  event Started();"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "if (now % 15 == 0) { // winner",
+      "confidence": "high",
+      "context_before": [
+        "  uint256 bugv_tmstmp5 = block.timestamp;",
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);"
+      ],
+      "context_after": [
+        "  event MasterRoleTransferred(address indexed previousMaster, address indexed newMaster);",
+        ""
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

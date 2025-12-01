@@ -1,0 +1,99 @@
+{
+  "contract": "buggy_36.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 14:19:57",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code snippet": "uint8 vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because adding a positive number to zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The overflow check in the SafeMath library does not prevent this specific operation from causing unintended underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 43,
+      "code snippet": "uint8 vundflw1 = vundflw1 -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 52,
+      "code snippet": "lockTime_intou5[msg.sender] += _secondsToIncrease;",
+      "confidence": "high|medium",
+      "reasoning": "This is an overflow bug because adding a large positive number to the lockTime in a uint8 variable can cause it to exceed its maximum value, leading to incorrect timing calculations and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 64,
+      "code snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 72,
+      "code snippet": "vundflw1 = vundflw1 - p_intou36;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 76,
+      "code snippet": "vundflw1 = vundflw1 - p_intou39;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 102,
+      "code snippet": "lockTime_intou9[msg.sender] += _secondsToIncrease;",
+      "confidence": "high|medium",
+      "reasoning": "This is an overflow bug because adding a large positive number to the lockTime in a uint8 variable can cause it to exceed its maximum value, leading to incorrect timing calculations and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 107,
+      "code snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 120,
+      "code snippet": "lockTime_intou5[msg.sender] += _secondsToIncrease;",
+      "confidence": "high|medium",
+      "reasoning": "This is an overflow bug because adding a large positive number to the lockTime in a uint8 variable can cause it to exceed its maximum value, leading to incorrect timing calculations and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 125,
+      "code snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 130,
+      "code snippet": "lockTime_intou5[msg.sender] += _secondsToIncrease;",
+      "confidence": "high|medium",
+      "reasoning": "This is an overflow bug because adding a large positive number to the lockTime in a uint8 variable can cause it to exceed its maximum value, leading to incorrect timing calculations and potential vulnerabilities."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 135,
+      "code snippet": "vundflw = vundflw -10;",
+      "confidence": "high|medium",
+      "reasoning": "This is an underflow bug because subtracting a positive number from zero in a uint8 variable will result in negative values, which wrap around and cause incorrect behavior. The contract should use SafeMath for such operations to prevent unintended underflow."
+    },
+    {
+      "bug_type": "Overflow",
+      "line_number": 140,
+      "code snippet": "lockTime_intou5[msg.sender] += _secondsToIncrease;",
+      "confidence": "high|medium",
+      "reasoning": "This is an overflow bug because adding a large positive number to the lockTime in a uint8 variable can cause it to exceed its maximum value, leading to incorrect timing calculations and potential vulnerabilities."
+    }
+  ]
+}

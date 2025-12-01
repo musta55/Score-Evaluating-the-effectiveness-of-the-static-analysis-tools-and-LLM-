@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_50.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:01:30",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 1,
+      "code_snippet": "msg.sender.call.value(_weiToWithdraw))",
+      "confidence": "high",
+      "reasoning": "The external call to .call() is followed by updating the contract's balance, allowing attackers to manipulate the state after re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 2,
+      "code_snippet": "msg.sender.call.value(1 ether)",
+      "confidence": "high",
+      "reasoning": "The external call is followed by setting a flag, but no state variables are updated after the call."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 3,
+      "code_snippet": "msg.sender.call.value(10 ether)",
+      "confidence": "high",
+      "reasoning": "The external call is followed by updating the contract's balance, allowing attackers to manipulate the state after re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 4,
+      "code_snippet": "msg.sender.call.value(hashfee)",
+      "confidence": "high",
+      "reasoning": "The external call is followed by updating the contract's balance, allowing attackers to manipulate the state after re-entrancy."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 5,
+      "code_snippet": "msg.sender.call.value(1 ether)",
+      "confidence": "high",
+      "reasoning": "The external call is followed by setting a flag, but no state variables are updated after the call."
+    }
+  ]
+}

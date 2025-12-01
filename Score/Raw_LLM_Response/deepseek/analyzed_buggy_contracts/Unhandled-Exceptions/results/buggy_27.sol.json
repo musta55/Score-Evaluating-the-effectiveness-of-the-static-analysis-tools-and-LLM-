@@ -1,0 +1,148 @@
+{
+  "contract": "buggy_27.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:29:51",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code snippet": "addr_unchk6.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk6.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code snippet": "winner_unchk10.send(subpot_unchk10);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If winner_unchk10.send(subpot_unchk10) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 95,
+      "code snippet": "winner_unchk22.send(subpot_unchk22);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If winner_unchk22.send(subpot_unchk22) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 106,
+      "code snippet": "addr_unchk3.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk3.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 117,
+      "code snippet": "addr_unchk43.send(10 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk43.send(10 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 128,
+      "code snippet": "addr_unchk7.send(10 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk7.send(10 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 42,
+      "code snippet": "addr_unchk15.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk15.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 86,
+      "code snippet": "addr_unchk19.send(10 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk19.send(10 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 105,
+      "code snippet": "addr_unchk27.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk27.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 116,
+      "code snippet": "addr_unchk31.send(10 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk31.send(10 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 127,
+      "code snippet": "addr_unchk39.send(4 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk39.send(4 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 140,
+      "code snippet": "dst.call.value(msg.value);leftover;",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If dst.call.value(msg.value) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 150,
+      "code snippet": "dst.call.value(msg.value);leftover;",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If dst.call.value(msg.value) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 163,
+      "code snippet": "addr_unchk57.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk57.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 174,
+      "code snippet": "addr_unchk60.send(10 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk60.send(10 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 185,
+      "code snippet": "addr_unchk63.send(42 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk63.send(42 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 196,
+      "code snippet": "addr_unchk66.send(5 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If addr_unchk66.send(5 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 72,
+      "code snippet": "callee.call.value(1 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If callee.call.value(1 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 80,
+      "code snippet": "callee.call.value(1 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If callee.call.value(1 ether) throws an exception, it may not be caught here."
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 96,
+      "code snippet": "callee.call.value(1 ether);",
+      "confidence": "high|medium",
+      "reasoning": "External function call without error handling. If callee.call.value(1 ether) throws an exception, it may not be caught here."
+    }
+  ]
+}

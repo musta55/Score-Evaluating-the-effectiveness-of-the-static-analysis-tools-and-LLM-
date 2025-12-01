@@ -1,0 +1,234 @@
+{
+  "contract": "buggy_9.sol",
+  "contract_name": "Ownable",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 34,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "    return a / b;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend)."
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function add(uint256 a, uint256 b) internal pure returns (uint256 c) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 55,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp20); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp20 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract Ownable {"
+      ],
+      "context_after": [
+        "    return block.timestamp >= 1546300800;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 63,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp32); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp32 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "        owner = msg.sender;",
+        "    }"
+      ],
+      "context_after": [
+        "function play_tmstmp7(uint startTime) public {",
+        "\tuint _vtime = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 71,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp4); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp4 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner);"
+      ],
+      "context_after": [
+        "    }",
+        "uint256 bugv_tmstmp5 = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 79,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp8 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "    using SafeMath for uint256;",
+        ""
+      ],
+      "context_after": [
+        "  function bug_tmstmp25() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 87,
+      "code_snippet": "require(msg.value == 10 ether); // must send 10 ether to play\n        require(now != pastBlockTime_tmstmp40); // only 1 transaction per block   //bug\n        pastBlockTime_tmstmp40 = now;       //bug",
+      "confidence": "high",
+      "context_before": [
+        "function play_tmstmp19(uint startTime) public {",
+        "\tuint _vtime = block.timestamp;"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp19 = msg.sender;}}",
+        "  string public symbol;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 3,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " * Source Code first verified at https://etherscan.io on Friday, April 26, 2019"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity >=0.4.22 <0.6.0;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "medium",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "  */",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){",
+      "confidence": "medium",
+      "context_before": [
+        "    if (a == 0) {",
+        "        return 0;"
+      ],
+      "context_after": [
+        "    c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require(now != pastBlockTime_tmstmp20); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  *  Integer division of two numbers, truncating the quotient.",
+        "  */"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "    // assert(b > 0); // Solidity automatically throws when dividing by 0",
+        "    // uint256 c = a / b;"
+      ],
+      "context_after": [
+        "    return a / b;",
+        "  }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "require(now != pastBlockTime_tmstmp36); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "  /**",
+        "  *  Subtracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend)."
+      ],
+      "context_after": [
+        "  function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    assert(b <= a);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 43,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        ""
+      ],
+      "context_after": [
+        "  *  Adds two numbers, throws on overflow.",
+        "  */"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_32.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 00:41:25",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 10,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 25,
+      "code_snippet": "addr_unchk30.send(42 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 17,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 35,
+      "code_snippet": "winner_unchk20.send(winAmount_unchk20)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 48,
+      "code_snippet": "winner_unchk32.send(winAmount_unchk32)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 60,
+      "code_snippet": "addr_unchk40.send(2 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 85,
+      "code_snippet": "addr_unchk31.send(10 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 92,
+      "code_snippet": "addr_unchk40.send(42 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

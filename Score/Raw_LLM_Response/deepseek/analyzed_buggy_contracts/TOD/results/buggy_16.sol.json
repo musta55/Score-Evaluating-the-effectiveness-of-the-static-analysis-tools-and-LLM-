@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_16.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:28:48",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 39,
+      "code snippet": "function play_TOD29(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD29 = msg.sender;\n        }\n    }",
+      "confidence": "medium",
+      "reasoning": "The reward is transferred immediately, bypassing checks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code snippet": "function getReward_TOD29() payable public{\n       winner_TOD29.transfer(msg.value);\n    }",
+      "confidence": "medium",
+      "reasoning": "The reward is transferred immediately, potentially bypassing checks."
+    }
+  ]
+}

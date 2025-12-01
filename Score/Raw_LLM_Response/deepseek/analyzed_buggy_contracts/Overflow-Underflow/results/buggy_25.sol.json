@@ -1,0 +1,64 @@
+{
+  "contract": "buggy_25.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:47:48",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 32,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "reasoning": "The addition of p_intou4 to vundflw1 could cause an overflow if p_intou4 is large enough. However, since the function is designed to handle bets, it's likely that p_intou4 should be non-negative and within a reasonable range."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 35,
+      "code_snippet": "vundflw1 = vundflw1 -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from vundflw1 could cause an underflow if the current value is less than 10, resulting in a negative value which is invalid for a uint variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 38,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from vundflw could cause an underflow if the current value is less than 10, resulting in a negative value which is invalid for a uint variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 42,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "medium",
+      "reasoning": "The subtraction of _value from vundflw could cause an underflow if the current balance is less than _value, resulting in a negative value which is invalid for a uint variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 45,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "reasoning": "The addition of p_intou8 to vundflw1 could cause an overflow if p_intou8 is large enough. However, since the function is designed to handle bets, it's likely that p_intou8 should be non-negative and within a reasonable range."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 50,
+      "code_snippet": "vundflw1 = vundflw1 -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from vundflw1 could cause an underflow if the current value is less than 10, resulting in a negative value which is invalid for a uint variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 53,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "high",
+      "reasoning": "Subtracting 10 from vundflw could cause an underflow if the current value is less than 10, resulting in a negative value which is invalid for a uint variable."
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "line_number": 56,
+      "code_snippet": "vundflw = vundflw - _value;",
+      "confidence": "medium",
+      "reasoning": "The subtraction of _value from vundflw could cause an underflow if the current balance is less than _value, resulting in a negative value which is invalid for a uint variable."
+    }
+  ]
+}

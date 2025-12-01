@@ -1,0 +1,92 @@
+{
+  "contract": "buggy_44.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:03:10",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 10,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 12,
+      "code_snippet": "require(tx.origin == owner_txorigin40);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 17,
+      "code_snippet": "require(tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 19,
+      "code_snippet": "require(tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 34,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 39,
+      "code_snippet": "require(tx.origin == owner_txorigin26);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 40,
+      "code_snippet": "require(tx.origin == owner_txorigin20);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 41,
+      "code_snippet": "require(tx.origin == owner_txorigin32);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 47,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 52,
+      "code_snippet": "require(tx.origin == owner_txorigin36);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 57,
+      "code_snippet": "require(tx.origin == owner_txorigin8);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 62,
+      "code_snippet": "require(tx.origin == owner_txorigin35);",
+      "confidence": "high",
+      "reasoning": "tx.origin is used for authentication, enabling phishing attacks by allowing attackers to impersonate the origin address."
+    }
+  ]
+}

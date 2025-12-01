@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: solidifi
+Version: 0.0.1
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: ijson
+Requires-Dist: numpy
+Requires-Dist: configparser
+Requires-Dist: pandas
+Dynamic: license-file
+Dynamic: requires-dist

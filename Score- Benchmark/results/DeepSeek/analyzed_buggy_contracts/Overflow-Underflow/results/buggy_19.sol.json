@@ -1,0 +1,32 @@
+{
+  "contract": "buggy_19.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:32:28",
+  "findings": [
+    {
+      "bug_type": "Overflow/Underflow Vulnerability",
+      "line_number": 10,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow/Underflow Vulnerability",
+      "line_number": 25,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow/Underflow Vulnerability",
+      "line_number": 43,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "Overflow/Underflow Vulnerability",
+      "line_number": 67,
+      "code_snippet": "vundflw = vundflw -10; // underflow bug",
+      "confidence": "high"
+    }
+  ]
+}

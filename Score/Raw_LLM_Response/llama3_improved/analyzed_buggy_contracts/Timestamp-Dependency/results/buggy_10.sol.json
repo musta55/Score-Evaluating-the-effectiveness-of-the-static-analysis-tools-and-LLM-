@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 4,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        " * Source Code first verified at https://etherscan.io on Friday, April 26, 2019",
+        " (UTC) */"
+      ],
+      "context_after": [
+        "pragma solidity >=0.4.21 < 0.6.0;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  function bug_tmstmp33() view public returns (bool) {",
+        "    return block.timestamp >= 1546300800;"
+      ],
+      "context_after": [
+        "  mapping(bytes32=>string) public docs;",
+        "  address winner_tmstmp27;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "return block.timestamp >= 1546300800;",
+      "confidence": "high",
+      "context_before": [
+        "  address winner_tmstmp27;",
+        "function play_tmstmp27(uint startTime) public {"
+      ],
+      "context_after": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp27 = msg.sender;}}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ],
+      "context_after": [
+        "  mapping(bytes32=>address[]) public signers;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "    modifier validDoc(bytes32 _docHash) {",
+        "        require(bytes(docs[_docHash]).length != 0, \"Document is not submitted\");"
+      ],
+      "context_after": [
+        "    }",
+        "uint256 bugv_tmstmp2 = block.timestamp;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "uint _vtime = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "uint256 bugv_tmstmp2 = block.timestamp;"
+      ],
+      "context_after": [
+        "  uint256 bugv_tmstmp3 = block.timestamp;",
+        "  event Sign(bytes32 indexed _doc, address indexed _signer);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "if (startTime + (5 * 1 days) == _vtime){",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  uint256 bugv_tmstmp3 = block.timestamp;"
+      ],
+      "context_after": [
+        "  uint256 bugv_tmstmp4 = block.timestamp;",
+        "  event NewDocument(bytes32 _docHash);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 30,
+      "code_snippet": "uint256 bugv_tmstmp2 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "  event NewDocument(bytes32 _docHash);",
+        ""
+      ],
+      "context_after": [
+        "        bytes32 _docHash = getHash(_doc);",
+        "        if(bytes(docs[_docHash]).length == 0) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "uint256 bugv_tmstmp3 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "    function submitDocument(string memory _doc) public {",
+        "        bytes32 _docHash = getHash(_doc);"
+      ],
+      "context_after": [
+        "            docs[_docHash] = _doc;",
+        "            emit NewDocument(_docHash);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "uint256 bugv_tmstmp5 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "address winner_tmstmp31;"
+      ],
+      "context_after": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 42,
+      "code_snippet": "uint256 bugv_tmstmp1 = block.timestamp;",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp31 = msg.sender;}}"
+      ],
+      "context_after": [
+        "    function signDocument(bytes32 _docHash) public validDoc(_docHash){",
+        "        address[] storage _signers = signers[_docHash];"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

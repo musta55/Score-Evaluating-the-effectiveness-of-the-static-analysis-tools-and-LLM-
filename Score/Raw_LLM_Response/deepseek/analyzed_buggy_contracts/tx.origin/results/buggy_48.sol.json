@@ -1,0 +1,99 @@
+{
+  "contract": "buggy_48.sol",
+  "bug_type": "tx.origin",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:08:03",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin13(address payable receiver, uint amount,address owner_txorigin13) public {\n\trequire (tx.origin == owner_txorigin13);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {\n\trequire (tx.origin == owner_txorigin9);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin1(address payable receiver, uint amount,address owner_txorigin1) public {\n\trequire (tx.origin == owner_txorigin1);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin17(address payable receiver, uint amount,address owner_txorigin17) public {\n\trequire (tx.origin == owner_txorigin17);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin37(address payable receiver, uint amount,address owner_txorigin37) public {\n\trequire (tx.origin == owner_txorigin37);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin3(address to, uint amount,address owner_txorigin3) public {\n\trequire (tx.origin == owner_txorigin3);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin19(address to, uint amount,address owner_txorigin19) public {\n\trequire (tx.origin == owner_txorigin19);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin27(address to, uint amount,address owner_txorigin27) public {\n\trequire (tx.origin == owner_txorigin27);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin31(address to, uint amount,address owner_txorigin31) public {\n\trequire (tx.origin == owner_txorigin31);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin33(address payable receiver, uint amount,address owner_txorigin33) public {\n\trequire (tx.origin == owner_txorigin33);\n\treceiver.transfer(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin35(address to, uint amount,address owner_txorigin35) public {\n\trequire (tx.origin == owner_txorigin35);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin39(address to, uint amount,address owner_txorigin39) public {\n\trequire (tx.origin == owner_txorigin39);\n\tto.call.value(amount);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing the transfer."
+    },
+    {
+      "bug_type": "tx.origin",
+      "line_number": 42,
+      "code_snippet": "function sendto_txorigin40(address owner_txorigin40) public {\n\trequire (tx.origin == owner_txorigin40);\n}\n",
+      "confidence": "high",
+      "reasoning": "The function checks if tx.origin equals the specified owner address before allowing access."
+    }
+  ]
+}

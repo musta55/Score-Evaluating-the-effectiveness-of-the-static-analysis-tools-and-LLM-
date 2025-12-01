@@ -1,0 +1,90 @@
+{
+  "contract": "buggy_10.sol",
+  "contract_name": "DocumentSigner",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "dst.send(msg.value);",
+      "confidence": "high",
+      "context_before": [
+        " (UTC) */",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract DocumentSigner {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 10,
+      "code_snippet": "winner_unchk44.send(winAmount_unchk44);",
+      "confidence": "high",
+      "context_before": [
+        "  function my_func_unchk35(address payable dst) public payable{",
+        "        dst.send(msg.value);"
+      ],
+      "context_after": [
+        "  mapping(bytes32=>string) public docs;",
+        "  bool public payedOut_unchk44 = false;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "addr_unchk40.send(2 ether);",
+      "confidence": "high",
+      "context_before": [
+        "uint public winAmount_unchk44;",
+        ""
+      ],
+      "context_after": [
+        "        require(!payedOut_unchk44);",
+        "        winner_unchk44.send(winAmount_unchk44);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "addr_unchk31.send (10 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        payedOut_unchk44 = true;",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "    modifier validDoc(bytes32 _docHash) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "addr.send(42 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        require(bytes(docs[_docHash]).length != 0, \"Document is not submitted\");",
+        "        _;"
+      ],
+      "context_after": [
+        "",
+        "  bool public payedOut_unchk45 = false;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

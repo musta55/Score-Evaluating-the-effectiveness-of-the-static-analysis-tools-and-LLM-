@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_26.sol",
+  "contract_name": "UBBCToken",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "lockTime_intou37[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    function sub(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "        require(b <= a, \"SafeMath: subtraction overflow\");"
+      ],
+      "context_after": [
+        "        return c;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 26,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522",
+        "        if (a == 0) {"
+      ],
+      "context_after": [
+        "        }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high",
+      "context_before": [
+        "        }",
+        ""
+      ],
+      "context_after": [
+        "        require(c / a == b, \"SafeMath: multiplication overflow\");",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "        require(c / a == b, \"SafeMath: multiplication overflow\");",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        // Solidity only automatically asserts when dividing by 0",
+        "        require(b > 0, \"SafeMath: division by zero\");"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 38,
+      "code_snippet": "uint8 vundflw =0;",
+      "confidence": "medium",
+      "context_before": [
+        "        // Solidity only automatically asserts when dividing by 0",
+        "        require(b > 0, \"SafeMath: division by zero\");"
+      ],
+      "context_after": [
+        "        // assert(a == b * c + a % b); // There is no case in which this doesn't hold",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "        // assert(a == b * c + a % b); // There is no case in which this doesn't hold",
+        ""
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        ""
+      ],
+      "context_after": [
+        "        require(b != 0, \"SafeMath: modulo by zero\");",
+        "        return a % b;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "        require(b != 0, \"SafeMath: modulo by zero\");",
+        "        return a % b;"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 50,
+      "code_snippet": "uint8 vundflw1=0;",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "    function totalSupply() external view returns (uint256);",
+        "    function balanceOf(address account) external view returns (uint256);"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "vundflw = vundflw -10;",
+      "confidence": "medium",
+      "context_before": [
+        "    function totalSupply() external view returns (uint256);",
+        "    function balanceOf(address account) external view returns (uint256);"
+      ],
+      "context_after": [
+        "    function allowance(address owner, address spender) external view returns (uint256);",
+        "    function approve(address spender, uint256 amount) external returns (bool);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

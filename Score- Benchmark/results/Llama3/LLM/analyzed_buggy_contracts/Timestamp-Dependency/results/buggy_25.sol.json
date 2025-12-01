@@ -1,0 +1,122 @@
+{
+  "contract": "buggy_25.sol",
+  "contract_name": "WhiteBetting",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "require(now != pastBlockTime_tmstmp4); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "contract WhiteBetting {"
+      ],
+      "context_after": [
+        "\tuint pastBlockTime_tmstmp32; // Forces one bet per block",
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 14,
+      "code_snippet": "pastBlockTime_tmstmp4 = now;",
+      "confidence": "high",
+      "context_before": [
+        "contract WhiteBetting {",
+        "function bug_tmstmp32 () public payable {"
+      ],
+      "context_after": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp32); // only 1 transaction per block   //bug"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "\trequire(msg.value == 10 ether); // must send 10 ether to play",
+        "        require(now != pastBlockTime_tmstmp32); // only 1 transaction per block   //bug"
+      ],
+      "context_after": [
+        "        if(now % 15 == 0) { // winner    //bug",
+        "            msg.sender.transfer(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "require(now != pastBlockTime_tmstmp8); // only 1 transaction per block   //bug",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  address payable public owner;"
+      ],
+      "context_after": [
+        "  // Game information",
+        "  struct GameInfo {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "pastBlockTime_tmstmp8 = now;",
+      "confidence": "high",
+      "context_before": [
+        "  address payable public owner;",
+        ""
+      ],
+      "context_after": [
+        "  struct GameInfo {",
+        "    // game start time"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "if(now % 15 == 0) { // winner    //bug",
+      "confidence": "high",
+      "context_before": [
+        "  struct GameInfo {",
+        "    // game start time"
+      ],
+      "context_after": [
+        "    // game odds",
+        "    uint32 odd_homeTeam;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require(block.timestamp >= 1546300800);",
+      "confidence": "medium",
+      "context_before": [
+        "    uint32 odd_awayTeam;",
+        "    uint32 odd_over;"
+      ],
+      "context_after": [
+        "    uint32 odd_homeTeamAndDraw;",
+        "    uint32 odd_homeAndAwayTeam;"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

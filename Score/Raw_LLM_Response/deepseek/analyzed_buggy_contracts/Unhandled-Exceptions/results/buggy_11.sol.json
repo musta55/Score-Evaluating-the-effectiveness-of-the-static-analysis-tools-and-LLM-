@@ -1,0 +1,20 @@
+{
+  "contract": "buggy_11.sol",
+  "bug_type": "Unhandled-Exceptions",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 23:28:53",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 1,
+      "code_snippet": "address.send(1 ether)",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "line_number": 2,
+      "code_snippet": "addr_unchk30.send(42 ether)",
+      "confidence": "medium"
+    }
+  ]
+}

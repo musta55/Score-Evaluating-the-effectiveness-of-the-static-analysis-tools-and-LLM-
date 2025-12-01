@@ -1,0 +1,170 @@
+{
+  "contract": "buggy_41.sol",
+  "contract_name": "AO",
+  "bug_type": "Overflow-Underflow",
+  "findings": [
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 3,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou20;",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " *Submitted for verification at Etherscan.io on 2019-09-25"
+      ],
+      "context_after": [
+        "",
+        "/**"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou4;",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        " *Submitted for verification at Etherscan.io on 2019-05-23",
+        "*/"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 7,
+      "code_snippet": "vundflw = vundflw - 10;",
+      "confidence": "high",
+      "context_before": [
+        "/**",
+        " *Submitted for verification at Etherscan.io on 2019-05-23"
+      ],
+      "context_after": [
+        "",
+        "pragma solidity >=0.4.22 <0.6.0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "totalSupply = initialSupply * 10 ** uint256(decimals);",
+      "confidence": "medium",
+      "context_before": [
+        "  string public name;",
+        "  function bug_intou32(uint8 p_intou32) public{"
+      ],
+      "context_after": [
+        "    vundflw1 = vundflw1 + p_intou32;   // overflow bug",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "vundflw1 = vundflw1 + p_intou8;",
+      "confidence": "high",
+      "context_before": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou32;   // overflow bug"
+      ],
+      "context_after": [
+        "  string public symbol;",
+        "  mapping(address => uint) balances_intou38;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "lockTime_intou13[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "function transfer_intou38(address _to, uint _value) public returns (bool) {",
+        "    require(balances_intou38[msg.sender] - _value >= 0);  //bug"
+      ],
+      "context_after": [
+        "    balances_intou38[_to] += _value;  //bug",
+        "    return true;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "balanceOf[_from] -= _value;",
+      "confidence": "medium",
+      "context_before": [
+        "    return true;",
+        "  }"
+      ],
+      "context_after": [
+        "    // 18 decimals is the strongly suggested default, avoid changing it",
+        "  function bug_intou4(uint8 p_intou4) public{"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "balanceOf[_to] += _value;",
+      "confidence": "medium",
+      "context_before": [
+        "  }",
+        "  uint8 public decimals = 18;"
+      ],
+      "context_after": [
+        "  function bug_intou4(uint8 p_intou4) public{",
+        "    uint8 vundflw1=0;"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "totalSupply -= _value;",
+      "confidence": "medium",
+      "context_before": [
+        "  uint8 public decimals = 18;",
+        "    // 18 decimals is the strongly suggested default, avoid changing it"
+      ],
+      "context_after": [
+        "    uint8 vundflw1=0;",
+        "    vundflw1 = vundflw1 + p_intou4;   // overflow bug"
+      ]
+    },
+    {
+      "bug_type": "Overflow-Underflow",
+      "sub_type": "Overflow-Underflow",
+      "severity": "Warning",
+      "line_number": 45,
+      "code_snippet": "lockTime_intou33[msg.sender] += _secondsToIncrease;",
+      "confidence": "high",
+      "context_before": [
+        "    // This creates an array with all balances",
+        "  function bug_intou7() public{"
+      ],
+      "context_after": [
+        "    vundflw = vundflw -10;   // underflow bug",
+        "}"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

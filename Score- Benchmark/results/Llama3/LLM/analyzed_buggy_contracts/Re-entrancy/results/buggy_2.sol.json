@@ -1,0 +1,106 @@
+{
+  "contract": "buggy_2.sol",
+  "contract_name": "CareerOnToken",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 14,
+      "code_snippet": "(bool success,) = msg.sender.call.value(1 ether)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "            revert();",
+        "        }"
+      ],
+      "context_after": [
+        "    }",
+        "  event Transfer(address indexed _from, address indexed _to, uint256 _value);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 23,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance_re_ent19[msg.sender])(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "        require(msg.sender.send(_weiToWithdraw));  //bug",
+        "        balances_re_ent31[msg.sender] -= _weiToWithdraw;"
+      ],
+      "context_after": [
+        "  event Approval(address indexed a_owner, address indexed _spender, uint256 _value);",
+        "  bool not_called_re_ent13 = true;"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 31,
+      "code_snippet": "(bool success,) = msg.sender.call.value(1 ether)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "        if( ! success ){",
+        "            revert();"
+      ],
+      "context_after": [
+        "        not_called_re_ent13 = false;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 37,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance_re_ent26[msg.sender])(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  mapping(address => uint) redeemableEther_re_ent25;"
+      ],
+      "context_after": [
+        "        // ensure there is a reward to give",
+        "        require(redeemableEther_re_ent25[msg.sender] > 0);"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 45,
+      "code_snippet": "(bool success,) = msg.sender.call.value(1 ether)(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "  uint256 public totalSupply;"
+      ],
+      "context_after": [
+        "function withdrawBalance_re_ent19() public{",
+        "        // send userBalance[msg.sender] ethers to msg.sender"
+      ]
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 51,
+      "code_snippet": "(bool success,) = msg.sender.call.value(userBalance_re_ent40[msg.sender])(\"\");",
+      "confidence": "high",
+      "context_before": [
+        "        if( ! (msg.sender.send(userBalance_re_ent19[msg.sender]) ) ){",
+        "            revert();"
+      ],
+      "context_after": [
+        "        userBalance_re_ent19[msg.sender] = 0;",
+        "    }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

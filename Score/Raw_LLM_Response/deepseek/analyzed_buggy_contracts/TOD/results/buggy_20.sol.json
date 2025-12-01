@@ -1,0 +1,92 @@
+{
+  "contract": "buggy_20.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 10:02:44",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code snippet": "function play_TOD21(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD21 = msg.sender;\n        }\n    }",
+      "confidence": "high|medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code snippet": "function setReward_TOD26() public payable {\n        require (!claimed_TOD26);\n\n        require(msg.sender == owner_TOD26);\n        owner_TOD26.transfer(reward_TOD26);\n        reward_TOD26 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 45,
+      "code snippet": "function play_TOD1(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD1 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 47,
+      "code snippet": "function setReward_TOD20() public payable {\n        require (!claimed_TOD20);\n\n        require(msg.sender == owner_TOD20);\n        owner_TOD20.transfer(reward_TOD20);\n        reward_TOD20 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 51,
+      "code snippet": "function play_TOD3(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD3 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 53,
+      "code snippet": "function setReward_TOD25() public payable {\n        require (!claimed_TOD25);\n\n        require(msg.sender == owner_TOD25);\n        owner_TOD25.transfer(reward_TOD25);\n        reward_TOD25 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 60,
+      "code snippet": "function play_TOD37(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD37 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 64,
+      "code snippet": "function setReward_TOD22() public payable {\n        require (!claimed_TOD22);\n\n        require(msg.sender == owner_TOD22);\n        owner_TOD22.transfer(reward_TOD22);\n        reward_TOD22 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 68,
+      "code snippet": "function play_TOD31(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD31 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 70,
+      "code snippet": "function setReward_TOD26() public payable {\n        require (!claimed_TOD26);\n\n        require(msg.sender == owner_TOD26);\n        owner_TOD26.transfer(reward_TOD26);\n        reward_TOD26 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 74,
+      "code snippet": "function play_TOD39(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD39 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 78,
+      "code snippet": "function setReward_TOD26() public payable {\n        require (!claimed_TOD26);\n\n        require(msg.sender == owner_TOD26);\n        owner_TOD26.transfer(reward_TOD26);\n        reward_TOD26 = msg.value;\n    }",
+      "confidence": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 80,
+      "code snippet": "function play_TOD35(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD35 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 84,
+      "code snippet": "function setReward_TOD26() public payable {\n        require (!claimed_TOD26);\n\n        require(msg.sender == owner_TOD26);\n        owner_TOD26.transfer(reward_TOD26);\n        reward_TOD26 = msg.value;\n    }",
+      "confidence": "medium"
+    }
+  ]
+}

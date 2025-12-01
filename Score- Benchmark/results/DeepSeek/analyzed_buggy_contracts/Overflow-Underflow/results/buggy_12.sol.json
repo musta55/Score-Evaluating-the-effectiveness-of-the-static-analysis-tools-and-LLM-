@@ -1,0 +1,58 @@
+{
+  "contract": "buggy_12.sol",
+  "bug_type": "Overflow-Underflow",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 13:19:04",
+  "findings": [
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 42,
+      "code_snippet": "function bug_intou1() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 43,
+      "code_snippet": "function bug_intou2() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Overflow Vulnerability",
+      "line_number": 44,
+      "code_snippet": "function bug_intou3() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 45,
+      "code_snippet": "function bug_intou4() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 46,
+      "code_snippet": "function bug_intou5() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 47,
+      "code_snippet": "function bug_intou6() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 48,
+      "code_snippet": "function bug_intou7() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 49,
+      "code_snippet": "function bug_intou8() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 50,
+      "code_snippet": "function bug_intou9() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    },
+    {
+      "bug_type": "Underflow Vulnerability",
+      "line_number": 51,
+      "code_snippet": "function bug_intou10() public{\n    uint8 vundflw =0;\n    vundflw = vundflw -10;   // underflow bug\n}"
+    }
+  ]
+}

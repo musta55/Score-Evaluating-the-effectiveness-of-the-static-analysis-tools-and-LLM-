@@ -1,0 +1,26 @@
+{
+  "contract": "buggy_39.sol",
+  "contract_name": "TAMCContract",
+  "bug_type": "Re-entrancy",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "sub_type": "DAO",
+      "severity": "Violation",
+      "line_number": 9,
+      "code_snippet": "if (success) balances_re_ent8[msg.sender] = 0;",
+      "confidence": "medium",
+      "context_before": [
+        "contract TAMCContract {",
+        "  uint256 counter_re_ent14 =0;"
+      ],
+      "context_after": [
+        "        require(counter_re_ent14<=5);",
+        "\tif( ! (msg.sender.send(10 ether) ) ){"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

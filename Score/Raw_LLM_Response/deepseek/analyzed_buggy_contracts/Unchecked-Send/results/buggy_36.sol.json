@@ -1,0 +1,43 @@
+{
+  "contract": "buggy_36.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 22:40:01",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 42,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct transfer without sender validation"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 53,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct transfer without sender validation"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 64,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct transfer without sender validation"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 75,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct transfer without sender validation"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 86,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "Direct transfer without sender validation"
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "contract": "buggy_33.sol",
+  "contract_name": "Owned",
+  "bug_type": "Unhandled-Exceptions",
+  "findings": [
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 5,
+      "code_snippet": "addr.send (42 ether);",
+      "confidence": "high",
+      "context_before": [
+        "*/",
+        ""
+      ],
+      "context_after": [
+        "",
+        "contract Owned {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "  bool public payedOut_unchk9 = false;",
+        ""
+      ],
+      "context_after": [
+        "        require(payedOut_unchk9);",
+        "        msg.sender.send(address(this).balance);"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "        msg.sender.send(address(this).balance);",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        "  function bug_unchk31() public{"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "addr_unchk4.send (42 ether))",
+      "confidence": "high",
+      "context_before": [
+        "if (!addr_unchk31.send (10 ether) || 1==1)",
+        "\t{revert();}"
+      ],
+      "context_after": [
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "addr_unchk7.send (10 ether) || 1==1)",
+      "confidence": "high",
+      "context_before": [
+        "        owner = msg.sender;",
+        "    }"
+      ],
+      "context_after": [
+        "{  address payable addr_unchk4;",
+        "   if (! addr_unchk4.send (42 ether))"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      }",
+        "\telse"
+      ],
+      "context_after": [
+        "      }",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner || msg.sender == address(this));"
+      ],
+      "context_after": [
+        "    }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 47,
+      "code_snippet": "addr_unchk30.send(42 ether))",
+      "confidence": "high",
+      "context_before": [
+        "        newOwner = _newOwner;",
+        "    }"
+      ],
+      "context_after": [
+        "address payable addr_unchk7;",
+        "if (!addr_unchk7.send (10 ether) || 1==1)"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 53,
+      "code_snippet": "callee.call.value(1 ether);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "}"
+      ],
+      "context_after": [
+        "library SafeMath {",
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 59,
+      "code_snippet": "callee.send(5 ether);",
+      "confidence": "high",
+      "context_before": [
+        "      return 0;",
+        "    }"
+      ],
+      "context_after": [
+        "    assert(c / a == b);",
+        "    return c;"
+      ]
+    },
+    {
+      "bug_type": "Unhandled-Exceptions",
+      "sub_type": "Unhandled-Exceptions",
+      "severity": "Warning",
+      "line_number": 65,
+      "code_snippet": "addr_unchk19.send (10 ether) || 1==1)",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  function div(uint256 a, uint256 b) internal pure returns (uint256) {"
+      ],
+      "context_after": [
+        "    return c;",
+        "  }"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

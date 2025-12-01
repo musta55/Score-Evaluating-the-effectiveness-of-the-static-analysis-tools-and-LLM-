@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_50.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 12:00:39",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code_snippet": "function play_TOD2(bytes32 guess) public{\n        if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD2 = msg.sender;\n        }\n    }",
+      "confidence": "medium",
+      "reasoning": "The function play_TOD2 does not check if the guesser has already claimed a prize. This could allow multiple claims from the same user."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code_snippet": "function setReward_TOD2() public payable {\n        require(!claimed_TOD2);\n        require(msg.sender == owner_TOD2);\n        owner_TOD2.transfer(reward_TOD2);\n        reward_TOD2 = msg.value;\n    }",
+      "confidence": "high",
+      "reasoning": "The function setReward_TOD2 does not check if the sender is authorized to transfer the reward. It only checks that the sender is the owner."
+    }
+  ]
+}

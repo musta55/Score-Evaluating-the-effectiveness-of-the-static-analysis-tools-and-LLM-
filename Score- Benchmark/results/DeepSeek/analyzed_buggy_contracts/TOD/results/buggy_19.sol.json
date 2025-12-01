@@ -1,0 +1,56 @@
+{
+  "contract": "buggy_19.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 09:47:31",
+  "findings": [
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 42,
+      "code snippet": "function play_TOD12(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD12 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 49,
+      "code snippet": "function play_TOD9(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD9 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 70,
+      "code snippet": "function play_TOD7(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD7 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 84,
+      "code snippet": "function play_TOD23(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD23 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 90,
+      "code snippet": "function play_TOD19(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD19 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 104,
+      "code snippet": "function play_TOD27(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD27 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 109,
+      "code snippet": "function play_TOD31(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD31 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    },
+    {
+      "bug_type": "TOD - Potential Unauthorized Access",
+      "line_number": 114,
+      "code snippet": "function play_TOD13(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD13 = msg.sender;\n        }\n    }",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "contract": "buggy_15.sol",
+  "contract_name": "MD",
+  "bug_type": "TOD",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "_transfer(_from, _to, _value);",
+      "confidence": "high",
+      "context_before": [
+        "        reward_TOD20 = msg.value;",
+        "    }"
+      ],
+      "context_after": [
+        "    function claimReward_TOD20(uint256 submission) public {",
+        "        require (!claimed_TOD20);"
+      ]
+    },
+    {
+      "bug_type": "TOD",
+      "sub_type": "TOD",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "_transfer(_from, _to, _value);",
+      "confidence": "high",
+      "context_before": [
+        "uint256 reward_TOD32;",
+        "function setReward_TOD32() public payable {"
+      ],
+      "context_after": [
+        "",
+        "        require(msg.sender == owner_TOD32);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

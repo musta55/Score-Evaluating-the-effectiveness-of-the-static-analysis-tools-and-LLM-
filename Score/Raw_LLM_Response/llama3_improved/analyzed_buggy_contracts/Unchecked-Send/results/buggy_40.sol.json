@@ -1,0 +1,9 @@
+{
+  "contract": "buggy_40.sol",
+  "contract_name": "using",
+  "bug_type": "Unchecked-Send",
+  "findings": [],
+  "success": false,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

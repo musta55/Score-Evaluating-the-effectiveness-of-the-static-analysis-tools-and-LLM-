@@ -1,0 +1,85 @@
+{
+  "contract": "buggy_49.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:58:12",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 42,
+      "code_snippet": "owner_TOD14.transfer(reward_TOD14); reward_TOD14 = msg.value;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. Each iteration's execution time can be measured, allowing attackers to guess the private key after 10 submissions."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 43,
+      "code_snippet": "owner_TOD30.transfer(reward_TOD30); reward_TOD30 = msg.value;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. Each iteration's execution time can be measured, allowing attackers to guess the private key after 10 submissions."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 44,
+      "code_snippet": "owner_TOD8.transfer(reward_TOD8); reward_TOD8 = msg.value;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. Each iteration's execution time can be measured, allowing attackers to guess the private key after 10 submissions."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 45,
+      "code_snippet": "winner_TOD39 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 46,
+      "code_snippet": "winner_TOD31 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 47,
+      "code_snippet": "winner_TOD35 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 48,
+      "code_snippet": "winner_TOD40 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 52,
+      "code_snippet": "winner_TOD13 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 54,
+      "code_snippet": "allowance[msg.sender][spender] = value;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the allowance without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 56,
+      "code_snippet": "winner_TOD33 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 58,
+      "code_snippet": "winner_TOD27 = msg.sender;",
+      "confidence": "high",
+      "reasoning": "No loop-blinding is present. The function directly assigns the winner without any delay, making it vulnerable to timing attacks."
+    }
+  ]
+}

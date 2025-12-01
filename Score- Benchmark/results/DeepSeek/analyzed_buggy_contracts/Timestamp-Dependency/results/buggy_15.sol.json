@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_15.sol",
+  "bug_type": "Timestamp-Dependency",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 17:43:50",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "bug_tmstmp8() public payable {\n    require(msg.value == 10 ether);\n    require(now != pastBlockTime_tmstmp8);\n    pastBlockTime_tmstmp8 = now;\n    if (now % 15 == 0) {\n        msg.sender.transfer(address(this).balance);\n    }\n}",
+      "confidence": "high",
+      "reasoning": "Multiple requirements checking future timestamps without proper checks, allowing attackers to exploit timing to send multiple ethers in one block."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "bug_tmstmp36() public payable {\n    require(msg.value == 10 ether);\n    require(now != pastBlockTime_tmstmp36);\n    pastBlockTime_tmstmp36 = now;\n    if (now % 15 == 0) {\n        msg.sender.transfer(address(this).balance);\n    }\n}",
+      "confidence": "high",
+      "reasoning": "Same as above, multiple requirements checking future timestamps without proper checks."
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "line_number": 42,
+      "code_snippet": "bug_tmstmp40() public payable {\n    require(msg.value == 10 ether);\n    require(now != pastBlockTime_tmstmp40);\n    pastBlockTime_tmstmp40 = now;\n    if (now % 15 == 0) {\n        msg.sender.transfer(address(this).balance);\n    }\n}",
+      "confidence": "high",
+      "reasoning": "Same as above, multiple requirements checking future timestamps without proper checks."
+    }
+  ]
+}

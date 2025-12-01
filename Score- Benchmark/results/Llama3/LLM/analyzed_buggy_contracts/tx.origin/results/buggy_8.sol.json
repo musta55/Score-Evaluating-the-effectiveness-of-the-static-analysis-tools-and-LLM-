@@ -1,0 +1,250 @@
+{
+  "contract": "buggy_8.sol",
+  "contract_name": "Ownable",
+  "bug_type": "tx.origin",
+  "findings": [
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 13,
+      "code_snippet": "require (tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        "  address public owner;"
+      ],
+      "context_after": [
+        "function bug_txorigin40(address owner_txorigin40) public{",
+        "        require(tx.origin == owner_txorigin40);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 15,
+      "code_snippet": "require (tx.origin == owner_txorigin9);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "function bug_txorigin40(address owner_txorigin40) public{"
+      ],
+      "context_after": [
+        "    }",
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 17,
+      "code_snippet": "require (tx.origin == owner_txorigin25);",
+      "confidence": "high",
+      "context_before": [
+        "        require(tx.origin == owner_txorigin40);",
+        "    }"
+      ],
+      "context_after": [
+        "",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 19,
+      "code_snippet": "require (tx.origin == owner_txorigin10);",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);",
+        ""
+      ],
+      "context_after": [
+        "  /**",
+        "   * @dev The Ownable constructor sets the original `owner` of the contract to the sender"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 21,
+      "code_snippet": "require (tx.origin == owner_txorigin22);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "   * account.",
+        "   */"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 23,
+      "code_snippet": "require (tx.origin == owner_txorigin11);",
+      "confidence": "high",
+      "context_before": [
+        "   * @dev The Ownable constructor sets the original `owner` of the contract to the sender",
+        "   * account."
+      ],
+      "context_after": [
+        "  constructor () public {",
+        "    owner = msg.sender;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 25,
+      "code_snippet": "require (tx.origin == owner_txorigin1);",
+      "confidence": "high",
+      "context_before": [
+        "   */",
+        "  constructor () public {"
+      ],
+      "context_after": [
+        "  }",
+        "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 27,
+      "code_snippet": "require (tx.origin == owner_txorigin2);",
+      "confidence": "high",
+      "context_before": [
+        "    owner = msg.sender;",
+        "  }"
+      ],
+      "context_after": [
+        "\trequire (tx.origin == owner_txorigin9);",
+        "\treceiver.transfer(amount);"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 29,
+      "code_snippet": "require (tx.origin == owner_txorigin33);",
+      "confidence": "high",
+      "context_before": [
+        "function sendto_txorigin9(address payable receiver, uint amount,address owner_txorigin9) public {",
+        "\trequire (tx.origin == owner_txorigin9);"
+      ],
+      "context_after": [
+        "}",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 31,
+      "code_snippet": "require (tx.origin == owner_txorigin27);",
+      "confidence": "high",
+      "context_before": [
+        "\treceiver.transfer(amount);",
+        "}"
+      ],
+      "context_after": [
+        "  /**",
+        "   * @dev Throws if called by any account other than the owner."
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 33,
+      "code_snippet": "require (tx.origin == owner_txorigin7);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "   */",
+        "  modifier onlyOwner() {"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 35,
+      "code_snippet": "require (tx.origin == owner_txorigin37);",
+      "confidence": "high",
+      "context_before": [
+        "   * @dev Throws if called by any account other than the owner.",
+        "   */"
+      ],
+      "context_after": [
+        "    require(msg.sender == owner);",
+        "    _;"
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 37,
+      "code_snippet": "require (tx.origin == owner_txorigin13);",
+      "confidence": "high",
+      "context_before": [
+        "  modifier onlyOwner() {",
+        "    require(msg.sender == owner);"
+      ],
+      "context_after": [
+        "  }",
+        ""
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 39,
+      "code_snippet": "require (tx.origin == owner_txorigin23);",
+      "confidence": "high",
+      "context_before": [
+        "    _;",
+        "  }"
+      ],
+      "context_after": [
+        "  /**",
+        "   * @dev Allows the current owner to transfer control of the contract to a newOwner."
+      ]
+    },
+    {
+      "bug_type": "tx.origin",
+      "sub_type": "tx.origin",
+      "severity": "Warning",
+      "line_number": 41,
+      "code_snippet": "require (tx.origin == owner_txorigin39);",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "  /**"
+      ],
+      "context_after": [
+        "   * @param newOwner The address to transfer ownership to.",
+        "   */"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

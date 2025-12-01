@@ -1,0 +1,154 @@
+{
+  "contract": "buggy_42.sol",
+  "contract_name": "Owned",
+  "bug_type": "Timestamp-Dependency",
+  "findings": [
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 16,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp23 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  }",
+        "  address public newOwner;"
+      ],
+      "context_after": [
+        "  uint256 bugv_tmstmp2 = block.timestamp;",
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 20,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp14 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "  event OwnershipTransferred(address indexed _from, address indexed _to);",
+        ""
+      ],
+      "context_after": [
+        "        owner = msg.sender;",
+        "    }"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 24,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp30 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "    }",
+        "address winner_tmstmp23;"
+      ],
+      "context_after": [
+        "\tuint _vtime = block.timestamp;",
+        "\tif (startTime + (5 * 1 days) == _vtime){"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 28,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp39 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "\tif (startTime + (5 * 1 days) == _vtime){",
+        "\t\twinner_tmstmp23 = msg.sender;}}"
+      ],
+      "context_after": [
+        "    modifier onlyOwner {",
+        "        require(msg.sender == owner || msg.sender == address(this));"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 32,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp19 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "        require(msg.sender == owner || msg.sender == address(this));",
+        "        _;"
+      ],
+      "context_after": [
+        "uint256 bugv_tmstmp1 = block.timestamp;",
+        ""
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 36,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp7 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "",
+        "    function transferOwnership(address _newOwner) public onlyOwner {"
+      ],
+      "context_after": [
+        "    }",
+        "address winner_tmstmp14;"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 40,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp35 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "address winner_tmstmp14;",
+        "function play_tmstmp14(uint startTime) public {"
+      ],
+      "context_after": [
+        "\t\twinner_tmstmp14 = msg.sender;}}",
+        "}"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 44,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp27 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "}",
+        ""
+      ],
+      "context_after": [
+        "  function mul(uint256 a, uint256 b) internal pure returns (uint256) {",
+        "    if (a == 0) {"
+      ]
+    },
+    {
+      "bug_type": "Timestamp-Dependency",
+      "sub_type": "Timestamp-Dependency",
+      "severity": "Warning",
+      "line_number": 48,
+      "code_snippet": "if (startTime + (5 * 1 days) == block.timestamp){winner_tmstmp31 = msg.sender;}",
+      "confidence": "high",
+      "context_before": [
+        "    if (a == 0) {",
+        "      return 0;"
+      ],
+      "context_after": [
+        "    uint256 c = a * b;",
+        "    assert(c / a == b);"
+      ]
+    }
+  ],
+  "success": true,
+  "improved_version": true,
+  "multi_pass_enabled": true
+}

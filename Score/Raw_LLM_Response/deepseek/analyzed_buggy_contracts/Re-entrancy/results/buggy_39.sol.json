@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_39.sol",
+  "bug_type": "Re-entrancy",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 16:02:42",
+  "findings": [
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 15,
+      "code_snippet": "msg.sender.call.value(balances_re_ent8[msg.sender ])\"\n",
+      "confidence": "medium",
+      "reasoning": "The withdraw_balances_re_ent8 function calls msg.sender.call() without ensuring that the balance has been updated after the call, allowing an external attacker to manipulate the balance without proper state synchronization."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 34,
+      "code_snippet": "msg.sender.send(_weiToWithdraw);",
+      "confidence": "medium",
+      "reasoning": "The withdrawFunds_re_ent31 function calls msg.sender.send() without checking if the balance is sufficient after the call, potentially allowing an external attacker to bypass state updates."
+    },
+    {
+      "bug_type": "Re-entrancy",
+      "line_number": 45,
+      "code_snippet": "msg.sender.call.value(userBalance_re_ent33[msg.sender])\"\n",
+      "confidence": "medium",
+      "reasoning": "The withdrawBalance_re_ent33 function calls msg.sender.call() without ensuring that the balance is updated after the call, allowing an external attacker to manipulate the balance."
+    }
+  ]
+}

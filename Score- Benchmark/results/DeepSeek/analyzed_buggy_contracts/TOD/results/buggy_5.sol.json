@@ -1,0 +1,22 @@
+{
+  "contract": "buggy_5.sol",
+  "bug_type": "TOD",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-18 11:59:17",
+  "findings": [
+    {
+      "bug_type": "TOD",
+      "line_number": 17,
+      "code snippet": "function play_TOD17(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD17 = msg.sender;\n        }\n    }",
+      "reasoning": "The function sets the winner but does not immediately transfer the reward, allowing attackers to intercept if they predict correctly.",
+      "severity": "medium"
+    },
+    {
+      "bug_type": "TOD",
+      "line_number": 35,
+      "code snippet": "function play_TOD35(bytes32 guess) public{\n       if (keccak256(abi.encode(guess)) == keccak256(abi.encode('hello'))) {\n            winner_TOD35 = msg.sender;\n        }\n    }",
+      "reasoning": "The function sets the winner without transferring immediately, creating a window for interception.",
+      "severity": "medium"
+    }
+  ]
+}

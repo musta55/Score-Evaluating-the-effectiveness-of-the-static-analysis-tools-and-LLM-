@@ -1,0 +1,29 @@
+{
+  "contract": "buggy_16.sol",
+  "bug_type": "Unchecked-Send",
+  "model": "deepseek-r1:7b",
+  "timestamp": "2025-11-17 21:53:34",
+  "findings": [
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 29,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 6,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    },
+    {
+      "bug_type": "Unchecked-Send",
+      "line_number": 14,
+      "code_snippet": "msg.sender.transfer(1 ether)",
+      "confidence": "high",
+      "reasoning": "return value not checked"
+    }
+  ]
+}
