@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../Benchmark analysis'))
 from evaluation_helpers import (
     extract_contract_name,
     coerce_line_number,

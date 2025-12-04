@@ -5,7 +5,7 @@ import time
 import configparser
 import solidifi
 
-BUG_TYPES_CONF = 'bug_types.conf'
+BUG_TYPES_CONF = 'configs/bug_types.conf'
 CONTRACTS_DIR = 'contracts'
 
 

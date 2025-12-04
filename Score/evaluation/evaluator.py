@@ -3,10 +3,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
-import solidifi
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../injection'))
+import solidifi
+sys.path.append(os.path.join(os.path.dirname(__file__), '../Benchmark analysis'))
 import inspection
 import shutil, glob
 

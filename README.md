@@ -35,14 +35,14 @@ To generate the dataset of buggy contracts by injecting vulnerabilities into cle
 **Option A: Inject bugs into ALL contracts (Recommended)**
 ```bash
 cd Score
-python3 inject_all.py
+python3 injection/inject_all.py
 ```
 *   This will create a `buggy/` directory containing contracts with injected vulnerabilities (e.g., Re-entrancy, Overflow-Underflow).
 
 **Option B: Inject bugs into a SINGLE contract**
 ```bash
 cd Score
-python3 solidifi.py -i contracts/1.sol Re-entrancy
+python3 injection/solidifi.py -i contracts/1.sol Re-entrancy
 ```
 *   Supported bug types: `Re-entrancy`, `Timestamp-Dependency`, `Unchecked-Send`, `Unhandled-Exceptions`, `TOD`, `Overflow-Underflow`, `tx.origin`.
 *   **Note:** Ensure `solc` is in your system PATH.
@@ -72,14 +72,14 @@ To evaluate the buggy contracts using a local LLM (e.g., Llama 3 or DeepSeek) vi
     *   **Llama 3:**
         ```bash
         cd Score
-        python3 llm_evaluator_llama3.py
+        python3 evaluation/llm_evaluator_llama3.py
         ```
         Results saved to: `tool_results/LLM/analyzed_buggy_contracts`
 
     *   **DeepSeek R1:**
         ```bash
         cd Score
-        python3 llm_evaluator_deepseek.py
+        python3 evaluation/llm_evaluator_deepseek.py
         ```
         Results saved to: `tool_results/deepseek/analyzed_buggy_contracts`
 
@@ -106,8 +106,9 @@ python3 compare_with_ground_truth.py --ground-truth merged_bug_logs.csv
 ## Project Structure
 
 *   `Score/`: Main source code.
-    *   `solidifi.py`: Core bug injection tool.
-    *   `llm_evaluator_llama3.py`: Script to evaluate contracts using Llama 3 via Ollama.
+    *   `injection/`: Scripts for bug injection (`solidifi.py`, `inject_all.py`).
+    *   `evaluation/`: Scripts for LLM evaluation (`llm_evaluator_llama3.py`, `llm_evaluator_deepseek.py`).
+    *   `configs/`: Configuration files for bug types and injection patterns.
     *   `buggy/`: Generated buggy contracts.
     *   `tool_results/`: Output directory for analysis tools.
 *   `Score/Benchmark analysis/`: Scripts for calculating precision, recall, and F1-scores.

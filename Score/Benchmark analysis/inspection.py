@@ -2,6 +2,7 @@
 import os,sys
 import shutil, glob
 import csv
+sys.path.append(os.path.join(os.path.dirname(__file__), '../injection'))
 import inject_file
 import re
 import json

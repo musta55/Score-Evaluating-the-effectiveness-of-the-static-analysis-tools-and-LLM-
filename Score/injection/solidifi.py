@@ -8,10 +8,17 @@ import configparser
 import subprocess
 import getopt
 import csv
-sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../Benchmark analysis'))
 import inspection
 
-bugs_dir = "bugs"
+# Define paths relative to project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_DIR = os.path.join(PROJECT_ROOT, "configs")
+BUGS_DIR = os.path.join(PROJECT_ROOT, "bugs")
+AST_DIR = os.path.join(PROJECT_ROOT, "ast")
+BUGGY_DIR = os.path.join(PROJECT_ROOT, "buggy")
+
+bugs_dir = BUGS_DIR
 cur_contr_ast_data = None
 cur_contr_file = None
 src_contr_file = None
@@ -97,7 +104,7 @@ def inject_bug(bug_type):
 def get_bug_info(bug_type):
     bug_types = []
     bug_type_configs = configparser.RawConfigParser(allow_no_value=True)
-    bug_type_configs.read("bug_types.conf")
+    bug_type_configs.read(os.path.join(CONFIG_DIR, "bug_types.conf"))
     for config in  bug_type_configs.sections():
         _bug_type_id = bug_type_configs.get(config, 'bug_type_id')
         _bug_type = bug_type_configs.get(config, 'bug_type')
@@ -225,7 +232,7 @@ def code_transform(filename, bug_type):
     """ Inject bugs through Code Transformation approach """
     existing_patterns = []
     code_trans_configs = configparser.RawConfigParser(allow_no_value=True)
-    code_trans_configs.read("code_trans.conf")
+    code_trans_configs.read(os.path.join(CONFIG_DIR, "code_trans.conf"))
     for config in  code_trans_configs.sections():
         _bug_type = code_trans_configs.get(config, 'bug_type')
         _sec_snip= code_trans_configs.get(config, 'current_snippet')
@@ -253,7 +260,7 @@ def weaken_sec_mec(filename, bug_type):
     """ Inject bugs through Weakning Security Mechanisms approach """
     existing_patterns = []
     sec_mec_configs = configparser.RawConfigParser(allow_no_value=True)
-    sec_mec_configs.read("sec_methods.conf")
+    sec_mec_configs.read(os.path.join(CONFIG_DIR, "sec_methods.conf"))
     for config in  sec_mec_configs.sections():
         _bug_type = sec_mec_configs.get(config, 'bug_type')
         _sec_method_pattern= sec_mec_configs.get(config, 'sec_meth_pattern')
@@ -319,7 +326,7 @@ def main(argv=None):
             if not(os.path.isfile(argv[2])):
                 print("Specified source file does not exists")
     
-            buggy_dir = os.path.join("buggy",argv[3])
+            buggy_dir = os.path.join(BUGGY_DIR,argv[3])
             os.makedirs(buggy_dir,exist_ok=True)
             buggy_file_path = os.path.join(buggy_dir,"buggy_"+tail)
 
@@ -344,7 +351,7 @@ def main(argv=None):
             
 
             """ Generate AST"""
-            ast_json_files_dir = "ast"
+            ast_json_files_dir = AST_DIR
             os.makedirs(ast_json_files_dir,exist_ok=True)
             ast_json_file = os.path.join(ast_json_files_dir, os.path.splitext(tail)[0]+".json")
             
