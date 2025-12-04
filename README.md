@@ -1,4 +1,4 @@
-# Score -Evaluatind the Effectiveness of the Static Analysis tools and LLMs
+# Score - Evaluating the Effectiveness of the Static Analysis tools and LLMs
 
 This repository contains the SolidiFI benchmark for evaluating static analysis tools and Large Language Models (LLMs) on Solidity smart contracts.
 
