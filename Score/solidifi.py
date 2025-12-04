@@ -8,6 +8,8 @@ import configparser
 import subprocess
 import getopt
 import csv
+sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
+import inspection
 
 bugs_dir = "bugs"
 cur_contr_ast_data = None

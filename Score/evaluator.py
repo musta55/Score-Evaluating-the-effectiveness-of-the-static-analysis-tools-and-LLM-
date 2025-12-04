@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
 import solidifi
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
 import inspection
-import os,sys
 import shutil, glob
 
 

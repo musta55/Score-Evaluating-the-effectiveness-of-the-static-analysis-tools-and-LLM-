@@ -1,9 +1,6 @@
+import sys
 import os
-import json
-from string import Template
-import time
-import requests
-from requests.exceptions import RequestException
+sys.path.append(os.path.join(os.path.dirname(__file__), 'Benchmark analysis'))
 from evaluation_helpers import (
     extract_contract_name,
     coerce_line_number,
@@ -12,6 +9,12 @@ from evaluation_helpers import (
     extract_context_from_code,
     extract_json_from_text
 )
+
+import json
+from string import Template
+import time
+import requests
+from requests.exceptions import RequestException
 
 # Configuration
 OLLAMA_URL = 'http://localhost:11434/api/generate'

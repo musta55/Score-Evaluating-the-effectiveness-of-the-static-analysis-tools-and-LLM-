@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-"""Helper functions for LLM evaluation and comparison with static analysis tools"""
-
 import re
 import json
 from typing import Tuple, List, Optional
